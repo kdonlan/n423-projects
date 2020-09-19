@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  background: #36D1DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
 h1,
 h2 {
   font-family: 'Sue Ellen Francisco', cursive; }
@@ -16,22 +24,23 @@ a {
   font-family: 'Kumbh Sans', sans-serif; }
 
 .navbar {
-  background-color: #0742c1;
   height: 75px;
   display: flex;
-  border-radius: 0px; }
+  border-radius: 0px;
+  padding-bottom: 100px; }
   .navbar .logoContainer {
     width: 100%;
-    line-height: 75px; }
-  .navbar h1 {
     color: #fff;
-    letter-spacing: 1.5px;
     margin-left: 20px; }
+  .navbar h1 {
+    letter-spacing: 1.5px; }
+  .navbar p {
+    font-size: 16px; }
   .navbar .searchbarContainer {
     width: 500px;
     display: flex; }
     .navbar .searchbarContainer a {
-      color: #fff;
+      color: #00606b;
       text-align: center;
       flex-direction: column;
       justify-content: space-around; }
@@ -45,11 +54,33 @@ a {
         height: 35px;
         border: none; }
       .navbar .searchbarContainer .zipCitySearch #button {
-        background-color: #0742c1; }
+        height: 35px;
+        width: 95px;
+        margin-left: 20px;
+        border: none; }
 
-.footer {
-  background-color: #0742c1;
-  height: 50px; }
+.linkContainer {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 75px; }
+  .linkContainer a {
+    color: #ffe100;
+    text-transform: uppercase;
+    text-decoration: none; }
+
+.header {
+  width: 500px;
+  margin: 0 auto; }
+  .header h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #00606b; }
+  .header p {
+    font-size: 18px;
+    color: #00606b;
+    font-style: italic; }
+  .header h3 {
+    font-size: 18px;
+    color: #4a0d3e; }
 
 .header {
   color: blue;
@@ -57,8 +88,7 @@ a {
 
 #contentContainer {
   width: 100%;
-  margin: 0 auto;
-  background-color: #fff; }
+  margin: 0 auto; }
 
 .contentRow {
   padding: 30px;
@@ -68,17 +98,82 @@ a {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center; }
-  .contentRow .contentCard {
+  .contentRow .contentCard, .contentRow .contentCard-2, .contentRow .contentCard-3, .contentRow .contentCard-4, .contentRow .contentCard-5, .contentRow .contentCard-6, .contentRow .contentCard-7, .contentRow .contentCard-8, .contentRow .contentCard-9 {
     width: 30%;
     border: 1px solid lightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 10px;
     padding: 50px;
+    margin-bottom: 20px;
     border: 1 solid black;
     flex-direction: column;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #fff; }
+    .contentRow .contentCard h3, .contentRow .contentCard-2 h3, .contentRow .contentCard-3 h3, .contentRow .contentCard-4 h3, .contentRow .contentCard-5 h3, .contentRow .contentCard-6 h3, .contentRow .contentCard-7 h3, .contentRow .contentCard-8 h3, .contentRow .contentCard-9 h3 {
+      text-transform: uppercase;
+      color: #0491a2; }
+    .contentRow .contentCard h4, .contentRow .contentCard-2 h4, .contentRow .contentCard-3 h4, .contentRow .contentCard-4 h4, .contentRow .contentCard-5 h4, .contentRow .contentCard-6 h4, .contentRow .contentCard-7 h4, .contentRow .contentCard-8 h4, .contentRow .contentCard-9 h4 {
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px; }
+    .contentRow .contentCard .stylizedNumber, .contentRow .contentCard-2 .stylizedNumber, .contentRow .contentCard-3 .stylizedNumber, .contentRow .contentCard-4 .stylizedNumber, .contentRow .contentCard-5 .stylizedNumber, .contentRow .contentCard-6 .stylizedNumber, .contentRow .contentCard-7 .stylizedNumber, .contentRow .contentCard-8 .stylizedNumber, .contentRow .contentCard-9 .stylizedNumber {
+      color: #0491a2;
+      font-size: 50px;
+      font-family: 'Titillium Web', sans-serif; }
+    .contentRow .contentCard .textContainer, .contentRow .contentCard-2 .textContainer, .contentRow .contentCard-3 .textContainer, .contentRow .contentCard-4 .textContainer, .contentRow .contentCard-5 .textContainer, .contentRow .contentCard-6 .textContainer, .contentRow .contentCard-7 .textContainer, .contentRow .contentCard-8 .textContainer, .contentRow .contentCard-9 .textContainer {
+      height: 90px; }
+      .contentRow .contentCard .textContainer .stylizedText, .contentRow .contentCard-2 .textContainer .stylizedText, .contentRow .contentCard-3 .textContainer .stylizedText, .contentRow .contentCard-4 .textContainer .stylizedText, .contentRow .contentCard-5 .textContainer .stylizedText, .contentRow .contentCard-6 .textContainer .stylizedText, .contentRow .contentCard-7 .textContainer .stylizedText, .contentRow .contentCard-8 .textContainer .stylizedText, .contentRow .contentCard-9 .textContainer .stylizedText {
+        color: #0491a2;
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 38px; }
+      .contentRow .contentCard .textContainer h4, .contentRow .contentCard-2 .textContainer h4, .contentRow .contentCard-3 .textContainer h4, .contentRow .contentCard-4 .textContainer h4, .contentRow .contentCard-5 .textContainer h4, .contentRow .contentCard-6 .textContainer h4, .contentRow .contentCard-7 .textContainer h4, .contentRow .contentCard-8 .textContainer h4, .contentRow .contentCard-9 .textContainer h4 {
+        text-transform: uppercase;
+        color: black;
+        font-size: 15px; }
 
 .header {
   color: blue;
   text-align: center; }
+
+#sectionContainer {
+  width: 100%; }
+
+.sectionRow {
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #014c68; }
+  .sectionRow .sectionCard {
+    width: 100%;
+    border: 1px solid lightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 20px;
+    border: 1 solid black;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff; }
+    .sectionRow .sectionCard h3 {
+      text-transform: uppercase;
+      color: #0491a2; }
+    .sectionRow .sectionCard h4 {
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px; }
+    .sectionRow .sectionCard .stylizedNumber {
+      color: #0491a2;
+      font-size: 50px;
+      font-family: 'Titillium Web', sans-serif; }
+    .sectionRow .sectionCard .textContainer {
+      height: 90px; }
+      .sectionRow .sectionCard .textContainer .stylizedText {
+        color: #0491a2;
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 38px; }
+      .sectionRow .sectionCard .textContainer h4 {
+        text-transform: uppercase;
+        color: black;
+        font-size: 15px; }

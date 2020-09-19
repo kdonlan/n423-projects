@@ -1,24 +1,14 @@
-#contentContainer {
+#sectionContainer {
     width: 100%;
-    margin:0 auto;
-    // background-color: #fff;
-    // border: 1px solid #000;
-
 }
-.contentRow {
+
+.sectionRow {
     padding: 30px;
-    // width: 80%;
+    width: 100%;
     margin: 0 auto;
-    display: flex;
-    // background-color: blue;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    // background-color: #014c68;
-    
-    .contentCard, .contentCard-2, .contentCard-3, .contentCard-4, .contentCard-5, .contentCard-6, .contentCard-7, .contentCard-8, .contentCard-9 {
-        width: 30%;
+    background-color: #014c68;
+    .sectionCard {
+        width: 100%;
         border: 1px solid lightblue;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
@@ -31,9 +21,6 @@
         overflow: hidden;
         background-color: #fff;
 
-
-
-        
         h3 { //front text
             text-transform: uppercase;
             color: #0491a2;
@@ -66,6 +53,4 @@
         }
         
     }
-    
-
 }

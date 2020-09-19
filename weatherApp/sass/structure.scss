@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 h1,
 h2 {
     font-family: 'Sue Ellen Francisco', cursive;
@@ -19,35 +25,32 @@ a {
 }
 
 .navbar {
-    background-color: #0742c1;
+    // background-color: #0491a2;
     height: 75px;
     display: flex;
     border-radius: 0px;
+    padding-bottom: 100px;
     .logoContainer {
         width: 100%;
+        color: #fff;
+        margin-left: 20px;
         // background-color: green;
-        line-height: 75px;
+        // line-height: 75px;
     }   
         h1 {
-        color: #fff;
-        letter-spacing: 1.5px;
-        margin-left: 20px;
+            letter-spacing: 1.5px;
     }
-        // .linksContainer {
-        //     width: 500px;
-        //     display:flex;
-        //     a {
-        //         color: #7ad8fa;
-        //         flex-direction: column;
-        //         justify-content: space-around;
-        //     }
-        // }
+        p {
+            font-size: 16px;
+
+
+    }
 
         .searchbarContainer {
             width: 500px;
             display:flex;
             a {
-                color: #fff;
+                color: hsl(186, 100%, 21%);;
                 text-align: center;
                 flex-direction: column;
                 justify-content: space-around;
@@ -65,14 +68,43 @@ a {
                 // border-radius: 10px;
             }
             #button {
-                background-color:#0742c1;
+                // background-color:gray;
+                height:35px; 
+                width: 95px;
+                margin-left:20px;
+                border: none;
             }
             }
         }
 }
 
+.linkContainer {
+    width: 90%;
+    margin: 0 auto;
+    line-height:75px;
+    a {
+        color: rgb(255, 225, 0);
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
 
-.footer {
-    background-color: #0742c1;
-    height: 50px;
+.header  {
+    width: 500px;
+    margin: 0 auto;
+    h2 {
+        font-family: 'Kumbh Sans', sans-serif;
+        // text-transform: uppercase;
+        // color: white;
+        color:hsl(186, 100%, 21%);
+    }
+    p {
+        font-size: 18px;
+        color:hsl(186, 100%, 21%);
+        font-style: italic;
+    }
+    h3 {
+        font-size: 18px;
+        color: hsl(312, 70%, 17%);
+    }
 }
