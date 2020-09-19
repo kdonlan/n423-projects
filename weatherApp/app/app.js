@@ -5,32 +5,34 @@
 //my api key - copy and pasted from Weather API 
 var apiKey = "1ad461bcc448452dabe232457201709";
 var baseURL = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=`;
-var storedZipcodeOrCity = "";
-var forecastBaseURL = "";
-var forecast = "&days=5";
+// var storedZipcodeOrCity = "";
+// var forecastBaseURL = "";
+// var forecast = "&days=5";
+console.log(baseURL);
 
 function getData(fullURL) {
     $.get(fullURL, function (data) {
         console.log(data);
-        $(".content").html(
+        $("div.contentCard").html(
             `<p>City: ${data.location.name}</p>
             <p>State: ${data.location.region}</p>
             <p>Time: ${data.location.localtime}</p>`
         );
+        console.log(data.location.name);
     }).catch(function (error) {
-        console.log(error);
-        console.log("your zipcode is not valid");
+        // console.log(error);
+        // console.log("your zipcode is not valid");
     });
 }
 
 function initListeners() {
-    //id of my button
-    $("#getWeather").click(function () {
+    //class of my button
+    $("#button").click(function () {
         //grabs input out of the box
-        var zipcode = $(".zipcode").val();
+        var zipcodeCityInput = $(".zipcodeCityInput").val();
 
         //creates the api call url you are looking for with variables created above
-        var fullURL = baseURL + zipcode;
+        var fullURL = baseURL + zipcodeCityInput;
         console.log(fullURL);
         getData(fullURL);
     })
@@ -38,5 +40,5 @@ function initListeners() {
 
 
 $(document).ready(function () {
-    initListeners();
+    initListeners(baseURL);
 })

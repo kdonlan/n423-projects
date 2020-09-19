@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #0742c1;
+    height: 75px;
+    display: flex;
+    border-radius: 0px;
+    .logoContainer {
+        width: 100%;
+        // background-color: green;
+        line-height: 75px;
+    }   
+        h1 {
+        color: #fff;
+        letter-spacing: 1.5px;
+        margin-left: 20px;
+    }
+        // .linksContainer {
+        //     width: 500px;
+        //     display:flex;
+        //     a {
+        //         color: #7ad8fa;
+        //         flex-direction: column;
+        //         justify-content: space-around;
+        //     }
+        // }
+
+        .searchbarContainer {
+            width: 500px;
+            display:flex;
+            a {
+                color: #fff;
+                text-align: center;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .zipCitySearch {
+                // background-color: #fff;
+                width: 500px;
+                height: 75px;
+                align-items: center;
+            .zipcodeCityInput {
+                margin-top: 15px;
+                width: 270px;
+                height: 35px;
+                border: none;
+                // border-radius: 10px;
+            }
+            #button {
+                background-color:#0742c1;
+            }
+            }
+        }
+}
+
+
+.footer {
+    background-color: #0742c1;
+    height: 50px;
+}

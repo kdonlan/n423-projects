@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1,
+h2 {
+  font-family: 'Sue Ellen Francisco', cursive; }
+
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: 'Kumbh Sans', sans-serif; }
+
+.navbar {
+  background-color: #0742c1;
+  height: 75px;
+  display: flex;
+  border-radius: 0px; }
+  .navbar .logoContainer {
+    width: 100%;
+    line-height: 75px; }
+  .navbar h1 {
+    color: #fff;
+    letter-spacing: 1.5px;
+    margin-left: 20px; }
+  .navbar .searchbarContainer {
+    width: 500px;
+    display: flex; }
+    .navbar .searchbarContainer a {
+      color: #fff;
+      text-align: center;
+      flex-direction: column;
+      justify-content: space-around; }
+    .navbar .searchbarContainer .zipCitySearch {
+      width: 500px;
+      height: 75px;
+      align-items: center; }
+      .navbar .searchbarContainer .zipCitySearch .zipcodeCityInput {
+        margin-top: 15px;
+        width: 270px;
+        height: 35px;
+        border: none; }
+      .navbar .searchbarContainer .zipCitySearch #button {
+        background-color: #0742c1; }
+
+.footer {
+  background-color: #0742c1;
+  height: 50px; }
+
+.header {
+  color: blue;
+  text-align: center; }
+
+#contentContainer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff; }
+
+.contentRow {
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .contentRow .contentCard {
+    width: 30%;
+    border: 1px solid lightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    border: 1 solid black;
+    flex-direction: column;
+    overflow: hidden; }
+
+.header {
+  color: blue;
+  text-align: center; }
