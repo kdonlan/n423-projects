@@ -13,6 +13,7 @@ body {
 h1,
 h2 {
     font-family: 'Sue Ellen Francisco', cursive;
+    color:rgb(255, 207, 48);
 }
 
 h3,
@@ -68,7 +69,7 @@ a {
                 // border-radius: 10px;
             }
             #button {
-                // background-color:gray;
+                background-color:rgb(255, 207, 48);
                 height:35px; 
                 width: 95px;
                 margin-left:20px;
@@ -92,19 +93,23 @@ a {
 .header  {
     width: 500px;
     margin: 0 auto;
+    color: black;
     h2 {
         font-family: 'Kumbh Sans', sans-serif;
         // text-transform: uppercase;
         // color: white;
-        color:hsl(186, 100%, 21%);
+        color: black;
     }
     p {
         font-size: 18px;
-        color:hsl(186, 100%, 21%);
+        // color:hsl(186, 100%, 21%);
         font-style: italic;
+        color: black;
     }
     h3 {
         font-size: 18px;
-        color: hsl(312, 70%, 17%);
+        // color: hsl(312, 70%, 17%);
+        color: black;
+
     }
 }
