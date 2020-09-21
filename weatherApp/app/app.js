@@ -40,7 +40,7 @@ function getData(headerURL) {
     $.get(headerURL, function (data) {
         // console.log(data);
         $("div.header").html(
-            `<h2>Currently in ${data.location.name}, ${data.location.region}</h2><br><p>${data.location.country}${data.location.localtime}</p><p>${data.location.tz_id} Time Zone</p>`
+            `<h2>Currently in ${data.location.name}, ${data.location.region}</h2><br><p>${data.location.country} ${data.location.localtime}</p><p>${data.location.tz_id} Time Zone</p>`
         );
     }).catch(function (error) {
         // console.log(error);
