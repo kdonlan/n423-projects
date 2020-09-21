@@ -1,9 +1,6 @@
 #contentContainer {
     width: 100%;
     margin:0 auto;
-    // background-color: #fff;
-    // border: 1px solid #000;
-
 }
 .contentRow {
     padding: 30px;
@@ -19,19 +16,18 @@
     
     .contentCard, .contentCard-2, .contentCard-3, .contentCard-4, .contentCard-5, .contentCard-6, .contentCard-7, .contentCard-8, .contentCard-9 {
         width: 30%;
+        height: 30%;
         border: 1px solid lightblue;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
         border-radius: 10px;
-        padding: 50px;
+        padding: 15px;
         margin-bottom: 20px;
         // height: 200px;
         border:1 solid black;
         flex-direction: column;
         overflow: hidden;
         background-color: #fff;
-
-
 
         
         h3 { //front text
@@ -57,15 +53,12 @@
                 color:#0491a2;
                 font-family: 'Sue Ellen Francisco', cursive;
                 font-size: 38px;
+                .stylizedText {
+                    color:#0491a2;
+                    font-family: 'Sue Ellen Francisco', cursive;
+                }
             }
-            h4 { //inside text
-                text-transform: uppercase;
-                color: grayscale($color: #000000);
-                font-size: 15px;
-            }
-        }
         
     }
-    
-
+}
 }

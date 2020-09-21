@@ -17,23 +17,24 @@
   <nav class="navbar">
     <div class="logoContainer">
       <div class="Logo">
-        <h1 style="color: white;">HOW'S THE WEATHER OUT THERE?</h1>
-        <!-- <p>Get everything you need to know about the weather near you.</p> -->
+        <h1>HOW'S THE WEATHER OUT THERE?</h1>
       </div>
     </div>
-    <div id="get" class="linkContainer"><a href="#">Click here to display your 5-Day Forecast</a></div>
+    <div id="linkContainer"><a class="signin" href="#"><strong>Sign In</strong></a>
+      <a class="signin" href="#"><strong>Sign up</strong></a>
     </div>
     <div class="searchbarContainer">
       <div class="zipCitySearch">
         <input class="zipcodeCityInput" type="text" placeholder="zipcode or city name" />
         <button id="button" type="submit"><a>Search</a></button>
       </div>
+
   </nav>
   <div class="header">
   </div>
 
   <div id="contentContainer">
-    <h1 style="display:block; text-align: center;padding-top:50px;">CURRENT WEATHER</h1>
+    <!-- <h1 style="display:block; text-align: center;padding-top:10px;color:white;">CURRENT WEATHER</h1> -->
     <div class="contentRow">
       <div class="contentCard">
         <img src="./images/temp.png" style="width:100px" alt="">
@@ -74,16 +75,72 @@
     </div>
   </div>
 
-  <h1 style="display:block; text-align: center;padding-top:50px;">5-DAY FORECAST</h1></br></br>
+  <!-- <h1 style="display:block; text-align: center;padding-top:10px;">5-DAY FORECAST</h1></br></br>
   <div id="sectionContainer">
     <div class="sectionRow">
       <div class="sectionCard">
-        WOULD LIKE FOR THE FORECAST TO GO HERE
+        
+      </div>
+      <div class="sectionCard">
+      
+      </div>
+      <div class="sectionCard">
+        
+      </div>
+      <div class="sectionCard">
+        
+      </div>
+      <div class="sectionCard">
+        
       </div>
     </div>
-
+  </div> -->
+  <!-- <h1 style="display:block; text-align: center;padding-top:10px;font-family:sans-serif;color:white;">More Weather Details</h1></br></br> -->
+  <div id="sectionContainer">
+    <div class="sectionRow">
+      <div class="sectionCard-1" style="text-transform: uppercase;">
+        <p>Pressure <br>in millibars</p>
+      </div>
+      <div class="sectionCard-2" style="text-transform: uppercase;">
+        <p>pressure <br>inches</p>
+      </div>
+      <div class="sectionCard-3" style="text-transform: uppercase;">
+        <p>UV <br>index</p>
+      </div>
+      <div class="sectionCard-4" style="text-transform: uppercase;">
+        <p>Precipitation <br>millimeters</p>
+      </div>
+      <div class="sectionCard-5" style="text-transform: uppercase;">
+        <p>Precipitation <br>inches</p>
+      </div>
+      <div class="sectionCard-6" style="text-transform: uppercase;">
+        <p>visibility <br>miles</p>
+      </div>
+      <div class="sectionCard-7" style="text-transform: uppercase;">
+        <p>cloud coverage<br>percentage</p>
+      </div>
+      <div class="sectionCard-8" style="text-transform: uppercase;">
+        <p>temperature<br>celcius</p>
+      </div>
+      <div class="sectionCard-9" style="text-transform: uppercase;">
+        <p>feels like<br> celcius</p>
+      </div>
+      <div class="sectionCard-10" style="text-transform: uppercase;">
+        <p>feels like <br>farhrenheit</p>
+      </div>
+      <div class="sectionCard-11" style="text-transform: uppercase;">
+        <p>windgusts <br>mph</p>
+      </div>
+      <div class="sectionCard-12" style="text-transform: uppercase;">
+        <p>windgusts <br>kph</p>
+      </div>
+    </div>
   </div>
-
+  <div style="width: 200px; color:white; margin: 0 auto; padding-top:15px; padding-bottom: 15px;">
+    <p>Sourced by <a href="https://www.weatherapi.com/" title="Free Weather API"><img
+          src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+    </p>
+  </div>
   <script src="lib/jquery-3.5.1.min.js"></script>
   <script src="app/app.js"></script>
 </body>
