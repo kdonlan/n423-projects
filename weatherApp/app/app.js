@@ -34,12 +34,12 @@ var daysurl = "&days=";
 // ****************************************** ZIPCODE | CITY *********************************************
 
 function getData(headerURL) {
-    $.get(headerURL, function (data) {
+    $.get(headerURL, function(data) {
         // console.log(data);
         $("div.header").html(
             `<h2>${data.location.name}, ${data.location.region}</h2><br><p>${data.location.country} ${data.location.localtime}</p><p>${data.location.tz_id} Time Zone</p>`
         );
-    }).catch(function (error) {
+    }).catch(function(error) {
         // console.log(error);
         // console.log("your zipcode is not valid");
         $("div.header").html(
@@ -51,32 +51,31 @@ function getData(headerURL) {
 // ****************************************** FORECAST *********************************************
 
 function getForecastData(forecastURL) {
-    $.get(forecastURL, function (value) {
-        console.log(value.forecast);
+    $.get(forecastURL, function(value) {
+        // console.log(value.forecast);
         forecasts = value.forecast;
-        parseForecast(value.forecast.forecastday);
+        parseForecast(value.forecast.forecastday); //why an error here??!!
     });
 
 }
 
 function parseForecast(daysArray) {
-    $.each(daysArray, function (idx, value) {
-        console.log(value);
+    $.each(daysArray, function(idx, value) {
+        // console.log(value);
         $("div.forecastCard").append(
             `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.maxtemp_f} F</div></p>`);
     })
-    
-    $.each(daysArray, function (idx, value) {
-        console.log(value);
+
+    $.each(daysArray, function(idx, value) {
+        // console.log(value);
         $("div.forecastCard2").append(
             `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.mintemp_f} F</div></p>`);
     })
 
-    $.each(daysArray, function (idx, value) {
-        console.log(value);
+    $.each(daysArray, function(idx, value) {
+        // console.log(value);
         $("div.forecastCard3").append(
             `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.daily_chance_of_rain}%</div></p>`);
-            // <p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.avghumidity}%</div></p>
     })
 
 
@@ -85,7 +84,7 @@ function parseForecast(daysArray) {
 
 // ****************************************** TEMPERATURE *********************************************
 function tempData(tempURL) {
-    $.get(tempURL, function (data) {
+    $.get(tempURL, function(data) {
         // console.log(tempURL);
         $("div.contentCard").html(
             `<p class="stylizedNumber">${data.current.temp_f}&#176 F</p><h4>Temperature (F)</h4>`
@@ -94,7 +93,7 @@ function tempData(tempURL) {
 }
 // ****************************************** FEELS LIKE *********************************************
 function feelslikeData(feelsURL) {
-    $.get(feelsURL, function (data) {
+    $.get(feelsURL, function(data) {
         // console.log(feelsURL);
         $("div.contentCard-2").html(
             `<p class="stylizedNumber">${data.current.feelslike_f}&#176 F</p><h4>Feels Like (F)</h4>`
@@ -104,7 +103,7 @@ function feelslikeData(feelsURL) {
 
 // ****************************************** HUMIDITY *********************************************
 function humidityData(humidityURL) {
-    $.get(humidityURL, function (data) {
+    $.get(humidityURL, function(data) {
         // console.log(humidityURL);
         $("div.contentCard-3").html(
             `<p class="stylizedNumber">${data.current.humidity}&#176 F</p><h4>Humidity</h4>`
@@ -114,7 +113,7 @@ function humidityData(humidityURL) {
 
 // ****************************************** LONGITUDE *********************************************
 function longData(longitudeURL) {
-    $.get(longitudeURL, function (data) {
+    $.get(longitudeURL, function(data) {
         // console.log(longitudeURL);
         $("div.contentCard-4").html(
             `<p class="stylizedNumber">${data.location.lon}</p><h4>Longitude</h4>`
@@ -124,7 +123,7 @@ function longData(longitudeURL) {
 
 // ****************************************** LATITUDE *********************************************
 function latiData(latitudeURL) {
-    $.get(latitudeURL, function (data) {
+    $.get(latitudeURL, function(data) {
         // console.log(latitudeURL);
         $("div.contentCard-5").html(
             `<p class="stylizedNumber">${data.location.lat}</p><h4>Latitude</h4>`
@@ -134,7 +133,7 @@ function latiData(latitudeURL) {
 
 // ****************************************** CONDITION *********************************************
 function condData(conditionURL) {
-    $.get(conditionURL, function (data) {
+    $.get(conditionURL, function(data) {
         // console.log(conditionURL);
         $("div.contentCard-6").html(
             `<div class="textContainer"><h3 class="stylizedText">${data.current.condition.text}</h3><h4>Condition</h4>`
@@ -144,7 +143,7 @@ function condData(conditionURL) {
 
 // ****************************************** WIND *********************************************
 function windData(windURL) {
-    $.get(windURL, function (data) {
+    $.get(windURL, function(data) {
         // console.log(windURL);
         $("div.contentCard-7").html(
             `<p class="stylizedNumber">${data.current.wind_mph} mph</p><h4>Wind</h4>`
@@ -154,7 +153,7 @@ function windData(windURL) {
 
 // ****************************************** WIND DEGREE *********************************************
 function windDegreeData(windDegreeURL) {
-    $.get(windDegreeURL, function (data) {
+    $.get(windDegreeURL, function(data) {
         // console.log(windDegreeURL);
         $("div.contentCard-8").html(
             `<p class="stylizedNumber">${data.current.wind_degree}</p><h4>Wind Degree</h4>`
@@ -164,106 +163,106 @@ function windDegreeData(windDegreeURL) {
 
 // ****************************************** WIND DIRECTION *********************************************
 function windDirData(windDirURL) {
-    $.get(windDirURL, function (data) {
+    $.get(windDirURL, function(data) {
         // console.log(windDirURL);
         $("div.contentCard-9").html(
-            `<p class="stylizedNumber">${data.current.wind_dir}</p><h4>Wind Direction</h4>`
+            `<p class="stylizedNumber">${data.current.wind_dir}</p><h5>Wind Direction</h5>`
         );
     });
 }
 
 function pressureData(pressureURL) {
-    $.get(pressureURL, function (data) {
+    $.get(pressureURL, function(data) {
         $("div.sectionCard-1").html(
-            `<p class="stylizedNumber">${data.current.pressure_mb}</p><h4>Pressure<br>(millibars)</h4>`
+            `<p class="stylizedNumber">${data.current.pressure_mb}</p><h5>Pressure<br>(millibars)</h5>`
         );
     });
 }
 
 function pressureInchesData(pressureInchesURL) {
-    $.get(pressureInchesURL, function (data) {
+    $.get(pressureInchesURL, function(data) {
         $("div.sectionCard-2").html(
-            `<p class="stylizedNumber">${data.current.pressure_in}</p><h4>Pressure<br>(inches)</h4>`
+            `<p class="stylizedNumber">${data.current.pressure_in}</p><h5>Pressure<br>(inches)</h5>`
         );
     });
 }
 
 function uvData(uvURL) {
-    $.get(uvURL, function (data) {
+    $.get(uvURL, function(data) {
         $("div.sectionCard-3").html(
-            `<p class="stylizedNumber">${data.current.uv}</p><h4>UV<br>Index</h4>`
+            `<p class="stylizedNumber">${data.current.uv}</p><h5>UV<br>Index</h5>`
         );
     });
 }
 
 function percipmmData(percipmmURL) {
-    $.get(percipmmURL, function (data) {
+    $.get(percipmmURL, function(data) {
         $("div.sectionCard-4").html(
-            `<p class="stylizedNumber">${data.current.precip_mm}</p><h4>Precipitation<br>(millimeters)</h4>`
+            `<p class="stylizedNumber">${data.current.precip_mm}</p><h5>Precipitation<br>(millimeters)</h5>`
         );
     });
 }
 
 function percipinData(percipinURL) {
-    $.get(percipinURL, function (data) {
+    $.get(percipinURL, function(data) {
         $("div.sectionCard-5").html(
-            `<p class="stylizedNumber">${data.current.precip_in}</p><h4>Precipitation<br>(inches)</h4>`
+            `<p class="stylizedNumber">${data.current.precip_in}</p><h5>Precipitation<br>(inches)</h5>`
         );
     });
 }
 
 function visData(visURL) {
-    $.get(visURL, function (data) {
+    $.get(visURL, function(data) {
         $("div.sectionCard-6").html(
-            `<p class="stylizedNumber">${data.current.vis_miles}</p><h4>Visibility<br>in Miles</h4>`
+            `<p class="stylizedNumber">${data.current.vis_miles}</p><h5>Visibility<br>in Miles</h5>`
         );
     });
 }
 
 function cloudData(cloudURL) {
-    $.get(cloudURL, function (data) {
+    $.get(cloudURL, function(data) {
         $("div.sectionCard-7").html(
-            `<p class="stylizedNumber">${data.current.cloud}%</p><h4>Cloud<br>Coverage</h4>`
+            `<p class="stylizedNumber">${data.current.cloud}%</p><h5>Cloud<br>Coverage</h5>`
         );
     });
 }
 
 function tempcData(tempcURL) {
-    $.get(tempcURL, function (data) {
+    $.get(tempcURL, function(data) {
         $("div.sectionCard-8").html(
-            `<p class="stylizedNumber">${data.current.temp_c}&#176</p><h4>Temperature<br>(Celcius)</h4>`
+            `<p class="stylizedNumber">${data.current.temp_c}&#176</p><h4>Temperature<br>(Celcius)</h5>`
         );
     });
 }
 
 function feelcData(feelcURL) {
-    $.get(feelcURL, function (data) {
+    $.get(feelcURL, function(data) {
         $("div.sectionCard-9").html(
-            `<p class="stylizedNumber">${data.current.feelslike_c}&#176</p><h4>Feels Like<br>(Celcius)</h4>`
+            `<p class="stylizedNumber">${data.current.feelslike_c}&#176</p><h5>Feels Like<br>(Celcius)</h4>`
         );
     });
 }
 
 function feelfData(feelfURL) {
-    $.get(feelfURL, function (data) {
+    $.get(feelfURL, function(data) {
         $("div.sectionCard-10").html(
-            `<p class="stylizedNumber">${data.current.feelslike_f}&#176</p><h4>Feels Like<br>(Fahrenheit)</h4>`
+            `<p class="stylizedNumber">${data.current.feelslike_f}&#176</p><h5>Feels Like<br>(Fahrenheit)</h5>`
         );
     });
 }
 
 function gustmphData(gustmphURL) {
-    $.get(gustmphURL, function (data) {
+    $.get(gustmphURL, function(data) {
         $("div.sectionCard-11").html(
-            `<p class="stylizedNumber">${data.current.gust_mph}</p><h4>Wind Gusts<br>(mph)</h4>`
+            `<p class="stylizedNumber">${data.current.gust_mph}</p><h5>Wind Gusts<br>(mph)</h5>`
         );
     });
 }
 
 function gustkphData(gustkphURL) {
-    $.get(gustkphURL, function (data) {
+    $.get(gustkphURL, function(data) {
         $("div.sectionCard-12").html(
-            `<p class="stylizedNumber">${data.current.gust_kph}</p><h4>Wind Gusts<br>(kph)</h4>`
+            `<p class="stylizedNumber">${data.current.gust_kph}</p><h5>Wind Gusts<br>(kph)</h5>`
         );
     });
 }
@@ -276,7 +275,7 @@ function gustkphData(gustkphURL) {
 
 function initListeners() {
     //class of my button
-    $("#button").click(function () {
+    $("#button").click(function() {
         //grabs input out of the box
         var zipcodeCityInput = $(".zipcodeCityInput").val();
 
@@ -347,9 +346,10 @@ function initListeners() {
 
         //creates the api call for search 5 day forecast
         var forecastURL = forecastBaseURL + zipcodeCityInput + daysurl;
-        console.log(forecastURL);
+        // console.log(forecastURL);
 
         getData(headerURL);
+
         tempData(tempURL);
         feelslikeData(feelsURL);
         humidityData(humidityURL);
@@ -371,14 +371,12 @@ function initListeners() {
         feelfData(feelfURL);
         gustmphData(gustmphURL);
         gustkphData(gustkphURL);
+
         getForecastData(forecastURL);
     })
 }
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     initListeners(baseURL, forecastBaseURL);
-
 })
-
-// localStorage.clear()

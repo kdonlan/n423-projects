@@ -12,11 +12,14 @@ body {
   background: linear-gradient(to right, #5B86E5, #36D1DC);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
+#center {
+  width: 100%;
+  margin: 0 auto; }
+
 h1,
 h2 {
   font-family: 'Sue Ellen Francisco', cursive;
-  color: #ffcf30;
-  padding-top: 20px; }
+  color: #ffcf30; }
 
 h3,
 h4,
@@ -27,20 +30,23 @@ a {
   font-family: 'Kumbh Sans', sans-serif; }
 
 .navbar {
-  height: 75px;
+  height: 50px;
   display: flex;
   border-radius: 0px;
-  padding-bottom: 100px; }
+  padding-bottom: 74px; }
   .navbar .logoContainer {
     width: 100%;
     color: #ffcf30;
-    margin-left: 20px; }
+    margin-left: 20px;
+    background-color: #000; }
+    .navbar .logoContainer .logo {
+      background-color: #000; }
   .navbar h1 {
     letter-spacing: 1.5px; }
   .navbar p {
-    font-size: 16px; }
+    font-size: 10px; }
   .navbar .searchbarContainer {
-    width: 500px;
+    width: 450px;
     display: flex; }
     .navbar .searchbarContainer a {
       color: #00606b;
@@ -48,37 +54,40 @@ a {
       flex-direction: column;
       justify-content: space-around; }
     .navbar .searchbarContainer .zipCitySearch {
-      width: 500px;
+      width: 700px;
       height: 75px;
       align-items: center; }
       .navbar .searchbarContainer .zipCitySearch .zipcodeCityInput {
         margin-top: 15px;
-        width: 270px;
+        width: 175px;
         height: 35px;
         border: none; }
       .navbar .searchbarContainer .zipCitySearch #button {
         background-color: #ffcf30;
         height: 35px;
-        width: 95px;
+        width: 100px;
         margin-left: 20px;
         border: none; }
 
-.signin, .signup {
+.signin,
+.signup {
   color: #ffe100;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 50px; }
+  padding: 20px; }
 
 #linkContainer {
   width: 100%;
-  line-height: 100px; }
+  height: 75px;
+  line-height: 50px;
+  background-color: #000; }
 
 .header {
+  text-align: center;
   width: 100%;
   margin: 0 auto;
   color: black; }
   .header h2 {
-    padding: 10px;
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 55px;
     color: #014c68; }
@@ -101,11 +110,18 @@ a {
   padding: 30px;
   margin: 0 auto;
   display: flex;
-  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center; }
-  .contentRow .contentCard, .contentRow .contentCard-2, .contentRow .contentCard-3, .contentRow .contentCard-4, .contentRow .contentCard-5, .contentRow .contentCard-6, .contentRow .contentCard-7, .contentRow .contentCard-8, .contentRow .contentCard-9 {
+  .contentRow .contentCard,
+  .contentRow .contentCard-2,
+  .contentRow .contentCard-3,
+  .contentRow .contentCard-4,
+  .contentRow .contentCard-5,
+  .contentRow .contentCard-6,
+  .contentRow .contentCard-7,
+  .contentRow .contentCard-8,
+  .contentRow .contentCard-9 {
     width: 30%;
     height: 30%;
     border: 1px solid lightblue;
@@ -115,33 +131,76 @@ a {
     padding: 15px;
     margin-bottom: 20px;
     border: 1 solid black;
-    flex-direction: column;
     overflow: hidden;
     background-color: #fff; }
-    .contentRow .contentCard h3, .contentRow .contentCard-2 h3, .contentRow .contentCard-3 h3, .contentRow .contentCard-4 h3, .contentRow .contentCard-5 h3, .contentRow .contentCard-6 h3, .contentRow .contentCard-7 h3, .contentRow .contentCard-8 h3, .contentRow .contentCard-9 h3 {
+    .contentRow .contentCard h3,
+    .contentRow .contentCard-2 h3,
+    .contentRow .contentCard-3 h3,
+    .contentRow .contentCard-4 h3,
+    .contentRow .contentCard-5 h3,
+    .contentRow .contentCard-6 h3,
+    .contentRow .contentCard-7 h3,
+    .contentRow .contentCard-8 h3,
+    .contentRow .contentCard-9 h3 {
       text-transform: uppercase;
       color: #0491a2; }
-    .contentRow .contentCard h4, .contentRow .contentCard-2 h4, .contentRow .contentCard-3 h4, .contentRow .contentCard-4 h4, .contentRow .contentCard-5 h4, .contentRow .contentCard-6 h4, .contentRow .contentCard-7 h4, .contentRow .contentCard-8 h4, .contentRow .contentCard-9 h4 {
+    .contentRow .contentCard h4,
+    .contentRow .contentCard-2 h4,
+    .contentRow .contentCard-3 h4,
+    .contentRow .contentCard-4 h4,
+    .contentRow .contentCard-5 h4,
+    .contentRow .contentCard-6 h4,
+    .contentRow .contentCard-7 h4,
+    .contentRow .contentCard-8 h4,
+    .contentRow .contentCard-9 h4 {
       text-transform: uppercase;
       color: black;
       font-size: 15px; }
-    .contentRow .contentCard .stylizedNumber, .contentRow .contentCard-2 .stylizedNumber, .contentRow .contentCard-3 .stylizedNumber, .contentRow .contentCard-4 .stylizedNumber, .contentRow .contentCard-5 .stylizedNumber, .contentRow .contentCard-6 .stylizedNumber, .contentRow .contentCard-7 .stylizedNumber, .contentRow .contentCard-8 .stylizedNumber, .contentRow .contentCard-9 .stylizedNumber {
+    .contentRow .contentCard .stylizedNumber,
+    .contentRow .contentCard-2 .stylizedNumber,
+    .contentRow .contentCard-3 .stylizedNumber,
+    .contentRow .contentCard-4 .stylizedNumber,
+    .contentRow .contentCard-5 .stylizedNumber,
+    .contentRow .contentCard-6 .stylizedNumber,
+    .contentRow .contentCard-7 .stylizedNumber,
+    .contentRow .contentCard-8 .stylizedNumber,
+    .contentRow .contentCard-9 .stylizedNumber {
       color: #0491a2;
       font-size: 50px;
       font-family: 'Titillium Web', sans-serif; }
-    .contentRow .contentCard .textContainer, .contentRow .contentCard-2 .textContainer, .contentRow .contentCard-3 .textContainer, .contentRow .contentCard-4 .textContainer, .contentRow .contentCard-5 .textContainer, .contentRow .contentCard-6 .textContainer, .contentRow .contentCard-7 .textContainer, .contentRow .contentCard-8 .textContainer, .contentRow .contentCard-9 .textContainer {
+    .contentRow .contentCard .textContainer,
+    .contentRow .contentCard-2 .textContainer,
+    .contentRow .contentCard-3 .textContainer,
+    .contentRow .contentCard-4 .textContainer,
+    .contentRow .contentCard-5 .textContainer,
+    .contentRow .contentCard-6 .textContainer,
+    .contentRow .contentCard-7 .textContainer,
+    .contentRow .contentCard-8 .textContainer,
+    .contentRow .contentCard-9 .textContainer {
       height: 90px; }
-      .contentRow .contentCard .textContainer .stylizedText, .contentRow .contentCard-2 .textContainer .stylizedText, .contentRow .contentCard-3 .textContainer .stylizedText, .contentRow .contentCard-4 .textContainer .stylizedText, .contentRow .contentCard-5 .textContainer .stylizedText, .contentRow .contentCard-6 .textContainer .stylizedText, .contentRow .contentCard-7 .textContainer .stylizedText, .contentRow .contentCard-8 .textContainer .stylizedText, .contentRow .contentCard-9 .textContainer .stylizedText {
+      .contentRow .contentCard .textContainer .stylizedText,
+      .contentRow .contentCard-2 .textContainer .stylizedText,
+      .contentRow .contentCard-3 .textContainer .stylizedText,
+      .contentRow .contentCard-4 .textContainer .stylizedText,
+      .contentRow .contentCard-5 .textContainer .stylizedText,
+      .contentRow .contentCard-6 .textContainer .stylizedText,
+      .contentRow .contentCard-7 .textContainer .stylizedText,
+      .contentRow .contentCard-8 .textContainer .stylizedText,
+      .contentRow .contentCard-9 .textContainer .stylizedText {
         color: #0491a2;
         font-family: 'Sue Ellen Francisco', cursive;
         font-size: 38px; }
-        .contentRow .contentCard .textContainer .stylizedText .stylizedText, .contentRow .contentCard-2 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-3 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-4 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-5 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-6 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-7 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-8 .textContainer .stylizedText .stylizedText, .contentRow .contentCard-9 .textContainer .stylizedText .stylizedText {
+        .contentRow .contentCard .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-2 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-3 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-4 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-5 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-6 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-7 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-8 .textContainer .stylizedText .stylizedText,
+        .contentRow .contentCard-9 .textContainer .stylizedText .stylizedText {
           color: #0491a2;
           font-family: 'Sue Ellen Francisco', cursive; }
-
-.header {
-  color: blue;
-  text-align: center; }
 
 #sectionContainer {
   width: 100%;
@@ -149,7 +208,7 @@ a {
   padding: 5px; }
 
 .sectionRow {
-  padding: 50px;
+  padding: 10px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -157,30 +216,64 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center; }
-  .sectionRow .sectionCard-1, .sectionRow .sectionCard-2, .sectionRow .sectionCard-3, .sectionRow .sectionCard-4, .sectionRow .sectionCard-5, .sectionRow .sectionCard-6, .sectionRow .sectionCard-7, .sectionRow .sectionCard-8, .sectionRow .sectionCard-9, .sectionRow .sectionCard-10, .sectionRow .sectionCard-11, .sectionRow .sectionCard-12 {
+  .sectionRow .sectionCard-1,
+  .sectionRow .sectionCard-2,
+  .sectionRow .sectionCard-3,
+  .sectionRow .sectionCard-4,
+  .sectionRow .sectionCard-5,
+  .sectionRow .sectionCard-6,
+  .sectionRow .sectionCard-7,
+  .sectionRow .sectionCard-8,
+  .sectionRow .sectionCard-9,
+  .sectionRow .sectionCard-10,
+  .sectionRow .sectionCard-11,
+  .sectionRow .sectionCard-12 {
     width: 15%;
     border: 1px solid lightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #fff; }
-    .sectionRow .sectionCard-1 .stylizedNumber, .sectionRow .sectionCard-2 .stylizedNumber, .sectionRow .sectionCard-3 .stylizedNumber, .sectionRow .sectionCard-4 .stylizedNumber, .sectionRow .sectionCard-5 .stylizedNumber, .sectionRow .sectionCard-6 .stylizedNumber, .sectionRow .sectionCard-7 .stylizedNumber, .sectionRow .sectionCard-8 .stylizedNumber, .sectionRow .sectionCard-9 .stylizedNumber, .sectionRow .sectionCard-10 .stylizedNumber, .sectionRow .sectionCard-11 .stylizedNumber, .sectionRow .sectionCard-12 .stylizedNumber {
+    .sectionRow .sectionCard-1 .stylizedNumber,
+    .sectionRow .sectionCard-2 .stylizedNumber,
+    .sectionRow .sectionCard-3 .stylizedNumber,
+    .sectionRow .sectionCard-4 .stylizedNumber,
+    .sectionRow .sectionCard-5 .stylizedNumber,
+    .sectionRow .sectionCard-6 .stylizedNumber,
+    .sectionRow .sectionCard-7 .stylizedNumber,
+    .sectionRow .sectionCard-8 .stylizedNumber,
+    .sectionRow .sectionCard-9 .stylizedNumber,
+    .sectionRow .sectionCard-10 .stylizedNumber,
+    .sectionRow .sectionCard-11 .stylizedNumber,
+    .sectionRow .sectionCard-12 .stylizedNumber {
       color: #003a91;
       font-size: 50px;
       font-family: 'Titillium Web', sans-serif; }
+    .sectionRow .sectionCard-1 h5,
+    .sectionRow .sectionCard-2 h5,
+    .sectionRow .sectionCard-3 h5,
+    .sectionRow .sectionCard-4 h5,
+    .sectionRow .sectionCard-5 h5,
+    .sectionRow .sectionCard-6 h5,
+    .sectionRow .sectionCard-7 h5,
+    .sectionRow .sectionCard-8 h5,
+    .sectionRow .sectionCard-9 h5,
+    .sectionRow .sectionCard-10 h5,
+    .sectionRow .sectionCard-11 h5,
+    .sectionRow .sectionCard-12 h5 {
+      font-size: 14px; }
 
 #forecastContainer {
   width: 100%;
   margin: 0 auto;
   margin: 0 auto;
   text-transform: uppercase;
-  text-align: center;
-  background-color: #0491a2; }
+  text-align: center; }
   #forecastContainer h2 {
-    padding: 40px;
+    padding-top: 40px;
     margin: 0 auto;
     text-transform: uppercase;
     text-align: center; }
@@ -193,7 +286,9 @@ a {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center; }
-  .forecastRow .forecastCard, .forecastRow .forecastCard2, .forecastRow .forecastCard3 {
+  .forecastRow .forecastCard,
+  .forecastRow .forecastCard2,
+  .forecastRow .forecastCard3 {
     width: 30%;
     border: 1px solid lightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -205,23 +300,35 @@ a {
     flex-direction: column;
     overflow: hidden;
     background-color: #fff; }
-    .forecastRow .forecastCard h3, .forecastRow .forecastCard2 h3, .forecastRow .forecastCard3 h3 {
+    .forecastRow .forecastCard h3,
+    .forecastRow .forecastCard2 h3,
+    .forecastRow .forecastCard3 h3 {
       text-transform: uppercase;
       color: #0491a2; }
-    .forecastRow .forecastCard h4, .forecastRow .forecastCard2 h4, .forecastRow .forecastCard3 h4 {
+    .forecastRow .forecastCard h4,
+    .forecastRow .forecastCard2 h4,
+    .forecastRow .forecastCard3 h4 {
       text-transform: uppercase;
       color: black;
       font-size: 15px; }
-    .forecastRow .forecastCard .stylizedNumber, .forecastRow .forecastCard2 .stylizedNumber, .forecastRow .forecastCard3 .stylizedNumber {
+    .forecastRow .forecastCard .stylizedNumber,
+    .forecastRow .forecastCard2 .stylizedNumber,
+    .forecastRow .forecastCard3 .stylizedNumber {
       color: #0491a2;
       font-size: 50px;
       font-family: 'Titillium Web', sans-serif; }
-    .forecastRow .forecastCard .textContainer, .forecastRow .forecastCard2 .textContainer, .forecastRow .forecastCard3 .textContainer {
+    .forecastRow .forecastCard .textContainer,
+    .forecastRow .forecastCard2 .textContainer,
+    .forecastRow .forecastCard3 .textContainer {
       height: 90px; }
-      .forecastRow .forecastCard .textContainer .stylizedText, .forecastRow .forecastCard2 .textContainer .stylizedText, .forecastRow .forecastCard3 .textContainer .stylizedText {
+      .forecastRow .forecastCard .textContainer .stylizedText,
+      .forecastRow .forecastCard2 .textContainer .stylizedText,
+      .forecastRow .forecastCard3 .textContainer .stylizedText {
         color: #0491a2;
         font-family: 'Sue Ellen Francisco', cursive;
         font-size: 38px; }
-        .forecastRow .forecastCard .textContainer .stylizedText .stylizedText, .forecastRow .forecastCard2 .textContainer .stylizedText .stylizedText, .forecastRow .forecastCard3 .textContainer .stylizedText .stylizedText {
+        .forecastRow .forecastCard .textContainer .stylizedText .stylizedText,
+        .forecastRow .forecastCard2 .textContainer .stylizedText .stylizedText,
+        .forecastRow .forecastCard3 .textContainer .stylizedText .stylizedText {
           color: #0491a2;
           font-family: 'Sue Ellen Francisco', cursive; }

@@ -6,16 +6,23 @@
 }
 
 body {
-    background: #36D1DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #36D1DC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#center {
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1,
 h2 {
     font-family: 'Sue Ellen Francisco', cursive;
-    color:rgb(255, 207, 48);
-    padding-top: 20px;
+    color: rgb(255, 207, 48);
 }
 
 h3,
@@ -28,93 +35,89 @@ a {
 }
 
 .navbar {
-    // background-color: #0491a2;
-    height: 75px;
+    height: 50px;
     display: flex;
     border-radius: 0px;
-    padding-bottom: 100px;
+    padding-bottom: 74px;
     .logoContainer {
         width: 100%;
-        color:rgb(255, 207, 48);
+        color: rgb(255, 207, 48);
         margin-left: 20px;
-        // background-color: green;
-        // line-height: 75px;
-    }   
-        h1 {
-            letter-spacing: 1.5px;
+        background-color: #000;
+        .logo {
+            background-color: #000;
+        }
     }
-        p {
-            font-size: 16px;
-
-
+    h1 {
+        letter-spacing: 1.5px;
     }
-
-        .searchbarContainer {
-            width: 500px;
-            display:flex;
-            a {
-                color: hsl(186, 100%, 21%);;
-                text-align: center;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            .zipCitySearch {
-                // background-color: #fff;
-                width: 500px;
-                height: 75px;
-                align-items: center;
+    p {
+        font-size: 10px;
+    }
+    .searchbarContainer {
+        width: 450px;
+        display: flex;
+        a {
+            color: hsl(186, 100%, 21%);
+            text-align: center;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .zipCitySearch {
+            width: 700px;
+            height: 75px;
+            align-items: center;
             .zipcodeCityInput {
                 margin-top: 15px;
-                width: 270px;
+                width: 175px;
                 height: 35px;
                 border: none;
-                // border-radius: 10px;
             }
             #button {
-                background-color:rgb(255, 207, 48);
-                height:35px; 
-                width: 95px;
-                margin-left:20px;
+                background-color: rgb(255, 207, 48);
+                height: 35px;
+                width: 100px;
+                margin-left: 20px;
                 border: none;
             }
-            }
         }
+    }
 }
 
-.signin, .signup {
+.signin,
+.signup {
     color: rgb(255, 225, 0);
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
 }
 
 #linkContainer {
     width: 100%;
-    line-height:100px;
+    height: 75px;
+    line-height: 50px;
+    background-color: #000;
 }
 
-.header  {
+.header {
+    text-align: center;
     width: 100%;
     margin: 0 auto;
     color: black;
     h2 {
-        padding: 10px;
+        // padding: 10px;
         font-family: 'Sue Ellen Francisco', cursive;
         font-size: 55px;
-        // text-transform: uppercase;
-        // color: white;
-        color:#014c68;
+        color: #014c68;
     }
     p {
         font-size: 18px;
         // color:hsl(186, 100%, 21%);
         font-style: italic;
-color: #014c68;
+        color: #014c68;
     }
     h3 {
         font-size: 18px;
-        // color: hsl(312, 70%, 17%);
-color: #014c68;
-
+        color: #014c68;
     }
 }

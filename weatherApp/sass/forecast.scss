@@ -1,56 +1,51 @@
 #forecastContainer {
     width: 100%;
-    margin:0 auto;
     margin: 0 auto;
-        text-transform: uppercase;
-        text-align: center;
-        background-color: #0491a2;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
     h2 {
-        padding: 40px;
+        padding-top: 40px;
         margin: 0 auto;
         text-transform: uppercase;
-        text-align:center;
+        text-align: center;
     }
 }
+
 .forecastRow {
     padding: 30px;
     // width: 80%;
     margin: 0 auto;
     display: flex;
-    // background-color: blue;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    
-    .forecastCard, .forecastCard2, .forecastCard3 {
+    .forecastCard,
+    .forecastCard2,
+    .forecastCard3 {
         width: 30%;
-        // height: 30%;
         border: 1px solid lightblue;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
         border-radius: 10px;
         padding: 15px;
         margin-bottom: 20px;
-        // height: 200px;
-        border:1 solid black;
+        border: 1 solid black;
         flex-direction: column;
         overflow: hidden;
         background-color: #fff;
-
-
-        
-        h3 { //front text
+        h3 {
+            //front text
             text-transform: uppercase;
             color: #0491a2;
         }
-
-        h4 { //inside text
+        h4 {
+            //inside text
             text-transform: uppercase;
             color: grayscale($color: #000000);
             font-size: 15px;
         }
-
         .stylizedNumber {
             // color: #014c68;
             color: #0491a2;
@@ -60,15 +55,14 @@
         .textContainer {
             height: 90px;
             .stylizedText {
-                color:#0491a2;
+                color: #0491a2;
                 font-family: 'Sue Ellen Francisco', cursive;
                 font-size: 38px;
                 .stylizedText {
-                    color:#0491a2;
+                    color: #0491a2;
                     font-family: 'Sue Ellen Francisco', cursive;
                 }
             }
-        
+        }
     }
-}
 }
