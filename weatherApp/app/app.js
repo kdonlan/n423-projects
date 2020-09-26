@@ -27,7 +27,7 @@ var gustkph = "&gust_kph=";
 
 var days = {};
 var forecastBaseURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=`;
-var daysurl = "&days=3";
+var daysurl = "&days=";
 
 
 //appending the data
@@ -37,7 +37,7 @@ function getData(headerURL) {
     $.get(headerURL, function (data) {
         // console.log(data);
         $("div.header").html(
-            `<h2>Currently in ${data.location.name}, ${data.location.region}</h2><br><p>${data.location.country} ${data.location.localtime}</p><p>${data.location.tz_id} Time Zone</p>`
+            `<h2>${data.location.name}, ${data.location.region}</h2><br><p>${data.location.country} ${data.location.localtime}</p><p>${data.location.tz_id} Time Zone</p>`
         );
     }).catch(function (error) {
         // console.log(error);
@@ -62,10 +62,24 @@ function getForecastData(forecastURL) {
 function parseForecast(daysArray) {
     $.each(daysArray, function (idx, value) {
         console.log(value);
-        $(".forecast").append(
-            `<p>Date: ${value.date}</p>
-            <p>Day High: ${value.day.maxtemp_f}</p>`);
+        $("div.forecastCard").append(
+            `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.maxtemp_f} F</div></p>`);
     })
+    
+    $.each(daysArray, function (idx, value) {
+        console.log(value);
+        $("div.forecastCard2").append(
+            `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.mintemp_f} F</div></p>`);
+    })
+
+    $.each(daysArray, function (idx, value) {
+        console.log(value);
+        $("div.forecastCard3").append(
+            `<p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.daily_chance_of_rain}%</div></p>`);
+            // <p style="color: white;font-size:12px;"><div class="stylizedNumber">${value.day.avghumidity}%</div></p>
+    })
+
+
 }
 
 
@@ -358,7 +372,6 @@ function initListeners() {
         gustmphData(gustmphURL);
         gustkphData(gustkphURL);
         getForecastData(forecastURL);
-        // parseForecast(forecastURL);
     })
 }
 

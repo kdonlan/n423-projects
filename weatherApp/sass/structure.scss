@@ -15,6 +15,7 @@ h1,
 h2 {
     font-family: 'Sue Ellen Francisco', cursive;
     color:rgb(255, 207, 48);
+    padding-top: 20px;
 }
 
 h3,
@@ -102,26 +103,18 @@ a {
         font-size: 55px;
         // text-transform: uppercase;
         // color: white;
-        color:rgb(0, 58, 145)
+        color:#014c68;
     }
     p {
         font-size: 18px;
         // color:hsl(186, 100%, 21%);
         font-style: italic;
-        color: rgb(0, 58, 145)
+color: #014c68;
     }
     h3 {
         font-size: 18px;
         // color: hsl(312, 70%, 17%);
-        color: rgb(0, 58, 145)
+color: #014c68;
 
     }
-}
-
-#forecast {
-    background-color:rgb(255, 207, 48);
-                height:35px; 
-                width: 300px;
-                margin:0 auto;
-                border: none;
 }

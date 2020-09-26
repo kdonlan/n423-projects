@@ -28,20 +28,28 @@
     <div class="searchbarContainer">
       <div class="zipCitySearch">
         <input class="zipcodeCityInput" type="text" placeholder="zipcode or city name" />
-        <button id="button" onclick="getForecastData()" type="submit"><a>Search</a></button>
+        <button id="button" onclick="getForecastDataHigh()" type="submit"><a>Search</a></button>
       </div>
 
   </nav>
   <!--Lists the searched zip/city information at top-->
   <div class="header">
   </div>
-  
-  <!--Lists the 3 Day Forecast-->
-  <div class="forecast"></div>
-  
+
+  <!--Lists Tomorrow's Forecast-->
+  <div id="forecastContainer">
+    <h2>Tomorrow's Forecast</h2>
+    <div class="forecastRow">
+      <!-- <img src="./images/temp.png" style="width:100px" alt=""> -->
+      <div class="forecastCard"><h3><img src="./images/113.png" style="width:64px;" alt=""> High Temperature</h3></div>
+      <div class="forecastCard2"><h3><img src="./images/338.png" style="width:64px;" alt=""> Low Temperature</h3></div>
+      <div class="forecastCard3"><h3><img src="./images/308.png" style="width:64px;" alt=""> Rain Chance</h3></div>
+    </div>
+  </div>
+
   <!--Top Weather Info-->
   <div id="contentContainer">
-    <!-- <h1 style="display:block; text-align: center;padding-top:10px;color:white;">CURRENT WEATHER</h1> -->
+    <h2>CURRENTLY</h2>
     <div class="contentRow">
       <div class="contentCard">
         <img src="./images/temp.png" style="width:100px" alt="">

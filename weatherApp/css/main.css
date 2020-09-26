@@ -15,7 +15,8 @@ body {
 h1,
 h2 {
   font-family: 'Sue Ellen Francisco', cursive;
-  color: #ffcf30; }
+  color: #ffcf30;
+  padding-top: 20px; }
 
 h3,
 h4,
@@ -80,25 +81,21 @@ a {
     padding: 10px;
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 55px;
-    color: #003a91; }
+    color: #014c68; }
   .header p {
     font-size: 18px;
     font-style: italic;
-    color: #003a91; }
+    color: #014c68; }
   .header h3 {
     font-size: 18px;
-    color: #003a91; }
-
-#forecast {
-  background-color: #ffcf30;
-  height: 35px;
-  width: 300px;
-  margin: 0 auto;
-  border: none; }
+    color: #014c68; }
 
 #contentContainer {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center; }
 
 .contentRow {
   padding: 30px;
@@ -174,3 +171,57 @@ a {
       color: #003a91;
       font-size: 50px;
       font-family: 'Titillium Web', sans-serif; }
+
+#forecastContainer {
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #0491a2; }
+  #forecastContainer h2 {
+    padding: 40px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center; }
+
+.forecastRow {
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .forecastRow .forecastCard, .forecastRow .forecastCard2, .forecastRow .forecastCard3 {
+    width: 30%;
+    border: 1px solid lightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1 solid black;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff; }
+    .forecastRow .forecastCard h3, .forecastRow .forecastCard2 h3, .forecastRow .forecastCard3 h3 {
+      text-transform: uppercase;
+      color: #0491a2; }
+    .forecastRow .forecastCard h4, .forecastRow .forecastCard2 h4, .forecastRow .forecastCard3 h4 {
+      text-transform: uppercase;
+      color: black;
+      font-size: 15px; }
+    .forecastRow .forecastCard .stylizedNumber, .forecastRow .forecastCard2 .stylizedNumber, .forecastRow .forecastCard3 .stylizedNumber {
+      color: #0491a2;
+      font-size: 50px;
+      font-family: 'Titillium Web', sans-serif; }
+    .forecastRow .forecastCard .textContainer, .forecastRow .forecastCard2 .textContainer, .forecastRow .forecastCard3 .textContainer {
+      height: 90px; }
+      .forecastRow .forecastCard .textContainer .stylizedText, .forecastRow .forecastCard2 .textContainer .stylizedText, .forecastRow .forecastCard3 .textContainer .stylizedText {
+        color: #0491a2;
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 38px; }
+        .forecastRow .forecastCard .textContainer .stylizedText .stylizedText, .forecastRow .forecastCard2 .textContainer .stylizedText .stylizedText, .forecastRow .forecastCard3 .textContainer .stylizedText .stylizedText {
+          color: #0491a2;
+          font-family: 'Sue Ellen Francisco', cursive; }

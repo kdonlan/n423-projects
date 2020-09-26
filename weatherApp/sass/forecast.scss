@@ -1,11 +1,18 @@
-#contentContainer {
+#forecastContainer {
     width: 100%;
     margin:0 auto;
     margin: 0 auto;
         text-transform: uppercase;
         text-align: center;
+        background-color: #0491a2;
+    h2 {
+        padding: 40px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        text-align:center;
+    }
 }
-.contentRow {
+.forecastRow {
     padding: 30px;
     // width: 80%;
     margin: 0 auto;
@@ -15,11 +22,10 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    // background-color: #014c68;
     
-    .contentCard, .contentCard-2, .contentCard-3, .contentCard-4, .contentCard-5, .contentCard-6, .contentCard-7, .contentCard-8, .contentCard-9 {
+    .forecastCard, .forecastCard2, .forecastCard3 {
         width: 30%;
-        height: 30%;
+        // height: 30%;
         border: 1px solid lightblue;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         text-align: center;
@@ -31,6 +37,7 @@
         flex-direction: column;
         overflow: hidden;
         background-color: #fff;
+
 
         
         h3 { //front text
