@@ -22,18 +22,15 @@ var cloud = "&cloud=";
 var tempc = "&temp_c=";
 var feelc = "&feelslike_c=";
 var feelf = "&feelslike_f=";
-
-
 var gustmph = "&gust_mph=";
 var gustkph = "&gust_kph=";
 
-var zipcodeCityInput = $(".zipcodeCityInput").val();
-var forecastURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=`;
-var days = zipcodeCityInput + "zipCode&days=5";
-// var daysArray = {};
+var days = {};
+var forecastBaseURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=`;
+var daysurl = "&days=3";
 
 
-
+//appending the data
 // ****************************************** ZIPCODE | CITY *********************************************
 
 function getData(headerURL) {
@@ -53,10 +50,24 @@ function getData(headerURL) {
 
 // ****************************************** FORECAST *********************************************
 
-// function getForecastData() {
-//     $.getJSON("data.forecast", function(data) {
-//     console.log(data);
-//     });
+function getForecastData(forecastURL) {
+    $.get(forecastURL, function (value) {
+        console.log(value.forecast);
+        forecasts = value.forecast;
+        parseForecast(value.forecast.forecastday);
+    });
+
+}
+
+function parseForecast(daysArray) {
+    $.each(daysArray, function (idx, value) {
+        console.log(value);
+        $(".forecast").append(
+            `<p>Date: ${value.date}</p>
+            <p>Day High: ${value.day.maxtemp_f}</p>`);
+    })
+}
+
 
 // ****************************************** TEMPERATURE *********************************************
 function tempData(tempURL) {
@@ -146,8 +157,6 @@ function windDirData(windDirURL) {
         );
     });
 }
-
-// ****************************************** OTHER INFORMATION *********************************************
 
 function pressureData(pressureURL) {
     $.get(pressureURL, function (data) {
@@ -248,31 +257,7 @@ function gustkphData(gustkphURL) {
 
 
 
-
-
-
-
-// ****************************************** FORECAST *********************************************
-// function daysData(daysURL) {
-//     $.get(daysURL, function (data) {
-//         console.log(daysURL);
-//     });
-// }
-
-// function getArray(daysArray) {
-// $.each(daysArray, function(idx,value) {
-//     console.log(value);
-//     $("div.sectionCard").append(
-//     `<img src="./images/temp.png" alt="" style="width:100px;">`
-//     `<p class="stylizedText">${forecast.forecastday[idx]}</p><h4>Pressure</h4>`
-//     )
-//     console.log(daysArray);
-//     });
-// }
-
-
-
-
+//creates the url for the api call
 // ****************************************** LISTENER *********************************************
 
 function initListeners() {
@@ -346,10 +331,9 @@ function initListeners() {
         var gustmphURL = headerURL + gustmph;
         var gustkphURL = headerURL + gustkph;
 
-        /////////////////////// DAYS OF THE WEEK /////////////////////////////
-        // creates the api call for days of the week
-        // var daysURL = forecastURL + days;
-        // console.log(daysURL);
+        //creates the api call for search 5 day forecast
+        var forecastURL = forecastBaseURL + zipcodeCityInput + daysurl;
+        console.log(forecastURL);
 
         getData(headerURL);
         tempData(tempURL);
@@ -371,19 +355,17 @@ function initListeners() {
         tempcData(tempcURL);
         feelcData(feelcURL);
         feelfData(feelfURL);
-
         gustmphData(gustmphURL);
         gustkphData(gustkphURL);
-    
-
-
-
-        // daysData(daysURL); //going into box at the bottom where forecast should go
-        // getArray();
+        getForecastData(forecastURL);
+        // parseForecast(forecastURL);
     })
 }
 
 
 $(document).ready(function () {
-    initListeners(baseURL);
+    initListeners(baseURL, forecastBaseURL);
+
 })
+
+// localStorage.clear()

@@ -14,27 +14,32 @@
 </head>
 
 <body>
+  <!--Navigation-->
   <nav class="navbar">
     <div class="logoContainer">
       <div class="Logo">
         <h1>HOW'S THE WEATHER OUT THERE?</h1>
       </div>
     </div>
-    <div id="linkContainer"><a class="signin" href="#"><strong>Sign In</strong></a>
-      <a class="signin" href="#"><strong>Sign up</strong></a>
+    <div id="linkContainer">
+      <a class="signin" href="#"><strong>Sign In</strong></a>
+      <a class="signup" href="#"><strong>Sign up</strong></a>
     </div>
     <div class="searchbarContainer">
       <div class="zipCitySearch">
         <input class="zipcodeCityInput" type="text" placeholder="zipcode or city name" />
-        <button id="button" type="submit"><a>Search</a></button>
+        <button id="button" onclick="getForecastData()" type="submit"><a>Search</a></button>
       </div>
 
   </nav>
+  <!--Lists the searched zip/city information at top-->
   <div class="header">
   </div>
-
-  <!-- <div class="forecast"></div> -->
-
+  
+  <!--Lists the 3 Day Forecast-->
+  <div class="forecast"></div>
+  
+  <!--Top Weather Info-->
   <div id="contentContainer">
     <!-- <h1 style="display:block; text-align: center;padding-top:10px;color:white;">CURRENT WEATHER</h1> -->
     <div class="contentRow">
@@ -77,27 +82,7 @@
     </div>
   </div>
 
-  <!-- <h1 style="display:block; text-align: center;padding-top:10px;">5-DAY FORECAST</h1></br></br>
-  <div id="sectionContainer">
-    <div class="sectionRow">
-      <div class="sectionCard">
-        
-      </div>
-      <div class="sectionCard">
-      
-      </div>
-      <div class="sectionCard">
-        
-      </div>
-      <div class="sectionCard">
-        
-      </div>
-      <div class="sectionCard">
-        
-      </div>
-    </div>
-  </div> -->
-  <!-- <h1 style="display:block; text-align: center;padding-top:10px;font-family:sans-serif;color:white;">More Weather Details</h1></br></br> -->
+  <!--Bottom Weather Info-->
   <div id="sectionContainer">
     <div class="sectionRow">
       <div class="sectionCard-1" style="text-transform: uppercase;">
@@ -138,11 +123,15 @@
       </div>
     </div>
   </div>
+
+  <!--Weather API credit-->
   <div style="width: 200px; color:white; margin: 0 auto; padding-top:15px; padding-bottom: 15px;">
     <p>Sourced by <a href="https://www.weatherapi.com/" title="Free Weather API"><img
           src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
     </p>
   </div>
+
+  <!--scripts-->
   <script src="lib/jquery-3.5.1.min.js"></script>
   <script src="app/app.js"></script>
 </body>

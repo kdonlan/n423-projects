@@ -62,7 +62,7 @@ a {
         margin-left: 20px;
         border: none; }
 
-.signin {
+.signin, .signup {
   color: #ffe100;
   text-transform: uppercase;
   text-decoration: none;
@@ -88,6 +88,13 @@ a {
   .header h3 {
     font-size: 18px;
     color: #003a91; }
+
+#forecast {
+  background-color: #ffcf30;
+  height: 35px;
+  width: 300px;
+  margin: 0 auto;
+  border: none; }
 
 #contentContainer {
   width: 100%;

@@ -80,7 +80,7 @@ a {
         }
 }
 
-.signin {
+.signin, .signup {
     color: rgb(255, 225, 0);
         text-transform: uppercase;
         text-decoration: none;
@@ -116,4 +116,12 @@ a {
         color: rgb(0, 58, 145)
 
     }
+}
+
+#forecast {
+    background-color:rgb(255, 207, 48);
+                height:35px; 
+                width: 300px;
+                margin:0 auto;
+                border: none;
 }
