@@ -35,7 +35,3 @@ $("#storeStudent").click(function() {
         )
     }
 })
-
-function initListeners() {
-    showStudents();
-}
