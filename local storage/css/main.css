@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+}
+
+#section {
+    width: 800px;
+    padding: 20px;
+    /* background-color: blue; */
+}
+
+input {
+    width: 250px;
+    height: 25px;
+}
+
+#storeStudent,
+#clearStudent,
+#showStudents {
+    width: 125px;
+    /* margin-left: 25px; */
+    color: white;
+    background-color: black;
+    height: 35px;
+}
