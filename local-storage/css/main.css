@@ -52,3 +52,12 @@ input {
     line-height: 15px;
     /* background-color: white; */
 }
+
+#clearStudent {
+    margin-left: 20px;
+    width: 125px;
+    /* margin-left: 25px; */
+    color: white;
+    background-color: gray;
+    height: 35px;
+}
