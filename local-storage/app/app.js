@@ -1,37 +1,46 @@
-var data = {
-    students: [],
-};
-
 $("#storeStudent").click(function() {
-    let name = $("#name").val();
-    let age = $("#age").val();
-    let phone = $("#phone").val();
-    let email = $("#email").val();
-    let course = $("#course").val();
-    var students = { name, age, phone, email, course }
-
-    // console.log(name, age, phone, course);
-    // var student = { name, age, phone, email, course }
-    data.students.push(data);
+    var data = {};
+    let sname = $("#name").val();
+    let sage = $("#age").val();
+    let sphone = $("#phone").val();
+    let semail = $("#email").val();
+    let scourse = $("#course").val();
+    var student = { name: sname, age: sage, phone: sphone, email: semail, course: scourse }
 
 
-    if (localStorage.getItem("#section") === null) {
-        data = [];
-    } else {
-        data = JSON.parse(localStorage.getItem("students"));
-    }
 
-    data.push(students);
-    localStorage.setItem("data", JSON.stringify(students));
-
-    function showStudents(data) {
-        let allStudents = JSON.parse(localStorage.getItem("data.student"))
-        $("#allStudents").html(
-            `<p>${data.student.name}</p>
-            <p>${data.allStudent.age}</p>
-            <p>${data.allStudents.phone}</p>
-            <p>${data.allStudent.email}</p>
-            <p>${data.allStudent.course}</p>`
+    if (localStorage.getItem("local-students") !== null) {
+        data = JSON.parse(localStorage.getItem("local-students"));
+        $("#message").html(
+            `<p>Student was added successfully!</p>`
         )
+
+    } else {
+        data.students = [];
     }
+    // console.log(data.students);
+    data.students.push(student);
+    localStorage.setItem("local-students", JSON.stringify(data));
 })
+
+$("#showStudents").click(function() {
+    showStudents();
+})
+
+function submitForm() {
+    document.form.submit();
+    document.form.reset();
+}
+
+
+
+function showStudents(data) {
+    let allStudents = JSON.parse(localStorage.getItem("local-students"));
+    // console.log(allStudents);
+    $("#allStudents").html(""); //clears it out from button clicking
+    $.each(allStudents.students, function(idx, value) { //key and value
+        $("#allStudents").append(
+            `<div class="oneStudent"><p>Name: ${value.name}<br>Age: ${value.age}<br>Phone: ${value.phone}<br>Email: ${value.email}<br>Course: ${value.course}</p></div>`
+        )
+    })
+}
