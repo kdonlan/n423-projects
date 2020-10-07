@@ -60,4 +60,5 @@ input {
     color: white;
     background-color: gray;
     height: 35px;
+    float: right;
 }

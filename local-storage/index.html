@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <h1>Student Roster Information</h1>
+    <h1>Student Roster Information</h1> <button id="clearStudent" onclick="window.location.reload()">Refresh Page</button>
+    <button id="clearStudent" onclick="window.localStorage.clear()" "window.location.reload()">Clear Students</button>
     <form action="submit">
         <div id="section">
             <input id="name" type="text" placeholder="Student's Name"></input><br>
@@ -22,8 +23,6 @@
 
     <button id="storeStudent">Add</button>
     <button id="showStudents">Show All</button>
-    <button id="clearStudent" onclick="window.location.reload()">Refresh Page</button>
-    <button id="clearStudent" onclick="window.localStorage.clear() window.location.reload()">Clear Students</button>
 
     <div id="message"></div>
     <div id="allStudents"></div>
