@@ -70,8 +70,8 @@ $(document).ready(function () {
 
 //***************** TRYING TO GET ONE RECORD ********************//
 
-// $("#get").click(function() {
-//     _db
+$("#get").click(function() {
+_db
 //         .collection("names")
 //         .get()
 //         .then(function(querySnapshot) {

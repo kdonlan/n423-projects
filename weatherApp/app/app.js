@@ -25,6 +25,13 @@ var feelf = "&feelslike_f=";
 var gustmph = "&gust_mph=";
 var gustkph = "&gust_kph=";
 
+$.get(
+    "http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=46051&days=1",
+    function (data) {
+      console.log("data ", data);
+    }
+  );
+
 var days = {};
 var forecastBaseURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=`;
 var daysurl = "&days=";
