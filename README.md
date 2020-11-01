@@ -1,6 +1,6 @@
 Kim Donlan-N423-Projects
 
-live link (please use this link for grading--Web 4 never works because of the mapping problem):
+live link (please use this link for grading--Web 4 never works because of the mapping problem. I tried to fix the mapping but still not reading the db from Firebase?!):
 https://homework-5-kdonlan.firebaseapp.com
 
 Github files:
