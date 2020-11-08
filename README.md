@@ -1,5 +1,12 @@
 Kim Donlan-N423-Projects
 
-https://kdonlan.github.io/n423-projects/weatherApp/index.html
+live link (please use this link for grading--Web 4 never works because of the mapping problem. I tried to fix the mapping but still not reading the db from Firebase?!):
+https://homework-5-kdonlan.firebaseapp.com
 
-https://kdonlan.github.io/n423-projects/local-storage/index.html
+Github files:
+https://github.com/kdonlan/n423-projects/tree/master/homework5
+
+Web 4 link: (This doesn't work correctly. I think it is the mapping)
+https://in-info-web4.informatics.iupui.edu/~kimdonl/homework5/public/
+
+
