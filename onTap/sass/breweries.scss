@@ -1,0 +1,83 @@
+.breweryWrapper {
+    width: 100%;
+}
+
+.breweryItem {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    // background-color: pink;
+}
+
+.breweryItem img {
+    width: 166px;
+    margin-bottom: 20px;
+}
+
+.breweryItem .glassPic {
+    width: 300px;
+}
+
+.entry {
+    // background-color: pink;
+    margin-left: 75px;
+    // width: 100%;
+    line-height: .45rem;
+    a {
+        font-family: 'Radley', serif;
+        line-height: 39px;
+        text-align: left;
+        text-decoration: none;    }
+}
+
+.entry h3 {
+    font-size: 28px;
+}
+.entry p {
+    text-align: left;
+    font-size: 15px;
+}
+
+#info a {
+    padding-top: 20px;
+    width:150px;
+    height: 20px;
+    background-color: white;
+}
+
+.descItem {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    // background-color: pink;
+}
+
+.descItem .stylePic {
+    width: 150px;
+}
+
+.desc {
+    margin-left: 5px;
+
+    a {
+        font-family: 'Radley', serif;
+        line-height: 39px;
+        text-align: left;
+        text-decoration: none;    
+    }
+}
+
+.desc h3 {
+    font-size: 28px;
+}
+.desc p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5rem;
+}
