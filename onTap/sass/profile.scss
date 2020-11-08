@@ -1,0 +1,124 @@
+.headerContent-bg {
+    width: 80%;
+    min-height: 200px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 50px;
+}
+.header {
+    height: 200px;
+}
+
+.header h3 {
+    // margin-top: 0px;
+    font-size: 30px;
+    text-align: center;
+    color: #565655;
+}
+
+.profileContent-bg {
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 0px;
+}
+
+.profileWrapper {
+    // width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    // justify-items: center;
+    align-items: center;
+    // background-color: pink;
+}
+
+// .profileItem {
+//     width: 100%;
+//     margin: 0 auto;
+//     // background-color:black;
+// }
+
+.profileItem img { //profile Logo
+    width: 400px;
+    // background-color: yellow;
+    margin-top: 75px;
+    align-content: flex-start;;
+}
+
+.profile {
+    width: 100%;
+    line-height: .45rem;
+    a {
+        font-family: 'Radley', serif;
+        line-height: 39px;
+        text-align: left;
+        text-decoration: none;    }
+}
+
+.profile h3 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.profile .profileItem p {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Radley', serif;
+    color: #565655;
+}
+
+li, a {
+    text-align: center;
+    list-style: none;
+    margin-top: 15px;
+    font-family: 'Radley', serif;
+    color: #565655;
+    margin-bottom: 10px;
+}
+
+.columnLayout {
+    padding: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.column {
+    width: 100%;
+    margin: 0 auto; 
+    min-height: 200px;
+    // background-color: pink;
+}
+
+.column h1 {
+    font-size: 40px;
+    text-align: left;
+    opacity: 60%;
+}
+
+.column h3 {
+    font-size: 22px;
+}
+
+.column p {
+    font-family: 'Radley', serif;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: left;
+    color: #565655;
+}
+
+
+.side-by-side li {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px;
+}

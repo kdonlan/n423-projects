@@ -1,27 +1,33 @@
 [
     {
         "name": "Tasting & Sampler Glasses",
+        "image": "./images/beer-taster-glass.jpg", 
         "desc":"The tasting glass, also called a sampler glass, can be found in all shapes and sizes. We add it to our list of beer glasses, because they are commonly found throughout >brewery tours and pubs. Not to mention, every beer geek I know has their own special collection of tasting glasses at their home. Taster glasses typically hold a fraction of the amount of a pint glass, ranging from 2.5 to 6 ounces of beer. They’re purposely designed this way so you can sample a beer, without becoming intoxicated. Taster glasses are also handy for sampling a couple of draft beers at your local pub, without committing yourself to the full pint. Or, if you and your buddies buy a rare, expensive brew, taster glasses are a great way to split it up and allow everyone to experience the full flavor."
     },
     
     {
         "name": "Weizen Glasses",
+        "image": "./images/weizen-glass.jpg",
         "desc":"Weizen glasses are often confused with pilsner glasses, due to their similar shape and size. The main difference between these two styles, is that the Weizen glasses have more curvature to them, especially at the top of the glass. Starting with a strong, narrow base, the glass has a distinctive curve to it as it goes up. This type of beer glass is much taller than a pint glass, and usually holds at least ½ a liter of beer. Another important characteristic, weizen glasses are designed for and primarily used for wheat beers (Weizenbier). The curved lip at the top of the glass helps trap and encourage a thick foam head, allowing for you to appreciate the full aroma and flavor that comes along with wheat beers. However, be wary of the fruit that is usually served on the rim of wheat beers, especially at bars, as the acidity and juice of the fruit could destroy the foam head."
     },
     {
         "name": "Snifters",
+        "image": "./images/snifter-glass.jpg",
         "desc":"This type of beer glassware is somewhat rare to find out in public. However, don’t let that stop you from trying it out. You may have already heard of the snifter glass, as it is usually used for tasting cognac and brandy, but many people don’t realize that it’s also great at enriching the aromatics of beer. The unique shape of the glass allows you to swirl your beer around, stirring up the volatiles which helps bring out the full aroma of your brew. This type of glass looks kinda like the offspring of a wine glass and a goblet. It’s small with a thin stem and footer, but the large bowl on top holds plenty of liquid. Despite how much it can hold, with this type of glass you probably don’t want to fill it all the way up to the rim, as it’s typically reserved for beers with strong flavors and aromas. If you fill it up to the rim it may prohibit you from enjoying the full experience. This type of beer glass is typically used for stronger beers, such as Double or Imperial IPAs and Belgian IPAs, and is a favorite amongst beer enthusiasts."
     },
     {
         "name": "Tulip & Thistle Glasses",
+        "image": "./images/tulip-thistle-glass.png",
         "desc":"Another two popular beer glasses to try out are the Tulip and the Thistle glass. Designed to trap and maintain the foam head, the tulip glass helps enhance the flavor and aromatics of hoppy and malty brews. Much like the goblets and snifters, these types of beer glasses have a small stem and footer with a unique, tulip-like bowl on top. The top rim curves outward, forming a lip that helps ensnare the foam head. The thistle glass resembles a stretched-out version of the tulip. It has the same stumpy stem, with a bulb-like bowl, but it’s slightly taller and has less curves around the lip. The thistle glass is typically reserved and designed for Scottish Ales, as the “thistle” is Scotland’s official flower. Much like the snifter, the tulip glass is commonly used for stronger brews, such as Double IPAs, Belgian ales and barleywines. The bulb-like bowl allows you to generously swirl around your beer, releasing the full aromas. This is another type of beer glass that is a popular amongst beer geeks."
     },
     {
         "name": "Stange Glasses",
+        "image":"./images/stange-glass.jpg",
         "desc":"The stange glass (or stangen glass) is also commonly referred to as a strange glass, stick glass, pole glass or rod glass. This type of beer glass is named this not because it’s a weird looking glass, but because “stange” is the German word for rod… and that’s exactly what it resembles. The stange glass is tall and slender, much like a “Tom Collins” glass. It’s easily the most boring looking beer glass on this list, but its use can be traced back for decades. No beer glass list is complete without the stange. The shape of this glass is generally the same, but the size can vary. Generally, this type of beer glass will hold around 6.5 ounces, but it seems that in recent times larger versions are making their way out onto the market. This glassware is typically reserved for delicate beers, such as German Kölsch, to help intensify the flavors and aromas. The main benefit of this type of beer glass is that it has a firmer concentration of the important volatiles within the beer, allowing you to get a real sense of its flavor."
     },
     {
         "name": "Goblets & Chalices",
+        "image": "./images/goblet.jpg",
         "desc":"Goblets are one of the larger, more extravagant types of glassware that beer drinkers come across. Unlike pint glasses that hold a specified amount of liquid, goblets can be found in a variety of sizes.Goblets can be described as having a long thick stem, with a bowl sitting on top. Chalices are another common name for goblets, as they have the same shape. Chalices usually have thicker glass walls and may be heavier. You may find some goblets and chalices even have a gold or silver rim. This is merely decorative and serves no real purpose in terms of improving the quality of beer. Goblets and chalices are great choices for heavy, malty beers, such as Belgian ales and German Bocks. This type of glassware has a wide opening that assists a beer drinker in analyzing the overall flavor profile and aromas."
     }
 ]

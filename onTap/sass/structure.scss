@@ -1,24 +1,20 @@
 * {
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, a {
     margin-top: 12px;
 }
 
-hr {
-    width: 75%;
-}
-
 body {
-    background-color:#fbb03b;
+    background-color:#565655;
     background-image: url("../images/background-image.png");
     width: 100%;
     // height: 100vh;
     background-size: cover;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -26,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
 }
 
 .logo {
@@ -55,6 +51,10 @@ h1 {
 
 .subtext h1 {
     font-size: 22px;
+}
+
+.subtext p {
+    margin-top: 12px;
 }
 
 h2 {
@@ -101,7 +101,7 @@ nav {
         text-transform: uppercase;
         text-decoration: none;
         color: #fbb03b;
-        transition: .005s;
+        // transition: .005s;
     }
     a:hover {
         background-color: none;
@@ -119,10 +119,20 @@ nav {
     // position: relative;
     z-index: -1;
     width: 80%;
-    // height: 100vh;
+    height: 100%;
     margin: 0 auto;
     background-color: white;
     // opacity: 80%;
+    h1 {
+        padding-top: 66px;
+    }
+    h4 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #565655;
+    }
 }
 
 .homepageImage img {
@@ -133,9 +143,8 @@ nav {
     }
 
     .source {  
-        display: block;
+    display: block;
     height: 50px;
-    // padding: 10px;
     color: #565655;
     a {
         text-align: left;
@@ -143,3 +152,64 @@ nav {
         color: gray;
     }
 }
+  
+  /* On screens that are 992px or less */
+  @media screen and (max-width: 992px) {
+    .homepageImage img {
+        width: 500px; //for mobile use 380px;
+        margin: 0 auto;
+        padding: 10px;
+        padding-bottom: 55px;
+    }
+
+  }
+
+
+  /* On screens that are 700px or less */
+  @media screen and (max-width: 700px) {
+      body {
+        // background-color:#565655;
+        background-image: url("../images/background-image.png");
+        width: 100%;
+        // height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      nav {
+        img {
+            display: block;
+            display: none;
+        }
+            margin-top: 0px;
+            height: 300px;
+            background-color: #556655;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+            a:hover {
+                width: 60%;
+                margin-left: 155px;
+            }
+      }
+          h1 {
+              padding-top: 0px;
+          }
+
+          .content-bg {
+            // display: block;
+            z-index: -1;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+            // opacity: 80%;
+        }
+          
+        .homepageImage img {
+            width: 475px; //for mobile use 380px;
+            margin: 0 auto;
+            padding: 10px;
+            padding-bottom: 55px;
+        }
+    }

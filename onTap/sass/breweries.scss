@@ -13,12 +13,12 @@
 }
 
 .breweryItem img {
-    width: 166px;
+    width: 300px;
     margin-bottom: 20px;
 }
 
 .breweryItem .glassPic {
-    width: 300px;
+    width: 200px;
 }
 
 .entry {
@@ -39,6 +39,7 @@
 .entry p {
     text-align: left;
     font-size: 15px;
+    margin-top: 12px;
 }
 
 #info a {
@@ -53,13 +54,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     // background-color: pink;
 }
 
 .descItem .stylePic {
-    width: 150px;
+    width: 200px;
 }
 
 .desc {
@@ -81,3 +82,131 @@
     font-size: 15px;
     line-height: 1.5rem;
 }
+
+hr {
+    width: 90%;
+    border-top: 1 solid gray;
+}
+
+
+  /* On screens that are 992px or less */
+  @media screen and (max-width: 992px) {
+
+  }
+
+    /* On screens that are 1078px or less */
+    @media screen and (max-width: 1078px) {
+        .breweryItem {
+            // padding: 25px;
+            // padding-bottom: 25px;
+            // display: flex;
+            // flex-direction: column;
+            justify-content: space-around;
+            // justify-items: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .breweryItem img {
+            width: 350px;
+            margin: 0
+        }
+      }
+
+      @media screen and (max-width: 980px) {
+        .content-bg {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+            // padding-top: 75px;
+            // position: relative;
+            z-index: -1;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+            // opacity: 80%;
+            h1 {
+                padding-top: 66px;
+            }
+            h4 {
+                font-family: 'Oswald', sans-serif;
+                font-size: 22px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #565655;
+            }
+        }
+
+        .breweryItem {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            // background-color: pink;
+        }
+        
+
+        .descItem {
+            // padding: 50px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-around;
+            width: 90%;
+            margin: 0 auto;
+            // background-color: pink;
+        }
+        
+        .descItem .stylePic {
+            width: 275px;
+        }
+        
+        .desc {
+            // margin-left: 5px;
+        
+            a {
+                font-family: 'Radley', serif;
+                line-height: 39px;
+                text-align: left;
+                text-decoration: none;    
+            }
+        }
+        
+        .desc h3 {
+            font-size: 28px;
+        }
+        .desc p {
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.5rem;
+        }
+
+        .entry {
+    // background-color: pink;
+    margin-left: 75px;
+    // width: 100%;
+    line-height: .45rem;
+    a {
+        font-family: 'Radley', serif;
+        line-height: 39px;
+        text-align: left;
+        text-decoration: none;    }
+}
+
+.entry h3 {
+    font-size: 28px;
+}
+.entry p {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+.source {
+    font-size: 13px;
+}
+
+      }

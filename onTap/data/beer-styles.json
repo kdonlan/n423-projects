@@ -2,33 +2,39 @@
     {
         "name": "Amber American Lager",
         "desc":"Amber lager features prevalent malt flavors with varying levels of hoppiness. This beer is also characterized by a darker color, caramel aroma, and smooth taste.",
-        "abv": "4.8%"
+        "abv": "4.8%",
+        "image": "./images/american-lager.png"
 
     },
     
     {
         "name": "IPA - India Pale Ale",
         "desc":"American IPAs have more hops, big herbal or citrus flavors, and high bitterness compared to pale ale.",
-        "abv": "6.3%"
+        "abv": "6.3%",
+        "image": "./images/ipa.png"
     },
     {
         "name": "Belgian Pale Ale",
         "desc":"Belgian pale ale contains a toasted malt flavor that is subtle enough to not overpower the taste of the hops.",
-        "abv": "4.0%"
+        "abv": "4.0%", 
+        "image": "./images/belgian-pale-ale.png"
     },
     {
         "name": "Stout",
         "desc":"American stouts feature malt flavors working to create strong chocolate and coffee notes, but without overpowering hop bitterness.",
-        "abv": "5.7%"
+        "abv": "5.7%",
+        "image": "./images/stout.png"
     },
     {
         "name": "Amber Lager",
         "desc":"Amber lager features prevalent malt flavors with varying levels of hoppiness. This beer is also characterized by a darker color, caramel aroma, and smooth taste.", 
-        "abv": "4.8%"
+        "abv": "4.8%",
+        "image": "./images/amber-lager.png"
     },
     {
         "name": "Brown Ale",
         "desc":"American brown ale is a dark beer without the bitterness of porters and stouts. This style boasts a dark caramel color and a medium to full-bodied profile.",
-        "abv": "4.2-6.3%"
+        "abv": "4.2%",
+        "image": "./images/brown-ale.png"
     }
 ]

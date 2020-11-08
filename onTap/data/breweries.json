@@ -6,6 +6,9 @@
         "name": "Liquid Roots",
         "address": "1048 Harper Ave. NW, Lenoir, NC 55521",
         "phone-num": "828-572-1106",
+        "instagram": "https://www.instagram.com/liquidrootsbrewing/",
+        "facebook": "https://www.facebook.com/liquidrootsbrewing",
+        "pets-ok": true,
         "operation_hours": [
             {
                 "day": "M",
@@ -48,92 +51,79 @@
                 "name": "Weiz Guy",
                 "style": "Hefeweizen",
                 "glassware": "Hefe glass",
-                "abv": "5.4", 
-                "guest-tap": false
+                "abv": "5.4"
             },
             {
                 "name": "The Mad Note",
                 "style": "Berry Smoothie Sour",
                 "glassware": "Tulip",
-                "abv": "6.5", 
-                "guest-tap": false
+                "abv": "6.5"
             },
             {
                 "name": "Love Drunk",
                 "style": "Hazy West Coast IPA",
                 "glassware": "IPA glass",
-                "abv": "6.9", 
-                "guest-tap": false
+                "abv": "6.9"
             },
             {
                 "name": "Space Pirate",
                 "style": "Juicy IPA",
                 "glassware": "IPA glass",
-                "abv": "6.7", 
-                "guest-tap": false
+                "abv": "6.7"
             },
             {
                 "name": "Gloop",
                 "style": "Coconut Coffee Milk Stout",
                 "glassware": "Snifter",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Get off the Juice",
                 "style": "Fruited Sour (papaya, passion fruit, pinappe, peach)",
                 "glassware": "Tulip",
-                "abv": "6.0",
-                "guest-tap": false
+                "abv": "6.0"
             },
             {
                 "name": "Burpee",
                 "style": "Blonde Ale",
                 "glassware": "Pint glass",
-                "abv": "5.4",
-                "guest-tap": false
+                "abv": "5.4"
             },
             {
                 "name": "The Magic Bus",
                 "style": "Hazy Pale Ale",
                 "glassware": "Pint glass",
-                "abv": "5.8",
-                "guest-tap": false
+                "abv": "5.8"
             },
             {
                 "name": "Freedom",
                 "style": "Scottish Ale",
                 "glassware": "Pint glass",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Stage 5 Clinger",
                 "style": "Hazy IPA",
                 "glassware": "IPA glass",
-                "abv": "7",
-                "guest-tap": false
+                "abv": "7.0"
             },
             {
                 "name": "Agnes's Unicorn",
                 "style": "Imperial Stout (marshmallow, sea salt, cocoa nibs",
                 "glassware": "Snifter",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Attitudinal Adjustment",
                 "style": "German-Style Pilsner",
                 "glassware": "Pilsner glass",
-                "abv": "5.0",
-                "guest-tap": false
+                "abv": "5.0"
             },
             {
                 "name": "Ciderboys Blackberry Cider",
                 "style": "Cider",
                 "glassware": "Tulip",
-                "abv": "5.0",
-                "guest-tap": true
+                "abv": "5.0"
             }
         ]
     },
@@ -144,6 +134,9 @@
         "name": "Deviate Brewing",
         "address": "4004 W. 96th St., Indianapolis, IN 46268",
         "phone-num": "317-374-8249",
+        "instagram": "https://www.instagram.com/deviatebrewing/",
+        "facebook": "https://www.facebook.com/Deviate-Brewing-1610184242564923",
+        "pets-ok": true,
         "operation_hours": [
             {
                 "day": "M",
@@ -186,92 +179,79 @@
                 "name": "Chocolate Orange",
                 "style": "Imperial Stout",
                 "glassware": "Snifter",
-                "abv": "10.0", 
-                "guest-tap": false
+                "abv": "10.0"
             },
             {
                 "name": "Lactic Prophylactic",
                 "style": "Berliner Weiss",
                 "glassware": "Goblet",
-                "abv": "3.8", 
-                "guest-tap": false
+                "abv": "3.8"
             },
             {
                 "name": "Love Drunk",
                 "style": "Hazy West Coast IPA",
                 "glassware": "IPA glass",
-                "abv": "6.9", 
-                "guest-tap": false
+                "abv": "6.9"
             },
             {
                 "name": "Space Pirate",
                 "style": "Juicy IPA",
                 "glassware": "IPA glass",
-                "abv": "6.7", 
-                "guest-tap": false
+                "abv": "6.7"
             },
             {
                 "name": "Gloop",
                 "style": "Coconut Coffee Milk Stout",
                 "glassware": "Snifter",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Get off the Juice",
                 "style": "Fruited Sour (papaya, passion fruit, pinappe, peach)",
                 "glassware": "Tulip",
-                "abv": "6.0",
-                "guest-tap": false
+                "abv": "6.0"
             },
             {
                 "name": "Burpee",
                 "style": "Blonde Ale",
                 "glassware": "Pint glass",
-                "abv": "5.4",
-                "guest-tap": false
+                "abv": "5.4"
             },
             {
                 "name": "The Magic Bus",
                 "style": "Hazy Pale Ale",
                 "glassware": "Pint glass",
-                "abv": "5.8",
-                "guest-tap": false
+                "abv": "5.8"
             },
             {
                 "name": "Freedom",
                 "style": "Scottish Ale",
                 "glassware": "Pint glass",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Stage 5 Clinger",
                 "style": "Hazy IPA",
                 "glassware": "IPA glass",
-                "abv": "7",
-                "guest-tap": false
+                "abv": "7"
             },
             {
                 "name": "Agnes's Unicorn",
                 "style": "Imperial Stout (marshmallow, sea salt, cocoa nibs",
                 "glassware": "Snifter",
-                "abv": "5.5",
-                "guest-tap": false
+                "abv": "5.5"
             },
             {
                 "name": "Attitudinal Adjustment",
                 "style": "German-Style Pilsner",
                 "glassware": "Pilsner glass",
-                "abv": "5.0",
-                "guest-tap": false
+                "abv": "5.0"
             },
             {
                 "name": "Ciderboys Blackberry Cider",
                 "style": "Cider",
                 "glassware": "Tulip",
-                "abv": "5.0",
-                "guest-tap": true
+                "abv": "5.0"
             }
         ]
     }

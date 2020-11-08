@@ -10,11 +10,11 @@
   margin: 0 auto; }
 
 .breweryItem img {
-  width: 166px;
+  width: 300px;
   margin-bottom: 20px; }
 
 .breweryItem .glassPic {
-  width: 300px; }
+  width: 200px; }
 
 .entry {
   margin-left: 75px;
@@ -30,7 +30,8 @@
 
 .entry p {
   text-align: left;
-  font-size: 15px; }
+  font-size: 15px;
+  margin-top: 12px; }
 
 #info a {
   padding-top: 20px;
@@ -43,11 +44,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 .descItem .stylePic {
-  width: 150px; }
+  width: 200px; }
 
 .desc {
   margin-left: 5px; }
@@ -65,29 +66,197 @@
   font-size: 15px;
   line-height: 1.5rem; }
 
+hr {
+  width: 90%;
+  border-top: 1 solid gray; }
+
+/* On screens that are 992px or less */
+/* On screens that are 1078px or less */
+@media screen and (max-width: 1078px) {
+  .breweryItem {
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto; }
+  .breweryItem img {
+    width: 350px;
+    margin: 0; } }
+
+@media screen and (max-width: 980px) {
+  .content-bg {
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white; }
+    .content-bg h1 {
+      padding-top: 66px; }
+    .content-bg h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #565655; }
+  .breweryItem {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto; }
+  .descItem {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto; }
+  .descItem .stylePic {
+    width: 275px; }
+  .desc a {
+    font-family: 'Radley', serif;
+    line-height: 39px;
+    text-align: left;
+    text-decoration: none; }
+  .desc h3 {
+    font-size: 28px; }
+  .desc p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5rem; }
+  .entry {
+    margin-left: 75px;
+    line-height: .45rem; }
+    .entry a {
+      font-family: 'Radley', serif;
+      line-height: 39px;
+      text-align: left;
+      text-decoration: none; }
+  .entry h3 {
+    font-size: 28px; }
+  .entry p {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 12px; }
+  .source {
+    font-size: 13px; } }
+
+.headerContent-bg {
+  width: 80%;
+  min-height: 200px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 0px;
+  padding-top: 50px; }
+
+.header {
+  height: 200px; }
+
+.header h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #565655; }
+
+.profileContent-bg {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 0px; }
+
+.profileWrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.profileItem img {
+  width: 400px;
+  margin-top: 75px;
+  align-content: flex-start; }
+
+.profile {
+  width: 100%;
+  line-height: .45rem; }
+  .profile a {
+    font-family: 'Radley', serif;
+    line-height: 39px;
+    text-align: left;
+    text-decoration: none; }
+
+.profile h3 {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 28px;
+  text-align: center; }
+
+.profile .profileItem p {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Radley', serif;
+  color: #565655; }
+
+li, a {
+  text-align: center;
+  list-style: none;
+  margin-top: 15px;
+  font-family: 'Radley', serif;
+  color: #565655;
+  margin-bottom: 10px; }
+
+.columnLayout {
+  padding: 70px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between; }
+
+.column {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 200px; }
+
+.column h1 {
+  font-size: 40px;
+  text-align: left;
+  opacity: 60%; }
+
+.column h3 {
+  font-size: 22px; }
+
+.column p {
+  font-family: 'Radley', serif;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: left;
+  color: #565655; }
+
+.side-by-side li {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px; }
+
 * {
   margin: 0px;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, a {
   margin-top: 12px; }
 
-hr {
-  width: 75%; }
-
 body {
-  background-color: #fbb03b;
+  background-color: #565655;
   background-image: url("../images/background-image.png");
   width: 100%;
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-height: 100%; }
+  height: 100%; }
 
 .logo {
   width: 200px;
@@ -110,6 +279,9 @@ h1 {
 
 .subtext h1 {
   font-size: 22px; }
+
+.subtext p {
+  margin-top: 12px; }
 
 h2 {
   font-family: 'Sarina', cursive;
@@ -150,8 +322,7 @@ nav {
     text-align: left;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fbb03b;
-    transition: .005s; }
+    color: #fbb03b; }
   nav a:hover {
     background-color: none;
     margin-bottom: 16px;
@@ -164,8 +335,17 @@ nav {
   justify-content: center;
   z-index: -1;
   width: 80%;
+  height: 100%;
   margin: 0 auto;
   background-color: white; }
+  .content-bg h1 {
+    padding-top: 66px; }
+  .content-bg h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #565655; }
 
 .homepageImage img {
   width: 800px;
@@ -180,3 +360,45 @@ nav {
     text-align: left;
     text-decoration: none;
     color: gray; }
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .homepageImage img {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 55px; } }
+
+/* On screens that are 700px or less */
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url("../images/background-image.png");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  nav {
+    margin-top: 0px;
+    height: 300px;
+    background-color: #556655;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    nav img {
+      display: block;
+      display: none; }
+    nav a:hover {
+      width: 60%;
+      margin-left: 155px; }
+  h1 {
+    padding-top: 0px; }
+  .content-bg {
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white; }
+  .homepageImage img {
+    width: 475px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 55px; } }
