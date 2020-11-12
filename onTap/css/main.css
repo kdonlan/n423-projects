@@ -1,3 +1,96 @@
+.content-bg .container {
+  background-color: white;
+  width: 100%;
+  min-height: 5rem;
+  margin: 0 auto;
+  --color-primary: #565655;
+  --color-secondary: #fbb03b;
+  --color-error: #ff0400;
+  --color-success: #63df58;
+  --border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; }
+
+.containerSm {
+  background-color: white;
+  width: 400px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius); }
+
+.containerSm,
+.form__input,
+.form__button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Radley', serif; }
+
+.form--hidden {
+  display: none; }
+
+.form .form__input-group {
+  font-family: 'Oswald', sans-serif;
+  color: var(--color-primary); }
+
+.form h4 {
+  padding-top: 20px; }
+
+.form__input-group {
+  margin-bottom: 1rem; }
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: .55rem;
+  border-radius: var(--border-radius);
+  border: 1px solid gray;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color .02s; }
+
+.form__input:focus {
+  border-color: var(--color-secondary);
+  background: white; }
+
+.form__message {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 15px; }
+
+.form__message--success {
+  color: var(--color-success); }
+
+.form__message--error {
+  color: var(--color-error); }
+
+.form__input--error {
+  color: var(--color-error);
+  border-color: var(--color-error); }
+
+.form__button {
+  color: var(--color-primary);
+  width: 100px;
+  height: 25px;
+  cursor: pointer; }
+
+.form__button:hover {
+  background-color: var(--color-secondary); }
+
+.form__button:active {
+  transition: scale(0.98);
+  font-weight: bold; }
+
+.form__links {
+  color: var(--color-primary);
+  text-decoration: none; }
+
+.form__links:hover {
+  text-decoration: underline; }
+
 .breweryWrapper {
   width: 100%; }
 
@@ -348,9 +441,10 @@ nav {
     color: #565655; }
 
 .homepageImage img {
-  width: 800px;
+  width: 600px;
   margin: 0 auto;
-  padding: 50px; }
+  padding: 35px;
+  padding-bottom: 35px; }
 
 .source {
   display: block;

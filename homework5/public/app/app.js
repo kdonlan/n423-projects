@@ -13,4 +13,4 @@ function initListeners() {
 $(document).ready(function () {
     Model.initFirebase();
     Model.signIn(initListeners);
-}); 
+});

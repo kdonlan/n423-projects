@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Radley&family=Sarina&display=swap"
         rel="stylesheet">
+
+    <script src="./lib/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+    <script src="./js/form.js"></script>
 </head>
 
 <body>
@@ -18,22 +24,46 @@
         <a href="glasses.html">What Glass?</a>
         <a href="aboutus.html">about us</a>
     </nav>
-    <div class="wrapper">
-        <div class="content-bg">
-            <h1>welcome</h1>
+    <div class="wrapper" style="align-items: center; justify-content: center;">
+        <div class="content-bg" style="height: 80vh;">
+            <div class="container">
+                <div class="containerSm">
+                    <form class="form" id="login">
+                        <h4>Sign in</h4>
+                        <!-- <div class="form__message form__message--error">The username and password combination you entered is not valid.</div> -->
+                        <div class="form__input-group">
+                            <input id="email" type="email" class="form__input" placeholder="Email">
+                        </div>
 
-            <div class="subtext">
-                <h4>Choose a category above to begin</h4>
-                <p>Welcome to the best beer finder because our brewery tap lists are always up to date.
-                    Choose from the categories above to find your favorite or explore new breweries.</p>
-                    <p>Using OnTap keeps you up to date on the taplists, and it's always in the palm of your hand.</p>
-                <h2 style="margin-bottom: 20px;">Cheers!</h2>
-            </div>
+                        <div class="form__input-group">
+                            <input id="password" type="password" class="form__input" placeholder="Password">
+                        </div>
+                        <button class="form__button" type="submit" onclick="signIn()">Sign In</button>
+                        <p class="form__text">
+                            <a class="form__link" >Do not have an account? Create one now.</a></p>
+                            <button class="form__button" type="submit" onclick="signOut()">Sign Out</button>
+                            <button class="form__button" type="submit" onclick="signUp()">Sign Up</button>
+                        </form>
+                </div>
                 <div class="homepageImage">
                     <img src="./images/beer-3570298_1920.jpg">
+                </div>
+
+            </div>
         </div>
-    </div>
     </div>
 </body>
 
 </html>
+
+
+
+<!-- <h1>welcome</h1>
+
+<div class="subtext">
+    <h4>Choose a category above to begin</h4>
+    <p>Welcome to the best beer finder because our brewery tap lists are always up to date.
+        Choose from the categories above to find your favorite or explore new breweries.</p>
+    <p>Using OnTap keeps you up to date on the taplists, and it's always in the palm of your hand.</p>
+    <h2 style="margin-bottom: 20px;">Cheers!</h2>
+</div>
