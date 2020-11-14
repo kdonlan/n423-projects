@@ -1,0 +1,124 @@
+.glassItem {
+    padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        min-width: 100%;
+        margin: 0 auto;
+        // background-color: pink;
+    }
+    
+    .glassItem .glassPic {
+        width: 250px;
+    }
+    
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES////////////////////////////////////////////////////////////////
+    
+    
+          @media screen and (max-width: 525px) {
+    
+    
+            .glassItem {
+                // padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                margin: 0 auto;
+                // background-color: pink;
+            }
+    
+            .glassItem .glassPic {
+                width: 250px;
+            }
+            
+            .source {
+                font-size: 13px;
+            }
+          }
+    
+    
+    
+        @media screen and (max-width: 925px) {
+            .content-bg {
+                display: flex;
+                flex-direction: column;
+                z-index: -1;
+                width: 80%;
+                height: 100%;
+                margin: 0 auto;
+                background-color: white;
+                // opacity: 80%;
+                h1 {
+                    padding-top: 66px;
+                }
+                h4 {
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 22px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #565655;
+                }
+                .styleItem img {
+                    width: 276px;
+                    // background-color: pink;
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                .content-bg {
+                    display: flex;
+                    flex-direction: column;
+                    z-index: -1;
+                    width: 80%;
+                    height: 100%;
+                    margin: 0 auto;
+                    background-color: white;
+                    // opacity: 80%;
+                    h1 {
+                        padding-top: 66px;
+                    }
+                    h4 {
+                        font-family: 'Oswald', sans-serif;
+                        font-size: 22px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #565655;
+                    }
+                }
+                .entry {
+                // line-height: .45rem;
+                    a { 
+                    font-family: 'Radley', serif;
+                    line-height: 39px;
+                    text-align: left;
+                    text-decoration: none;    }
+                }   
+        
+                .entry h3 {
+                    font-size: 28px;
+                }
+                
+                .entry p {
+                text-align: left;
+                font-size: 15px;
+                margin-top: 12px;
+                }
+        
+                .source {
+                    font-size: 13px;
+                }
+        
+            }
+    
+            .glassItem {
+                // padding: 50px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                width: 100%;
+                margin: 0 auto;
+                // background-color: pink;
+            }
+        }

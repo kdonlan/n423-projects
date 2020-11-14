@@ -91,7 +91,7 @@
 .form__links:hover {
   text-decoration: underline; }
 
-.styleItem {
+.glassItem {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -99,11 +99,89 @@
   min-width: 100%;
   margin: 0 auto; }
 
+.glassItem .glassPic {
+  width: 250px; }
+
+@media screen and (max-width: 525px) {
+  .glassItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto; }
+  .glassItem .glassPic {
+    width: 250px; }
+  .source {
+    font-size: 13px; } }
+
+@media screen and (max-width: 925px) {
+  .content-bg {
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white; }
+    .content-bg h1 {
+      padding-top: 66px; }
+    .content-bg h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #565655; }
+    .content-bg .styleItem img {
+      width: 276px; } }
+
+@media screen and (max-width: 925px) and (max-width: 700px) {
+  .content-bg {
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: white; }
+    .content-bg h1 {
+      padding-top: 66px; }
+    .content-bg h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #565655; }
+  .entry a {
+    font-family: 'Radley', serif;
+    line-height: 39px;
+    text-align: left;
+    text-decoration: none; }
+  .entry h3 {
+    font-size: 28px; }
+  .entry p {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 12px; }
+  .source {
+    font-size: 13px; } }
+
+@media screen and (max-width: 925px) {
+  .glassItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto; } }
+
+.styleItem {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100%;
+  margin: 0 auto; }
+
 .styleItem .stylePic {
   width: 300px; }
-
-.vert hr {
-  stroke: 1 solid red; }
 
 @media screen and (max-width: 525px) {
   .styleItem {
@@ -188,7 +266,7 @@
   margin-bottom: 20px; }
 
 .entry {
-  padding: 25px; }
+  padding: 40px; }
   .entry a {
     font-family: 'Radley', serif;
     line-height: 39px;
@@ -203,19 +281,20 @@
   font-size: 15px;
   margin-top: 12px; }
 
-#info a {
-  padding-top: 20px;
-  text-align: left;
-  width: 150px;
-  height: 20px;
-  background-color: white; }
-
 .breweryItem .stylePic {
   width: 400px; }
 
 hr {
   width: 90%;
   border-top: 1 solid gray; }
+
+.entry .hours li {
+  text-align: left;
+  font-size: 15px;
+  line-height: 7px; }
+
+#source {
+  font-size: 21px; }
 
 @media screen and (max-width: 525px) {
   .content-bg {
@@ -242,19 +321,21 @@ hr {
     margin: 0 auto; }
     .breweryItem img {
       width: 300px; }
-  .entry a {
-    font-family: 'Radley', serif;
-    line-height: 39px;
-    text-align: left;
-    text-decoration: none; }
+  .entry {
+    padding-top: 10px; }
+    .entry a {
+      font-family: 'Radley', serif;
+      line-height: 39px;
+      text-align: left;
+      text-decoration: none; }
   .entry h3 {
     font-size: 28px; }
   .entry p {
     text-align: left;
     font-size: 15px;
     margin-top: 12px; }
-  .source {
-    font-size: 13px; } }
+  #source {
+    font-size: 18px; } }
 
 @media screen and (max-width: 900px) {
   .content-bg {
@@ -274,15 +355,18 @@ hr {
       text-transform: uppercase;
       color: #565655; }
   .breweryItem {
+    padding: 5px;
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 0 auto; }
-  .entry a {
-    font-family: 'Radley', serif;
-    line-height: 39px;
-    text-align: left;
-    text-decoration: none; }
+  .entry {
+    padding-bottom: 10px; }
+    .entry a {
+      font-family: 'Radley', serif;
+      line-height: 39px;
+      text-align: left;
+      text-decoration: none; }
   .entry h3 {
     font-size: 28px; }
   .entry p {
@@ -293,59 +377,34 @@ hr {
     font-size: 13px; } }
 
 .headerContent-bg {
-  width: 80%;
-  min-height: 200px;
+  width: 100%;
   margin: 0 auto;
   background-color: white;
-  margin-top: 0px;
-  padding-top: 50px; }
-
-.header {
-  height: 200px; }
+  margin-top: 0px; }
 
 .header h3 {
   font-size: 30px;
   text-align: center;
   color: #565655; }
 
+.header h1 {
+  padding-top: 0;
+  opacity: 60%; }
+
 .profileContent-bg {
-  width: 80%;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   background-color: white;
-  margin-top: 0px; }
-
-.profileWrapper {
-  margin: 0 auto;
+  margin-top: 0px;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
-.profileItem img {
-  width: 400px;
-  margin-top: 75px;
-  align-content: flex-start; }
-
-.profile {
-  width: 100%;
-  line-height: .45rem; }
-  .profile a {
-    font-family: 'Radley', serif;
-    line-height: 39px;
-    text-align: left;
-    text-decoration: none; }
-
-.profile h3 {
-  padding-top: 5px;
-  padding-bottom: 10px;
-  font-size: 28px;
-  text-align: center; }
-
-.profile .profileItem p {
-  text-align: center;
-  font-size: 15px;
-  font-family: 'Radley', serif;
-  color: #565655; }
+.header img {
+  width: 500px;
+  margin-top: 45px;
+  align-content: space-around; }
 
 li, a {
   text-align: center;
@@ -358,19 +417,24 @@ li, a {
 .columnLayout {
   padding: 70px;
   width: 100%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: row;
-  align-content: space-between; }
+  align-content: space-around;
+  justify-items: center; }
 
 .column {
   width: 100%;
   margin: 0 auto;
-  min-height: 200px; }
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 10px; }
 
 .column h1 {
   font-size: 40px;
-  text-align: left;
+  text-align: center;
   opacity: 60%; }
 
 .column h3 {
@@ -379,15 +443,46 @@ li, a {
 .column p {
   font-family: 'Radley', serif;
   font-size: 15px;
-  margin-top: 10px;
   text-align: left;
   color: #565655; }
+
+.column img {
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px; }
+
+.beerItem {
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .side-by-side li {
   width: 100%;
   margin: 0 auto;
   background-color: white;
-  padding: 15px; }
+  padding-bottom: 30px; }
+
+.myButton {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #ffec64;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: #565656;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 11px 50px;
+  text-decoration: none;
+  text-align: center; }
+
+.myButton:hover {
+  background-color: #565656;
+  color: #ffab23; }
+
+.myButton:active {
+  position: relative;
+  top: 2px; }
 
 * {
   margin: 0px;
@@ -408,13 +503,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%; }
 
 .logo {
   width: 200px;
   margin: 0 auto;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1; }
   .logo a:hover {
     margin-bottom: 25px; }
 
@@ -429,6 +527,8 @@ h1 {
 .subtext {
   width: 400px;
   margin: 0 auto; }
+  .subtext h2 {
+    margin-bottom: 20px; }
 
 .subtext h1 {
   font-size: 22px; }
@@ -486,13 +586,11 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  padding-top: 25px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   background-color: white; }
-  .content-bg h1 {
-    padding-top: 66px; }
   .content-bg h4 {
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
@@ -515,13 +613,22 @@ nav {
     text-decoration: none;
     color: gray; }
 
-/* On screens that are 992px or less */
-@media screen and (max-width: 992px) {
+/* On screens that are399x or less */
+@media screen and (max-width: 510px) {
   .homepageImage img {
-    width: 500px;
     margin: 0 auto;
+    width: 200px;
     padding: 10px;
-    padding-bottom: 55px; } }
+    padding-bottom: 55px; }
+  .subtext {
+    width: 250px; } }
+
+/* On screens that are 700px or less */
+@media screen and (max-width: 600px) {
+  .homepageImage img {
+    display: none; }
+  .subtext {
+    width: 250px; } }
 
 /* On screens that are 700px or less */
 @media screen and (max-width: 700px) {
@@ -551,7 +658,15 @@ nav {
     margin: 0 auto;
     background-color: white; }
   .homepageImage img {
-    width: 475px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 55px; } }
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .homepageImage img {
+    width: 500px;
     margin: 0 auto;
     padding: 10px;
     padding-bottom: 55px; } }

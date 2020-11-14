@@ -2,7 +2,7 @@
 padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     min-width: 100%;
     margin: 0 auto;
     // background-color: pink;
@@ -10,11 +10,6 @@ padding: 10px;
 
 .styleItem .stylePic {
     width: 300px;
-}
-
-.vert hr {
-    stroke: 1 solid red;
-
 }
 
 
@@ -122,9 +117,3 @@ padding: 10px;
             // background-color: pink;
         }
     }
-
-    //   @media screen and (max-width: 399px) {
-    //     .breweryItem .stylePic {
-    //         width: 70px;
-    //     }
-    //   }

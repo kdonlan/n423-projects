@@ -1,13 +1,9 @@
 .headerContent-bg {
-    width: 80%;
-    min-height: 200px;
+    width: 100%;
+    // min-height: 200px;
     margin: 0 auto;
     background-color: white;
     margin-top: 0px;
-    padding-top: 50px;
-}
-.header {
-    height: 200px;
 }
 
 .header h3 {
@@ -17,59 +13,28 @@
     color: #565655;
 }
 
+.header h1 {
+    padding-top: 0;
+    opacity: 60%;
+}
+
 .profileContent-bg {
-    width: 80%;
+    width: 100%;
     min-height: 100vh;
     margin: 0 auto;
     background-color: white;
     margin-top: 0px;
-}
-
-.profileWrapper {
-    // width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    // justify-items: center;
     align-items: center;
-    // background-color: pink;
+
 }
 
-// .profileItem {
-//     width: 100%;
-//     margin: 0 auto;
-//     // background-color:black;
-// }
-
-.profileItem img { //profile Logo
-    width: 400px;
+.header img { //profile Logo
+    width: 500px;
     // background-color: yellow;
-    margin-top: 75px;
-    align-content: flex-start;;
-}
-
-.profile {
-    width: 100%;
-    line-height: .45rem;
-    a {
-        font-family: 'Radley', serif;
-        line-height: 39px;
-        text-align: left;
-        text-decoration: none;    }
-}
-
-.profile h3 {
-    padding-top: 5px;
-    padding-bottom: 10px;
-    font-size: 28px;
-    text-align: center;
-}
-
-.profile .profileItem p {
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Radley', serif;
-    color: #565655;
+    margin-top: 45px;
+    align-content: space-around;
 }
 
 li, a {
@@ -84,41 +49,98 @@ li, a {
 .columnLayout {
     padding: 70px;
     width: 100%;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    align-content: space-around;
+    // align-content: center;
+    // justify-content: center;
+    // align-content: center;
+    justify-items: center;
+    // background-color: yellow;
 }
 
 .column {
     width: 100%;
-    margin: 0 auto; 
-    min-height: 200px;
+    margin: 0 auto;
+    display: flex;   
+    flex-direction: column; 
+    align-content: center;
+    // min-height: 200px;
     // background-color: pink;
+    margin-left: 10px; 
 }
 
 .column h1 {
     font-size: 40px;
-    text-align: left;
+    text-align: center;
     opacity: 60%;
 }
 
 .column h3 {
     font-size: 22px;
+    // padding: 0 0 25px;
 }
 
 .column p {
     font-family: 'Radley', serif;
     font-size: 15px;
-    margin-top: 10px;
+    // margin-top: 10px;
     text-align: left;
     color: #565655;
 }
 
+.column img {
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.beerItem {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .side-by-side li {
     width: 100%;
     margin: 0 auto;
     background-color: white;
-    padding: 15px;
+    padding-bottom: 30px;
 }
+
+
+.myButton {
+    // width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    // box-shadow: 4px 4px 0px 0px #fff6af;
+	background-color:#ffec64;
+	border-radius:6px;
+	// border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#565656;
+    font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	padding:11px 50px;
+    text-decoration:none;
+    text-align: center;
+	// text-shadow:0px 1px 0px #ffee66;
+}
+
+.myButton:hover {
+	// background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color:#565656;
+    color: #ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:2px;
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

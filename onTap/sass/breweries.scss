@@ -20,7 +20,7 @@
 
 
 .entry {
-padding: 25px;
+padding: 40px;
     // line-height: .45rem;
     a {
         font-family: 'Radley', serif;
@@ -38,14 +38,6 @@ padding: 25px;
     margin-top: 12px;
 }
 
-#info a {
-    padding-top: 20px;
-    text-align: left;
-    width:150px;
-    height: 20px;
-    background-color: white;
-}
-
 .breweryItem .stylePic {
     width: 400px;
 }
@@ -56,9 +48,19 @@ hr {
     border-top: 1 solid gray;
 }
 
+.entry .hours li {
+    text-align: left;
+    font-size: 15px;
+    line-height: 7px;
+}
 
+#source {
+    font-size: 21px;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES////////////////////////////////////////////////////////////////
+
+
 
 
       @media screen and (max-width: 525px) {
@@ -97,6 +99,7 @@ hr {
         }
 
         .entry {
+            padding-top: 10px;
         // line-height: .45rem;
             a { 
             font-family: 'Radley', serif;
@@ -115,8 +118,8 @@ hr {
         margin-top: 12px;
         }
 
-        .source {
-            font-size: 13px;
+        #source {
+            font-size: 18px;
         }
       }
 
@@ -144,7 +147,7 @@ hr {
         }
 
         .breweryItem {
-            // padding: 50px;
+            padding: 5px;
             display: flex;
             flex-direction: column;
             // justify-content: center;
@@ -156,8 +159,8 @@ hr {
 
     
     .entry {
-        // line-height: .45rem;
-            a { 
+            // padding-top: 10px;
+            padding-bottom: 10px;            a { 
             font-family: 'Radley', serif;
             line-height: 39px;
             text-align: left;
@@ -179,9 +182,3 @@ hr {
         }
 
     }
-
-    //   @media screen and (max-width: 399px) {
-    //     .breweryItem .stylePic {
-    //         width: 70px;
-    //     }
-    //   }
