@@ -181,7 +181,7 @@
   margin: 0 auto; }
 
 .styleItem .stylePic {
-  width: 300px; }
+  width: 250px; }
 
 @media screen and (max-width: 525px) {
   .styleItem {
@@ -268,6 +268,8 @@
   margin-bottom: 20px; }
 
 .entry {
+  width: 90%;
+  margin: 0 auto;
   padding: 15px; }
   .entry a {
     font-family: 'Radley', serif;
@@ -287,7 +289,7 @@
   width: 400px; }
 
 hr {
-  width: 90%;
+  width: 95%;
   border-top: 1 solid gray; }
 
 .entry .hours li {
@@ -497,17 +499,33 @@ h1, h2, h3, h4, h5, h6, a {
 body {
   background-color: #565655;
   background-image: url("../images/background-image.png");
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.auth {
   width: 100%;
-  height: 100%; }
+  height: 18px;
+  display: flex;
+  flex-direction: column; }
+  .auth h3 {
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+    font-style: 700;
+    color: white;
+    text-align: right;
+    padding-right: 100px; }
+  .auth p {
+    line-height: 10px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: right;
+    padding-right: 100px; }
+  .auth a {
+    width: 100%;
+    text-decoration: none;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: right; }
 
 .logo {
   width: 200px;
@@ -617,6 +635,8 @@ nav {
 
 /* On screens that are399x or less */
 @media screen and (max-width: 510px) {
+  .content-bg {
+    min-height: 667px; }
   .homepageImage img {
     margin: 0 auto;
     width: 200px;
@@ -626,14 +646,15 @@ nav {
     width: 250px; } }
 
 /* On screens that are 700px or less */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 745px) {
   .homepageImage img {
     display: none; }
   .subtext {
     width: 250px; } }
 
 /* On screens that are 700px or less */
-@media screen and (max-width: 700px) {
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
   nav {
     width: 80%;
     margin: 0 auto;
@@ -643,8 +664,8 @@ nav {
     flex-direction: column;
     justify-content: space-around; }
     nav .logo {
-      width: 160px;
-      padding-top: 50px;
+      width: 180px;
+      padding-top: 65px;
       margin: 0 auto; }
     nav a {
       line-height: 20px;
@@ -659,16 +680,34 @@ nav {
     height: 100%;
     margin: 0 auto;
     background-color: white; }
-  .homepageImage img {
-    width: 400px;
+  .auth {
+    background-color: #565656;
+    height: 125px;
+    width: 100%;
     margin: 0 auto;
-    padding: 10px;
-    padding-bottom: 55px; } }
+    display: flex;
+    flex-direction: column; }
+    .auth h3 {
+      padding-right: 0px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 25px;
+      font-style: 700;
+      color: white;
+      text-align: center; }
+    .auth p {
+      padding-right: 0px;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); }
+    .auth a {
+      padding-right: 0px;
+      margin: 0 auto;
+      text-decoration: none;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); } }
 
-/* On screens that are 992px or less */
-@media screen and (max-width: 992px) {
-  .homepageImage img {
-    width: 500px;
-    margin: 0 auto;
-    padding: 10px;
-    padding-bottom: 55px; } }
+.homepageImage img {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 55px; }

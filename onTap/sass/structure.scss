@@ -11,19 +11,41 @@ h1, h2, h3, h4, h5, h6, a {
 body {
     background-color:#565655;
     background-image: url("../images/background-image.png");
-    width: 100%;
     // height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.auth {
+    // background-color:yellow;
     width: 100%;
-    height: 100%;
+    height: 18px;
+    display: flex;
+    flex-direction: column; 
+   h3 {
+        // background-color: pink;
+        font-family: 'Oswald', sans-serif;
+        text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
+        font-size: 25px;
+        font-style: 700;
+        color: white;
+        // line-height: 25px;
+        text-align: right;
+        padding-right: 100px;
+    }
+    p {
+        line-height: 10px;
+        color: white;
+        text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
+        text-align: right;
+        padding-right: 100px;
+    }
+    a {
+        width: 100%;
+        text-decoration: none;
+         text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
+         text-align: right;
+    }
 }
 
 .logo {
@@ -129,9 +151,6 @@ nav {
     margin: 0 auto;
     background-color: white;
     // opacity: 80%;
-    h1 {
-        // padding-top: 66px;
-    }
     h4 {
         font-family: 'Oswald', sans-serif;
         font-size: 22px;
@@ -165,6 +184,9 @@ nav {
 
 /* On screens that are399x or less */
 @media screen and (max-width: 510px) {
+    .content-bg {
+        min-height: 667px;
+    }
     .homepageImage img {
         margin: 0 auto;
         width: 200px;
@@ -176,9 +198,11 @@ nav {
     }
 }
 
+  
+
 
 /* On screens that are 700px or less */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 745px) {
     .homepageImage img {
      display:none;
     }
@@ -189,60 +213,84 @@ nav {
 
 
   /* On screens that are 700px or less */
-  @media screen and (max-width: 700px) {
-    nav {
-      width: 80%;
-      margin: 0 auto;
-      margin-top: 0px;
-      height: 325px;
-      background-color:white;
-      // background-color: #556655;
-      flex-direction: column;
-      justify-content: space-around;
-      // align-items: center;
-      
-      .logo {
-          width: 160px;
-          padding-top: 50px;
-          margin: 0 auto;
-      }
-      a { 
-          line-height: 20px;
-          font-size: 1.25rem;
-      }
-      a:hover {
-          color:#565655;
-      } 
-    }
-        h1 {
-            padding-top: 0px;
-        }
-
-        .content-bg {
-          // display: block;
-          z-index: -1;
-          width: 80%;
-          height: 100%;
-          margin: 0 auto;
-          background-color: white;
-          // opacity: 80%;
-      }
-        
-      .homepageImage img {
-          width: 400px; //for mobile use 380px;
-          margin: 0 auto;
-          padding: 10px;
-          padding-bottom: 55px;
-      }
-  }  
+//   @media screen and (max-width: 700px) {
+ 
 
 /* On screens that are 992px or less */
   @media screen and (max-width: 992px) {
+    nav {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 0px;
+        height: 325px;
+        background-color:white;
+        // background-color: #556655;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        
+        .logo {
+            width: 180px;
+            padding-top: 65px;
+            margin: 0 auto;
+        }
+        a { 
+            line-height: 20px;
+            font-size: 1.25rem;
+        }
+        a:hover {
+            color:#565655;
+        } 
+      }
+          h1 {
+              padding-top: 0px;
+          }
+  
+          .content-bg {
+            // display: block;
+            z-index: -1;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+            // opacity: 80%;
+        }
+          
+        .auth {
+          background-color: #565656;
+          height: 125px;
+          width: 100%;
+          margin:0 auto;
+          display: flex;
+          flex-direction: column;
+          // align-items: space-around; 
+          h3 {
+              padding-right: 0px;
+              font-family: 'Oswald', sans-serif;
+              font-size: 25px;
+              font-style: 700;
+              color: white;
+              // line-height: 25px;
+              text-align: center;
+          }
+          p {
+              padding-right: 0px;
+              text-align: center;
+              line-height: 30px;
+              color: white;
+              text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
+          }
+          a {
+              padding-right: 0px;
+              margin: 0 auto;
+              text-decoration: none;
+              text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
+          }
+      }
+  }
     .homepageImage img {
         width: 500px; //for mobile use 380px;
         margin: 0 auto;
         padding: 10px;
         padding-bottom: 55px;
     }
-
-  }

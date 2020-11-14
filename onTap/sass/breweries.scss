@@ -20,7 +20,9 @@
 
 
 .entry {
-padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
     // line-height: .45rem;
     a {
         font-family: 'Radley', serif;
@@ -44,7 +46,7 @@ padding: 15px;
 
 
 hr {
-    width: 90%;
+    width: 95%;
     border-top: 1 solid gray;
 }
 
