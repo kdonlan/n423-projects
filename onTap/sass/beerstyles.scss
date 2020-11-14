@@ -1,10 +1,5 @@
-.breweryWrapper {
-    width: 100%;
-}
-
-.breweryItem {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.styleItem {
+padding: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -13,77 +8,23 @@
     // background-color: pink;
 }
 
-.breweryItem img {
-    width: 405px;
-    margin-bottom: 20px;
+.styleItem .stylePic {
+    width: 300px;
 }
 
+.vert hr {
+    stroke: 1 solid red;
 
-.entry {
-padding: 25px;
-    // line-height: .45rem;
-    a {
-        font-family: 'Radley', serif;
-        line-height: 39px;
-        text-align: left;
-        text-decoration: none;    }
 }
-
-.entry h3 {
-    font-size: 28px;
-}
-.entry p {
-    text-align: left;
-    font-size: 15px;
-    margin-top: 12px;
-}
-
-#info a {
-    padding-top: 20px;
-    text-align: left;
-    width:150px;
-    height: 20px;
-    background-color: white;
-}
-
-.breweryItem .stylePic {
-    width: 400px;
-}
-
-
-hr {
-    width: 90%;
-    border-top: 1 solid gray;
-}
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES////////////////////////////////////////////////////////////////
 
 
       @media screen and (max-width: 525px) {
-        .content-bg {
-            display: flex;
-            flex-direction: column;
-            z-index: -1;
-            height: 100%;
-            margin: 0 auto;
-            background-color: white;
-            // opacity: 80%;
-            h1 {
-                padding-top: 66px;
-                font-size: 42px;
-            }
-            h4 {
-                font-family: 'Oswald', sans-serif;
-                font-size: 15px;
-                text-align: center;
-                text-transform: uppercase;
-                color: #565655;
-            }
-        }
 
-        .breweryItem {
+
+        .styleItem {
             // padding: 50px;
             display: flex;
             flex-direction: column;
@@ -91,11 +32,39 @@ hr {
             width: 100%;
             margin: 0 auto;
             // background-color: pink;
-            img {
-                width: 300px;
-            }
         }
 
+        .styleItem .stylePic {
+            width: 250px;
+        }
+        
+        .source {
+            font-size: 13px;
+        }
+      }
+
+
+      @media screen and (max-width: 700px) {
+        .content-bg {
+            display: flex;
+            flex-direction: column;
+            z-index: -1;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+            // opacity: 80%;
+            h1 {
+                padding-top: 66px;
+            }
+            h4 {
+                font-family: 'Oswald', sans-serif;
+                font-size: 22px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #565655;
+            }
+        }
         .entry {
         // line-height: .45rem;
             a { 
@@ -118,10 +87,10 @@ hr {
         .source {
             font-size: 13px;
         }
-      }
 
+    }
 
-      @media screen and (max-width: 900px) {
+    @media screen and (max-width: 925px) {
         .content-bg {
             display: flex;
             flex-direction: column;
@@ -143,7 +112,7 @@ hr {
             }
         }
 
-        .breweryItem {
+        .styleItem {
             // padding: 50px;
             display: flex;
             flex-direction: column;
@@ -152,32 +121,6 @@ hr {
             margin: 0 auto;
             // background-color: pink;
         }
-        
-
-    
-    .entry {
-        // line-height: .45rem;
-            a { 
-            font-family: 'Radley', serif;
-            line-height: 39px;
-            text-align: left;
-            text-decoration: none;    }
-        }   
-
-        .entry h3 {
-            font-size: 28px;
-        }
-        
-        .entry p {
-        text-align: left;
-        font-size: 15px;
-        margin-top: 12px;
-        }
-
-        .source {
-            font-size: 13px;
-        }
-
     }
 
     //   @media screen and (max-width: 399px) {
