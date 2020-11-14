@@ -151,11 +151,6 @@ nav {
         text-decoration: none;
         color: gray;
     }
-
-    .horz hr {
-        width: 90%;
-        border-top: 1 solid gray;
-    }
 }
   
   /* On screens that are 992px or less */
@@ -169,33 +164,31 @@ nav {
 
   }
 
-
   /* On screens that are 700px or less */
   @media screen and (max-width: 700px) {
-      body {
-        // background-color:#565655;
-        background-image: url("../images/background-image.png");
-        width: 100%;
-        // height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
       nav {
-        img {
-            display: block;
-            display: none;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 0px;
+        height: 325px;
+        background-color:white;
+        // background-color: #556655;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        
+        .logo {
+            width: 160px;
+            padding-top: 50px;
+            margin: 0 auto;
         }
-            margin-top: 0px;
-            height: 300px;
-            background-color: #556655;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            
-            a:hover {
-                width: 60%;
-                margin-left: 155px;
-            }
+        a { 
+            line-height: 20px;
+            font-size: 1.25rem;
+        }
+        a:hover {
+            color:#565655;
+        } 
       }
           h1 {
               padding-top: 0px;
