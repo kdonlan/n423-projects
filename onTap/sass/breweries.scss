@@ -7,7 +7,7 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     min-width: 100%;
     margin: 0 auto;
     // background-color: pink;
@@ -20,7 +20,7 @@
 
 
 .entry {
-padding: 40px;
+padding: 15px;
     // line-height: .45rem;
     a {
         font-family: 'Radley', serif;
