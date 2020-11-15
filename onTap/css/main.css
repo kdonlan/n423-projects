@@ -256,6 +256,7 @@
 
 .breweryItem {
   padding-top: 50px;
+  margin: 0 auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
@@ -408,6 +409,7 @@ hr {
 .header img {
   width: 500px;
   margin-top: 45px;
+  margin: 0 auto;
   align-content: space-around; }
 
 li, a {
@@ -450,14 +452,12 @@ li, a {
   text-align: left;
   color: #565655; }
 
-.column img {
-  width: 350px;
-  margin: 0 auto;
-  padding: 20px; }
-
 .beerItem {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+.beerItem img {
+  width: 380px; }
 
 .side-by-side li {
   width: 100%;
@@ -466,6 +466,8 @@ li, a {
   padding-bottom: 30px; }
 
 .myButton {
+  width: 50%;
+  margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: #ffec64;
@@ -487,6 +489,67 @@ li, a {
 .myButton:active {
   position: relative;
   top: 2px; }
+
+@media screen and (max-width: 994px) {
+  .header h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #565655; }
+  .header h1 {
+    padding-top: 0;
+    opacity: 60%; }
+  .header img {
+    width: 480px;
+    align-content: space-around; }
+  .columnLayout {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around; }
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+  .beerItem img {
+    width: 480px;
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+
+@media screen and (max-width: 675px) {
+  .header h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: #565655; }
+  .header h1 {
+    padding-top: 0;
+    opacity: 60%;
+    font-size: 37px; }
+  .header h4 {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .header img {
+    margin: 0 auto;
+    width: 310px; }
+  .beerItem img {
+    width: 280px;
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+
+@media screen and (max-width: 400px) {
+  .beerItem img {
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .header h1 {
+    padding-top: 0;
+    opacity: 60%;
+    font-size: 25px; }
+  .header img {
+    width: 270px; } }
 
 * {
   margin: 0px;
@@ -606,7 +669,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
+  padding-top: 50px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -665,9 +728,10 @@ nav {
     justify-content: space-around; }
     nav .logo {
       width: 180px;
-      padding-top: 65px;
+      padding-top: 55px;
       margin: 0 auto; }
     nav a {
+      margin-bottom: 5px;
       line-height: 20px;
       font-size: 1.25rem; }
     nav a:hover {

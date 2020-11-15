@@ -34,6 +34,7 @@
     width: 500px;
     // background-color: yellow;
     margin-top: 45px;
+    margin: 0 auto;
     align-content: space-around;
 }
 
@@ -91,15 +92,13 @@ li, a {
     color: #565655;
 }
 
-.column img {
-    width: 350px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .beerItem {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.beerItem img {
+    width: 380px;
 }
 
 .side-by-side li {
@@ -111,7 +110,8 @@ li, a {
 
 
 .myButton {
-    // width: 50%;
+    width: 50%;
+    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
     // box-shadow: 4px 4px 0px 0px #fff6af;
@@ -144,3 +144,106 @@ li, a {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@media screen and (max-width: 994px) {
+    
+    .header h3 {
+        // margin-top: 0px;
+        font-size: 30px;
+        text-align: center;
+        color: #565655;
+    }
+    
+    .header h1 {
+        padding-top: 0;
+        opacity: 60%;
+    }
+    
+    .header img { //profile Logo
+        width: 480px;
+        // background-color: yellow;
+        // margin-top: 45px;
+        align-content: space-around;
+    }
+    
+    .columnLayout {
+        padding: 20px;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+    }
+    
+    .column {
+        display: flex;   
+        flex-direction: column; 
+        align-content: center;
+    }
+
+    .beerItem img {
+        width: 480px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 675px) {
+    
+    .header h3 {
+        // margin-top: 0px;
+        // font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        color: #565655;
+    }
+    
+    .header h1 {
+        padding-top: 0;
+        opacity: 60%;
+        font-size: 37px;
+    }
+
+    .header h4 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header img { //profile Logo
+        margin: 0 auto;
+        width: 310px;
+    }
+
+
+    .beerItem img {
+        width: 280px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .beerItem img {
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header h1 {
+        padding-top: 0;
+        opacity: 60%;
+        font-size: 25px;
+    }
+
+    .header img {
+        width: 270px;
+    }
+}
