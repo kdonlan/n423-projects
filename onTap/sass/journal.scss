@@ -1,0 +1,104 @@
+
+.journalWrapper {
+    width: 100%;
+    // background-color: pink;
+}
+
+.customize-journal {
+    width: 325px;
+    margin: 0 auto;
+    // background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;;
+}
+
+.customize-journal h1 {
+        font-size: 30px;
+        margin-top: 0;
+        opacity: 50%;
+    }
+.journalItem {
+    padding-top: 50px;
+    margin: 0 auto;
+    // padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 100%;
+    margin: 0 auto;
+    // background-color: pink;
+}
+
+.journal-image .journalPic {
+    width: 40px;
+    margin: 0 auto;
+    padding: 0px;
+    // margin-bottom: 20px;
+
+}
+
+
+.journal-entry {
+    padding-right: 45px;
+    // padding-bottom: 25px;
+    // line-height: .45rem;
+    a {
+        font-family: 'Radley', serif;
+        // line-height: 39px;
+        // text-align: left;
+        text-decoration: none;
+        line-height: 25px;
+    }
+        h3 {
+            font-size: 25px;
+        }
+        h1 {
+            color: gray;
+            font-size: 25px;
+            line-height: 20px;
+            text-align: right;
+        }
+}
+
+.journal-entry p {
+    text-align: left;
+    line-height: 15px;
+    font-size: 25px;
+    margin-top: 12px;
+    font-size: 20px;
+    opacity: 60%;
+}
+
+.descItal {
+    font-style: italic;
+    color: rgb(214, 74, 6);
+    font-weight: bold; 
+    
+}
+
+.journal-entry .journalPic {
+    width: 300px;
+}
+
+
+hr {
+    width: 95%;
+    border-top: 1 solid gray;
+}
+
+.journal-entry li {
+    text-align: left;
+    font-size: 15px;
+    line-height: 7px;
+}
+
+.customize-journal h1 {
+    font-size: 18px;
+    margin-top: 0;
+    opacity: 50%;
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES////////////////////////////////////////////////////////////////

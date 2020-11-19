@@ -1,5 +1,9 @@
 .breweryWrapper {
     width: 100%;
+    hr {
+        width: 95%;
+        border-top: 1 solid gray;
+    }
 }
 
 .breweryItem {
@@ -8,7 +12,6 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     min-width: 100%;
     margin: 0 auto;
     // background-color: pink;
@@ -51,10 +54,15 @@ hr {
     border-top: 1 solid gray;
 }
 
+.entry .hours {
+    width: 200px;
+}
+
 .entry .hours li {
     text-align: left;
     font-size: 15px;
     line-height: 7px;
+    width: 200px;
 }
 
 #source {

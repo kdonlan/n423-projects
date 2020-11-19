@@ -1,3 +1,76 @@
+.journalWrapper {
+  width: 100%; }
+
+.customize-journal {
+  width: 325px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.customize-journal h1 {
+  font-size: 30px;
+  margin-top: 0;
+  opacity: 50%; }
+
+.journalItem {
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 100%;
+  margin: 0 auto; }
+
+.journal-image .journalPic {
+  width: 40px;
+  margin: 0 auto;
+  padding: 0px; }
+
+.journal-entry {
+  padding-right: 45px; }
+  .journal-entry a {
+    font-family: 'Radley', serif;
+    text-decoration: none;
+    line-height: 25px; }
+  .journal-entry h3 {
+    font-size: 25px; }
+  .journal-entry h1 {
+    color: gray;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: right; }
+
+.journal-entry p {
+  text-align: left;
+  line-height: 15px;
+  font-size: 25px;
+  margin-top: 12px;
+  font-size: 20px;
+  opacity: 60%; }
+
+.descItal {
+  font-style: italic;
+  color: #d64a06;
+  font-weight: bold; }
+
+.journal-entry .journalPic {
+  width: 300px; }
+
+hr {
+  width: 95%;
+  border-top: 1 solid gray; }
+
+.journal-entry li {
+  text-align: left;
+  font-size: 15px;
+  line-height: 7px; }
+
+.customize-journal h1 {
+  font-size: 18px;
+  margin-top: 0;
+  opacity: 50%; }
+
 .content-bg .container {
   background-color: white;
   width: 100%;
@@ -114,7 +187,7 @@
   .source {
     font-size: 13px; } }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 990px) {
   .content-bg {
     display: flex;
     flex-direction: column;
@@ -134,7 +207,7 @@
     .content-bg .styleItem img {
       width: 276px; } }
 
-@media screen and (max-width: 925px) and (max-width: 700px) {
+@media screen and (max-width: 990px) and (max-width: 700px) {
   .content-bg {
     display: flex;
     flex-direction: column;
@@ -165,7 +238,7 @@
   .source {
     font-size: 13px; } }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 990px) {
   .glassItem {
     display: flex;
     flex-direction: column;
@@ -181,7 +254,7 @@
   margin: 0 auto; }
 
 .styleItem .stylePic {
-  width: 250px; }
+  width: 220px; }
 
 @media screen and (max-width: 525px) {
   .styleItem {
@@ -253,6 +326,9 @@
 
 .breweryWrapper {
   width: 100%; }
+  .breweryWrapper hr {
+    width: 95%;
+    border-top: 1 solid gray; }
 
 .breweryItem {
   padding-top: 50px;
@@ -260,7 +336,6 @@
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   min-width: 100%;
   margin: 0 auto; }
 
@@ -293,10 +368,14 @@ hr {
   width: 95%;
   border-top: 1 solid gray; }
 
+.entry .hours {
+  width: 200px; }
+
 .entry .hours li {
   text-align: left;
   font-size: 15px;
-  line-height: 7px; }
+  line-height: 7px;
+  width: 200px; }
 
 #source {
   font-size: 21px; }
@@ -458,6 +537,11 @@ li, a {
 
 .beerItem img {
   width: 380px; }
+
+.journal-add {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  opacity: .75; }
 
 .side-by-side li {
   width: 100%;
