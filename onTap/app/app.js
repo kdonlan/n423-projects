@@ -1,18 +1,17 @@
-function init() {
-  $.get("views/home/home.html", (homePageData) => {
-    $("#app").html(homePageData);
+function initViews() {
+  $.get("views/home/home.html", (contentData) => {
+    $("#content").html(contentData);
   });
 
   $("nav a").click((e) => {
     let linkID = e.currentTarget.id;
-    $.get(`views/${linkID}/${linkID}.html`, (pageData) => {
-      $("#app").html(pageData);
-      console.log("id clicked");
+    $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
+      $("#content").html(contentData);
     });
   });
 }
 
 
 $(document).ready(() => {
-  init();
+  initViews();
 });
