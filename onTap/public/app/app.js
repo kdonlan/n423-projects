@@ -19,7 +19,7 @@ function initFirebase() {
         _db = firebase.firestore();
       } else {
         console.log("No User");
-        _db = {};
+        // _db = {};
       }
     });
 }
@@ -273,7 +273,7 @@ function initViews() {
 
 //loads the view for the form to add a brewery
 function initFormView() {
-  $(".navWrapper").click((e) => {
+  $(".navWrapper a").click((e) => {
     //add brewery button to get the form to populate in content area
     $("#breweryformBtn").click((e) => {
       $.get(`views/breweryform/breweryform.html`, (formData) => { ///placeholder - ${formPage} can go here to find html page to serve from the database

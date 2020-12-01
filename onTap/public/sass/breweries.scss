@@ -1,5 +1,6 @@
 .breweryWrapper {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     hr {
         width: 95%;
         border-top: 1 solid gray;
@@ -12,7 +13,7 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    // min-width: 100%;
     margin: 0 auto;
     // background-color: pink;
 }
@@ -39,6 +40,28 @@
     font-size: 28px;
 }
 .entry p {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+
+.breweryEntry {
+    width: 50%;
+    margin: 0 auto;
+    // padding: 15px;
+    // line-height: .45rem;
+    a {
+        font-family: 'Radley', serif;
+        line-height: 39px;
+        text-align: left;
+        text-decoration: none;    }
+}
+
+.breweryEntry h3 {
+    font-size: 28px;
+}
+.breweryEntry p {
     text-align: left;
     font-size: 15px;
     margin-top: 12px;
@@ -109,7 +132,7 @@ hr {
             }
         }
 
-        .entry {
+        .breweryEntry {
             padding-top: 10px;
         // line-height: .45rem;
             a { 
@@ -119,11 +142,11 @@ hr {
             text-decoration: none;    }
         }   
 
-        .entry h3 {
+        .breweryEntry h3 {
             font-size: 28px;
         }
         
-        .entry p {
+        .breweryEntry p {
         text-align: left;
         font-size: 15px;
         margin-top: 12px;
@@ -136,7 +159,7 @@ hr {
 
 
       @media screen and (max-width: 900px) {
-        .content-bg {
+        #content {
             display: flex;
             flex-direction: column;
             z-index: -1;
@@ -162,14 +185,14 @@ hr {
             display: flex;
             flex-direction: column;
             // justify-content: center;
-            width: 100%;
+            width: 80%;
             margin: 0 auto;
             // background-color: pink;
         }
         
 
     
-    .entry {
+    .breweryEntry {
             // padding-top: 10px;
             padding-bottom: 10px;            a { 
             font-family: 'Radley', serif;
@@ -178,11 +201,11 @@ hr {
             text-decoration: none;    }
         }   
 
-        .entry h3 {
+        .breweryEntry h3 {
             font-size: 28px;
         }
         
-        .entry p {
+        .breweryEntry p {
         text-align: left;
         font-size: 15px;
         margin-top: 12px;
@@ -192,4 +215,11 @@ hr {
             font-size: 13px;
         }
 
+    }
+
+    .halfImageLogo {
+        padding-top: 10px;
+        // min-width: 50%;
+        margin: 0 auto;
+        // justify-content: space-around;
     }
