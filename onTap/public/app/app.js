@@ -1,76 +1,176 @@
+console.log("js app file is linked");
 ///connect to the database
 var _db;
 
-//add to collections
+//add to collections (use add data button to load the json into firebase)
 var fakeBreweries = {
   name: "Liquid Roots",
   city: "Lenoir"
 };
 
-
 function initFirebase() {
-  firebase.auth().onAuthStateChanged((user) => { //checks the state of the user in the sign up, sign in and sign out phase
-    if (user) {
-      // console.log("user is here ", user)
-      var displayName = user.displayName;
-      var email = user.email;
-      var uid = user.uid;
-      console.log("user is here ", uid, email);
-
-      console.log("Connected");
-      _db = firebase.firestore();
-      // ...
-    } else {
-
-    }
-  });
+  firebase
+    .auth()
+    .onAuthStateChanged((user) => {
+      if (user) {
+        var uid = user.uid;
+        console.log("Connected");
+        console.log(uid);
+        _db = firebase.firestore();
+      } else {
+        console.log("No User");
+        _db = {};
+      }
+    });
 }
+
+//WRONG!!!!!
+// function initFirebase() {
+//   firebase.auth().onAuthStateChanged((user) => { //checks the state of the user in the sign up, sign in and sign out phase
+//     if (user) {
+//       console.log("user is here ");
+//       var uid = user.uid;
+//       console.log(uid);
+//       console.log("user is here ", uid);
+
+
+//       _db = firebase.firestore();
+//       console.log("Connected");
+//       // ...
+//     } else {
+//       console.log("not connected :(");
+//     }
+//   });
+// }
 
 
 function initListeners() {
 
   /////////////////////// add Sign UP link  ////////////////////////
 
-  $("#signUp").click(function () {
-    let email = "kimdonl@iu.edu";
-    let password = "password";
-    // let email = document.getElementById("email");
-    // let password = document.getElementById("password");
+  $("#signUpPopup").click(function () { //popup modal code here
+    // $("#signUp").show();
+    Swal.mixin({
+      confirmButtonText: 'Next &rarr;',
+      confirmButtonColor: '#fbb03b',
+      showCancelButton: true,
+    }).queue([
+      {
+        title: '<h1 style="font-size:24px">Enter your Email<h1>',
+        input: 'email',
+        inputPlaceholder: 'Email'
+      },
+      {
+        title: '<h1 style="font-size:24px">Enter your Password<h1>',
+        input: 'password',
+        inputPlaceholder: 'Password'
+      }
+    ]).then((result) => {
+      if (result.value) {
+        const email = result.value[0];
+        const password = result.value[1];
+        // console.log(email, password);
+        // console.log(result.value[0]);
+        // console.log(email)
+        // console.log(password)
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then((user) => {
+            console.log("added!");
+            Swal.fire({
+              title: '<h1 style="font-size:24px;font-family:Radley serif; text-align: center;">All set!<h1>',
+              html: `
+                <pre><code><p style="font-family: serif; text-align: center;">You are now a member of On Tap: Your username is ${email}.</p></code></pre>
+              `,
 
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((user) => {
+              confirmButtonText: 'Explore the Site',
+              confirmButtonColor: '#fbb03b'
+            })
+            $("#signOut").show();
+            $("#signIn").hide();
+            $("#signUpPopup").hide();
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+            Swal.fire({
+              title: '<h1 style="font-size:24px;font-family:Radley serif">Whoops!<h1>',
+              html: `
+                <pre><code><p style="font-family: serif">${errorMessage}</p></code></pre>
+              `,
 
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorMessage, errorCode)
-        // ..
-      });
-    // console.log("sign up");
-    console.log("user is here ", email);
+              confirmButtonText: 'Please try again.',
+              confirmButtonColor: '#fbb03b'
+            })
+          });
+      }
+    })
   })
 
 
-  /////////////////////// add Sign IN link  ////////////////////////
+  /////////////////////// Sign IN link  ////////////////////////
 
   $("#signIn").click(function () {
-    let email = "kimdonl@iu.edu";
-    let password = "password";
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        // Signed in 
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-      });
-    console.log("user is here again ", email)
+    Swal.mixin({
+      confirmButtonText: 'Next &rarr;',
+      confirmButtonColor: '#fbb03b',
+      showCancelButton: true,
+    }).queue([
+      {
+        title: '<h1 style="font-size:24px">Enter your Email<h1>',
+        input: 'email',
+        inputPlaceholder: 'Email'
+      },
+      {
+        title: '<h1 style="font-size:24px">Enter your Password<h1>',
+        input: 'password',
+        inputPlaceholder: 'Password'
+      }
+    ]).then((result) => {
+      if (result.value) {
+        const email = result.value[0];
+        const password = result.value[1];
+        // console.log(email, password);
+        // console.log(result.value[0]);
+        // console.log(email)
+        // console.log(password)
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .then((user) => {
+            console.log("signed in!");
+            Swal.fire({
+              title: '<h1 style="font-size:24px;font-family:Radley serif">All set!<h1>',
+              html: `
+                <pre><code><p style="font-family: serif">You are now signed in. Cheers!</p></code></pre>
+              `,
+
+              confirmButtonText: 'Explore the Site',
+              confirmButtonColor: '#fbb03b'
+            })
+            $("#signOut").show();
+            $("#signIn").hide();
+            $("#signUpPopup").hide();
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+            Swal.fire({
+              title: '<h1 style="font-size:24px;font-family:Radley serif">Whoops!<h1>',
+              html: `
+                <pre><code><p style="font-family: serif">${errorMessage}</p></code></pre>
+              `,
+
+              confirmButtonText: 'Please try again.',
+              confirmButtonColor: '#fbb03b'
+            })
+          });
+      }
+    })
+
   })
 
 
@@ -80,18 +180,27 @@ function initListeners() {
     firebase
       .auth()
       .signOut().then(function () {
-        console.log("You've successfully signed out.")
-        _db = " ";
+        $("#signOut").hide();
       }).catch(function (error) {
-        // An error happened.
+        console.log(errorMessage);
       });
-    alert("Sign out successful");
-  })
+    Swal.fire({
+      confirmButtonText: 'Okay',
+      confirmButtonColor: '#fbb03b',
+      html: '<h3>You are now signed out. Please come back soon!</h3>'
+    })
+    _db = " ";
+    $("#signOut").hide();
+    $("#signIn").show();
+    $("#signUpPopup").show();
+  });
 
 
-  /////////////////////// add Data Button -- for CREATE ////////////////////////
+  /////////////////////// add Brewery Button -- for CREATE ////////////////////////
 
-  $("#add").click(function () {
+  $("#submitBreweryBtn").click(function () { //use for submitting for brewery form submit
+    // var breweryName = 
+    // var breweryProfileHTML = `<html>        <h3>${breweryName}</h3>
     _db //finds the collection or creates it in Firestore
       .collection("breweries")
       .add(fakeBreweries)
@@ -135,7 +244,6 @@ function initListeners() {
 }
 
 
-
 //gets the various pages viewing in the Single Page application ///////////////////////////////////////////////////////////////
 
 function initViews() {
@@ -145,10 +253,35 @@ function initViews() {
 
   $("nav a").click((e) => {
     let linkID = e.currentTarget.id;
+
+    //for placeholders below//////////////////////////////////////////
+    // let profileID = e.currentTarget.id;
+    // let formPage = e.currentTarget.id;
+
     $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
       $("#content").html(contentData);
+
+      //brewery profile page names to populate in content area
+      $(".entry a").click((e) => {
+        $.get(`views/profile/profile.html`, (profileData) => { ///placeholder - ${breweryID} can go here to find html page to serve from the database
+          $("#content").html(profileData);
+        })
+      })
     });
   });
+}
+
+//loads the view for the form to add a brewery
+function initFormView() {
+  $(".navWrapper").click((e) => {
+    //add brewery button to get the form to populate in content area
+    $("#breweryformBtn").click((e) => {
+      $.get(`views/breweryform/breweryform.html`, (formData) => { ///placeholder - ${formPage} can go here to find html page to serve from the database
+        $("#content").html(formData);
+        console.log("takes to form?!");
+      })
+    })
+  })
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -156,18 +289,14 @@ function initViews() {
 
 $(document).ready(function () {
   try {
-    initListeners();
-    let app = firebase.app();
     initFirebase();
-
+    initListeners();
+    initViews();
+    initFormView();
   } catch (e) {
     console.error(e);
   }
 });
-
-//invoking all functions in the application ///////////////////////////////////////////////////////////////
-initViews();
-
 
 //for rules once app is ready, after testing:
 

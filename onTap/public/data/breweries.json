@@ -1,12 +1,11 @@
 [
     {
-        "id": 0,
-        "breweryAdminId": "dskjflakdjf",
-        "website": "https://www.liquidrootsbrewing.com/",
-        "logo":"./images/liquid-roots.png",
-        "name": "Liquid Roots",
-        "address": "1048 Harper Ave. NW, Lenoir, NC 55521",
-        "phone-num": "828-572-1106",
+        "breweryName": "Liquid Roots",
+        "breweryStreet": "1048 Harper Ave. NW",
+        "city-state-zip": "Lenoir, NC 55521",
+        "breweryPhone": "828-572-1106",
+        "breweryUrl": "https://www.liquidrootsbrewing.com/",
+        "logo": "./images/liquid-roots.png",
         "instagram": "https://www.instagram.com/liquidrootsbrewing/",
         "facebook": "https://www.facebook.com/liquidrootsbrewing",
         "pets-ok": true,
@@ -79,54 +78,6 @@
                 "beer-style": "Coconut Coffee Milk Stout",
                 "glassware": "Snifter",
                 "abv": "5.5"
-            },
-            {
-                "beer-name": "Get off the Juice",
-                "style": "Fruited Sour (papaya, passion fruit, pinappe, peach)",
-                "glassware": "Tulip",
-                "abv": "6.0"
-            },
-            {
-                "beer-name": "Burpee",
-                "beer-style": "Blonde Ale",
-                "glassware": "Pint glass",
-                "abv": "5.4"
-            },
-            {
-                "beer-name": "The Magic Bus",
-                "beer-style": "Hazy Pale Ale",
-                "glassware": "Pint glass",
-                "abv": "5.8"
-            },
-            {
-                "beer-name": "Freedom",
-                "beer-style": "Scottish Ale",
-                "glassware": "Pint glass",
-                "abv": "5.5"
-            },
-            {
-                "beer-name": "Stage 5 Clinger",
-                "beer-style": "Hazy IPA",
-                "glassware": "IPA glass",
-                "abv": "7.0"
-            },
-            {
-                "beer-name": "Agnes's Unicorn",
-                "beer-style": "Imperial Stout (marshmallow, sea salt, cocoa nibs",
-                "glassware": "Snifter",
-                "abv": "5.5"
-            },
-            {
-                "beer-name": "Attitudinal Adjustment",
-                "beer-style": "German-Style Pilsner",
-                "glassware": "Pilsner glass",
-                "abv": "5.0"
-            },
-            {
-                "beer-name": "Ciderboys Blackberry Cider",
-                "beer-style": "Cider",
-                "glassware": "Tulip",
-                "abv": "5.0"
             }
         ]
     },
@@ -134,7 +85,7 @@
         "id": 1,
         "breweryAdminId": "dkfjalsdjfklsj",
         "website": "http://deviatebrewing.com/",
-        "logo":"./images/deviate.png",
+        "logo": "./images/deviate.png",
         "name": "Deviate Brewing",
         "address": "4004 W. 96th St., Indianapolis, IN 46268",
         "phone-num": "317-374-8249",
@@ -210,54 +161,6 @@
                 "style": "Coconut Coffee Milk Stout",
                 "glassware": "Snifter",
                 "abv": "5.5"
-            },
-            {
-                "name": "Get off the Juice",
-                "style": "Fruited Sour (papaya, passion fruit, pinappe, peach)",
-                "glassware": "Tulip",
-                "abv": "6.0"
-            },
-            {
-                "name": "Burpee",
-                "style": "Blonde Ale",
-                "glassware": "Pint glass",
-                "abv": "5.4"
-            },
-            {
-                "name": "The Magic Bus",
-                "style": "Hazy Pale Ale",
-                "glassware": "Pint glass",
-                "abv": "5.8"
-            },
-            {
-                "name": "Freedom",
-                "style": "Scottish Ale",
-                "glassware": "Pint glass",
-                "abv": "5.5"
-            },
-            {
-                "name": "Stage 5 Clinger",
-                "style": "Hazy IPA",
-                "glassware": "IPA glass",
-                "abv": "7"
-            },
-            {
-                "name": "Agnes's Unicorn",
-                "style": "Imperial Stout (marshmallow, sea salt, cocoa nibs",
-                "glassware": "Snifter",
-                "abv": "5.5"
-            },
-            {
-                "name": "Attitudinal Adjustment",
-                "style": "German-Style Pilsner",
-                "glassware": "Pilsner glass",
-                "abv": "5.0"
-            },
-            {
-                "name": "Ciderboys Blackberry Cider",
-                "style": "Cider",
-                "glassware": "Tulip",
-                "abv": "5.0"
             }
         ]
     }

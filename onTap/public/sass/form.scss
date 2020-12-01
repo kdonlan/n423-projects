@@ -1,119 +1,103 @@
-
-
-.content-bg .container {
-    background-color: white;
-    width: 100%;
-    min-height: 5rem;
+.formWrapper {
+    width: 80%;
+    min-height: 800px;
+    // background-color: black;
+    margin-top: 36px;
     margin: 0 auto;
-    --color-primary: #565655;
-    --color-secondary: #fbb03b;
-    --color-error: #ff0400;
-    --color-success: #63df58;
-    --border-radius: 4px;
+    // font-size: 25px;
+    h1, h2, h3, h4, h5, h6, a {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-}
-
-.containerSm {
+.formContainer {
     background-color: white;
-    width: 400px;
-    max-width: 400px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0,0,0, .2);   
-    border-radius: var(--border-radius);
-}
-
-.containerSm, 
-.form__input, 
-.form__button {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-family: 'Radley', serif;
-}
-
-.form--hidden {
-    display: none;
-}
-
-.form {
-    // width: 800px;
-    // margin: 0 auto;
-    .form__input-group {
-        font-family: 'Oswald', sans-serif;
-        color:(var(--color-primary));
+    width: 80%;
+    margin: 0 auto;
+    min-height: 200px;
+    border:3px solid gold;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    p {
+        font-size: 15px;
     }
     h4 {
-        padding-top: 20px;
+        font-size: 30px;
+        // padding-right: 60px;
+        line-height: -100px;
+        margin-bottom: 5px;
+        text-align: left;
+        }
+}
+
+    .formItemContainer {
+        width: 95%;
+        // background-color: pink;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+}
+
+
+
+.formItem {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 20px;
+    h4 {
+        text-align: left;
     }
 }
 
-.form__input-group {
-    margin-bottom: 1rem,
+.formWrapper .label {
+    width: 800px;
+    margin: 0 auto;
+
 }
 
-.form__input {
-    display: block;
+input {
     width: 100%;
-    padding: .55rem;
-    border-radius: var(--border-radius);
-    border: 1px solid gray;
+    margin: 0 auto;
+    height: 30px;
+    // padding-left: 20px;
+    // border-radius: var(--border-radius);
+    border: .5px solid gray;
     outline: none;
     background:#eeeeee;
     transition: background 0.2s, border-color .02s;
+    // align-content: right;
 }
-
-.form__input:focus {
-    border-color: var(--color-secondary);
+.label {
+    margin: 0 auto;
+    justify-content: center;
+}
+input:focus {
+    border-color: gold;
     background: white;
 }
-
-.form__message {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 15px;
-
 }
 
-.form__message--success {
-    color:(var(--color-success));
-}
-
-.form__message--error {
-    color:(var(--color-error));
-}
-
-.form__input--error {
-    color:(var(--color-error));
-    border-color:(var(--color-error));
-}
-
-.form__button {
-    color: var(--color-primary);
+button {
     width: 100px;
-    height: 25px;
-    cursor: pointer;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+}   
+
+#breweryFormBtn {
+    height: 55px;
 }
 
-.form__button:hover {
-    background-color: var(--color-secondary);
+#breweryLogoFile input {
+    outline: none;
 }
 
-.form__button:active {
-    transition: scale(.98);
-    font-weight: bold;
+#submitBtn {
+    background-color:rgb(251, 176, 59);
+    padding: 10px;
 }
-
-.form__links {
-    color:var(--color-primary);
-    text-decoration: none;
-}
-
-.form__links:hover {
-    text-decoration: underline;
-
-}
-

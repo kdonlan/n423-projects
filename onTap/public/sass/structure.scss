@@ -157,7 +157,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 75px;
     // position: relative;
     // z-index: -1;
     width: 100%;
@@ -196,17 +196,20 @@ nav {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/* On screens that are399x or less */
-@media screen and (max-width: 510px) {
-    .content-bg {
-        min-height: 667px;
+/* On screens that are 399x or less */
+@media screen and (max-width: 399px) {
+    #content {
+        // min-height: 667px;
+        background-color: white;
+
     }
     .homepageImage img {
+        width: 300px; //for mobile use 380px;
         margin: 0 auto;
-        width: 200px;
         padding: 10px;
         padding-bottom: 55px;
     }
+
     .subtext {
         width: 250px;
     }
@@ -218,7 +221,7 @@ nav {
 /* On screens that are 700px or less */
 @media screen and (max-width: 745px) {
     .homepageImage img {
-     display:none;
+     width: 450;
     }
     .subtext {
         width: 250px;
@@ -245,12 +248,12 @@ nav {
         
         .logo {
             width: 180px;
-            padding-top: 55px;
+            padding-top: 75px;
             margin: 0 auto;
         }
         a { 
             margin-bottom: 5px;
-            line-height: 20px;
+            line-height: 15px;
             font-size: 1.25rem;
         }
         a:hover {
@@ -261,10 +264,10 @@ nav {
               padding-top: 0px;
           }
   
-          .content-bg {
+          #content {
             // display: block;
             z-index: -1;
-            width: 80%;
+            width: 100%;
             height: 100%;
             margin: 0 auto;
             background-color: white;
@@ -273,9 +276,10 @@ nav {
           
         .auth {
           background-color: #565656;
-          height: 125px;
+          height: 85px;
           width: 100%;
           margin:0 auto;
+          padding-bottom: 25px;
           display: flex;
           flex-direction: column;
           // align-items: space-around; 
@@ -303,9 +307,8 @@ nav {
           }
       }
   }
-    .homepageImage img {
-        width: 500px; //for mobile use 380px;
-        margin: 0 auto;
-        padding: 10px;
-        padding-bottom: 55px;
-    }
+
+  #breweryform {
+      cursor: pointer;
+  }
+
