@@ -1,56 +1,56 @@
-<div class="formWrapper" action="#">
-    <form class="formContainer">
+<div class="formWrapper">
+    <div class="formContainer">
         <h1>Add your Brewery to On Tap Brew Finder</h1>
         <p>Please fill in the form to submit your brewery for consideration. We look forward to learning more about you
             and your delicious brews.</p>
-            
+
         <div class="formItemContainer">
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="breweryAddress">Name</h4>
-                    <input type="text" placeholder="Enter Address" name="breweryName"></label>
+                    <h4><label for="breweryName">Brewery Name</h4>
+                    <input name="breweryName" id="breweryName" type="text" placeholder="Enter Brewery Name"></label>
                 </div>
             </div>
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="breweryStreet">Street</h4>
-                    <input type="text" placeholder="Street" name="breweryStreet"></label>
+                    <h4><label for="breweryStreet">Street Address</h4>
+                    <input name="breweryStreet" id="breweryStreet" type="text" placeholder="Enter Street"></label>
                 </div>
             </div>
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="city-state-zip">City, State, Zipcode</h4>
-                    <input type="text" placeholder="City, State XXXXX" name="city-state-zip"></label>
+                    <h4><label for="cityStateZip">City, State, Zipcode</h4>
+                    <input name="cityStateZip" id="cityStateZip" type="text" placeholder="city-state-zip"></label>
                 </div>
             </div>
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="breweryPhone">Phone</h4>
-                    <input type="number" placeholder="000-000-0000" name="breweryPhone"></label>
+                    <h4><label for="breweryPhone">Phone Number</h4>
+                    <input name="breweryPhone" id="breweryPhone" type="number" placeholder="XXX-XXX-XXXX"></label>
                 </div>
             </div>
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="breweryUrl">Website</h4>
-                    <input type="url" placeholder="https://yourwebsite.com" name="breweryUrl"></label>
+                    <label for="breweryUrl">
+                        <h4>Website</h4>
+                        <input name="breweryUrl" id="breweryUrl" type="url" placeholder="https://yourwebsite.com">
+                    </label>
                 </div>
             </div>
-            <div class="formItem">
-                <h4><label for="breweryLogo">Logo</h4>
-                    <input id="breweryLogoFile" type="file" name="breweryLogo"></input></label>
-            </div>
-
-            <!--FORM BUTTONS-->
             <div class="formItem">
                 <div class="label">
-                    <button type="button" class="swal2-cancel swal2-styled" aria-label=""
-                        style="display: inline-block; background-color: rgb(251, 176, 59);">Cancel</button>
-                    <button type="submit" class="swal2-confirm swal2-styled" aria-label=""
-                        style="display: inline-block; background-color: rgb(251, 176, 59);">Sign Up</button>
+                    <h4><label for="breweryLogoFile">Logo</h4>
+                    <input id="breweryLogoFile" type="file" name="breweryLogoFile"></input></label>
                 </div>
             </div>
-
+            <div class="formItem">
+                <div class="label">
+                    <button onclick="goPrev()" class="swal2-confirm swal2-styled"
+                        style="display: inline-block; background-color: rgb(107, 106, 105);">CANCEL</button>
+                    <button id="submitBreweryBtn" class="swal2-confirm swal2-styled"
+                        style="display: inline-block; background-color: rgb(251, 176, 59)">SUBMIT</button>
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
-</form>
