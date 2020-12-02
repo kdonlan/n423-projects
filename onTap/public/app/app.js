@@ -2,24 +2,15 @@ console.log("js app file is linked");
 ///connect to the database
 var _db;
 
-//add to collections (use add data button to load the json into firebase)
-let breweryCollection =
-{
-  "breweryName": "Liquid Roots",
-  "breweryStreet": "1048 Harper Ave. NW",
-  "cityStateZip": "Lenoir, NC 55521",
-  "breweryPhone": "828-572-1106",
-  "breweryUrl": "https://www.liquidrootsbrewing.com/",
-  "breweryLogoFile": "./images/liquid-roots.png"
-}
+let breweryCollection = {}
 
-console.log(breweryCollection);
-console.log(breweryCollection.breweryName);
-console.log(breweryCollection.breweryStreet);
-console.log(breweryCollection.cityStateZip);
-console.log(breweryCollection.breweryPhone);
-console.log(breweryCollection.breweryUrl);
-console.log(breweryCollection.breweryLogoFile);
+// console.log(breweryCollection);
+// console.log(breweryCollection.breweryName);
+// console.log(breweryCollection.breweryStreet);
+// console.log(breweryCollection.cityStateZip);
+// console.log(breweryCollection.breweryPhone);
+// console.log(breweryCollection.breweryUrl);
+// console.log(breweryCollection.breweryLogoFile);
 
 function initFirebase() {
   firebase
@@ -56,6 +47,7 @@ function initListeners() {
   /////////////////////// Sign UP  ////////////////////////
 
   $("#signUpPopup").click(function () { //popup modal code here
+    console.log("sign up");
     Swal.mixin({
       confirmButtonText: 'Next &rarr;',
       confirmButtonColor: '#fbb03b',
@@ -209,8 +201,7 @@ function initListeners() {
   ///////////***************************///////////***************************///////////***************************///////////*************************** */
 
   /////////////////////// CREATE (THROUGH THE DATABASE---NOT THE APP)
-  // need to get inputs and SUBMIT Button working here! -- for CREATE ////////////////////////
-  //hard-coded above works great :)
+  // need to get inputs and SUBMIT Button working here!  //hard-coded above works great :)
   $("#add").click(function () {
     _db //finds the collection or creates it in Firestore
       .collection("breweries")
@@ -307,7 +298,84 @@ function goPrev() {
   window.history.go(-1); return false;
 }
 
+function newBrewery() {
+  let breweryName = $("#breweryName").val();
 
+  _db //finds the collection or creates it in Firestore
+    .collection("breweries")
+    .add(breweryCollection)
+    .then(function (data) {
+      console.log(data.id);
+      //add to collections (use add data button to load the json into firebase)
+
+      let breweryCollection =
+      {
+        "breweryName": breweryName,
+        "breweryStreet": breweryStreet,
+        "cityStateZip": "Lenoir, NC 55521",
+        "breweryPhone": "828-572-1106",
+        "breweryUrl": "https://www.liquidrootsbrewing.com/",
+        "breweryLogoFile": "./images/liquid-roots.png",
+        "profilePageHTML": `<div class="headerContent-bg">	
+  <div class="header">	
+      <h3><img src="./images/liquid-roots.png" alt=""></h3>	
+      <h3>Liquid Roots Brewing Project</h3>	
+      <h1>on tap - 11/9/2020</h1>	
+  </div>	
+</div>	
+
+<div class="columnLayout">	
+  <div class="column">	
+      <div class="beerItem">	
+          <h3>Weiz Guy | ABV 5.4%</h3>	
+          <p>HEFENWIZEN</p>	
+          <p>A bright, crisp light hefe, sure to make your day!</p>	
+          <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
+      </div>	
+      <div class="beerItem">	
+          <h3>Weiz Guy | ABV 5.4%</h3>	
+          <p>HEFENWIZEN</p>	
+          <p>A bright, crisp light hefe, sure to make your day!</p>	
+          <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
+      </div>	
+  </div>	
+
+  <div class="column">
+      <div class="beerItem">	
+      <img src="./images/liquid-roots-profile-pic.png" alt="">	
+  </div>	
+  <!-- <div class="beerItem">	
+      <button class="myButton">EDIT BEERS</button>	
+  </div> -->	
+  </div>	
+</div>	
+<hr style="width: 90%;margin: 0 auto; margin-bottom: 50px;">	
+<div class="header">	
+  <h3>About Liquid Roots Brewing Company</h3>	
+  <li>Lenoir, NC Brewery and Tap room.</li>	
+  <li>Dog and Kid Friendly.</li>	
+  <li>Beer, coffee, wine, and great people.</li>	
+  <li>	
+      <h4>Follow Liquid Roots Brewing Project</h3>	
+  </li>	
+
+  <div class="side-by-side">	
+      <li><a href="https://www.instagram.com/liquidrootsbrewing/" target="blank"><img	
+                  style="width: 70px;margin:0 auto; padding: 10px;" src="./images/instagram-final.png"	
+                  alt=""></a><a href="https://www.facebook.com/liquidrootsbrewing" target="blank"><img	
+                  style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
+                  alt=""></a></li>	
+  </div>	
+</div>`
+      }
+      // console.log(breweryCollection.breweryName);
+      // console.log(breweryCollection.breweryStreet);
+      // console.log(breweryCollection.cityStateZip);
+      // console.log(breweryCollection.breweryPhone);
+      // console.log(breweryCollection.breweryUrl);
+      // console.log(breweryCollection.breweryLogoFile)
+    });
+}
 
 $(document).ready(function () {
   try {
@@ -315,6 +383,7 @@ $(document).ready(function () {
     initListeners();
     initViews();
     initFormView();
+    newBrewery();
   } catch (e) {
     console.error(e);
   }
