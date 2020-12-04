@@ -10,14 +10,12 @@
       <a href="#" id="signIn">Sign In</a>
       <a href="#" id="signOut">Sign Out</a>
     </nav>
-    <div class="form">
+    <div>
       <label for="myImage">Upload Image</label>
       <input type="file" id="myImage"  />
-      <div>
         <!-- //disabled button, in case no one is signed in -->
         <input type="submit" value="Submit" id="submitBtn" disabled />
       </div>
-    </div>
 
     <div class="photoHolder"></div>
 
@@ -26,6 +24,7 @@
     <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.1.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.1.1/firebase-database.js"></script>
     <script defer src="/__/firebase/8.1.1/firebase-firestore.js"></script>
     <script defer src="/__/firebase/8.1.1/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->

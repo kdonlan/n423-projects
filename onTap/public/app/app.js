@@ -2,16 +2,6 @@ console.log("js app file is linked");
 ///connect to the database
 var _db;
 
-let breweryCollection = {}
-
-// console.log(breweryCollection);
-// console.log(breweryCollection.breweryName);
-// console.log(breweryCollection.breweryStreet);
-// console.log(breweryCollection.cityStateZip);
-// console.log(breweryCollection.breweryPhone);
-// console.log(breweryCollection.breweryUrl);
-// console.log(breweryCollection.breweryLogoFile);
-
 function initFirebase() {
   firebase
     .auth()
@@ -201,57 +191,39 @@ function initListeners() {
   ///////////***************************///////////***************************///////////***************************///////////*************************** */
 
   /////////////////////// CREATE (THROUGH THE DATABASE---NOT THE APP)
-  // need to get inputs and SUBMIT Button working here!  //hard-coded above works great :)
+    //hard-coded above works fine
   $("#add").click(function () {
     _db //finds the collection or creates it in Firestore
       .collection("breweries")
       .add(breweryCollection)
       .then(function (data) {
-        console.log(data.id);
+        let breweryCollection =
+        {
+          "breweryName": "Deviate",
+          "breweryStreet": "Michigan"
+        }
         console.log(breweryCollection.breweryName);
-        console.log(breweryCollection.breweryStreet);
-        console.log(breweryCollection.cityStateZip);
-        console.log(breweryCollection.breweryPhone);
-        console.log(breweryCollection.breweryUrl);
-        console.log(breweryCollection.breweryLogoFile)
+        console.log(breweryCollection.breweryStreet)
+        // console.log(data.id);
+        // console.log(breweryCollection.breweryName);
+        // console.log(breweryCollection.breweryStreet);
+        // console.log(breweryCollection.cityStateZip);
+        // console.log(breweryCollection.breweryPhone);
+        // console.log(breweryCollection.breweryUrl);
+        // console.log(breweryCollection.breweryLogoFile)
       });
 
 
     /////////////////////// GET Data Button -- for READ ////////////////////////
     $("#get").click(function () {
-      // use to populate info in pages //////////////////////
-      _db
-        .collection("breweries")
-        // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
-        .get()
 
-        //query Snapshots are in the Firestore documentation
-        .then(function (querySnapshot) {
-          //DO I MAKE AN EMPTY ARRAY HERE TO DEFINE A SINGLE BREWERY WITH INDEX?
-          //to loop through
-          querySnapshot.forEach(function (doc) {
-            console.log(data.breweryCollection);
-            // console.log(breweryCollection.breweryName);
-            // console.log(breweryCollection.breweryStreet);
-            // console.log(breweryCollection.cityStateZip);
-            // console.log(breweryCollection.breweryPhone);
-            // console.log(breweryCollection.breweryUrl);
-            // console.log(breweryCollection.breweryLogoFile)
-
-            //for a single record as seen on line #40 
-            //and change this to console.log(querySnapshot.data());
-          })
-        })
     })
 
     /////////////////////// UPDATE Data Button -- for UPDATE ////////////////////////
     $("#update").click(function () {
     })
 
-    /////////////////////// DELETE Data Button -- for DELETE ////////////////////////
-    $("#delete").click(function () {
 
-    })
   })
 }
 
@@ -267,18 +239,93 @@ function initViews() {
     //for placeholders below//////////////////////////////////////////
     // let profileID = e.currentTarget.id;
     // let formPage = e.currentTarget.id;
+    if (linkID == "breweries") {
+      let breweriesHTML = `<div style="width: 300px;">
+      <span>
+          <h1 style="text-align:left">Featured</h1>
+          <h2 style="text-align: right;margin-top:0;">Breweries</h2>
+      </span>
+  </div>`;
+        // use to populate info in pages //////////////////////
+        _db
+        .collection("breweries")
+        // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
+        .get()
+   
+        //query Snapshots are in the Firestore documentation
+        .then(function (querySnapshot) {
+          //DO I MAKE AN EMPTY ARRAY HERE TO DEFINE A SINGLE BREWERY WITH INDEX?
+          //to loop through
+          querySnapshot.forEach(function (doc) {
+            console.log(doc.data().breweryName + doc.id); ////the document with the json data
+            // console.log(breweryName);
+            let breweryHTML = `<div class="breweryWrapper">
+            <div class="breweryItem">
+                <div class="halfImageLogo"><a href="#"><img src="./images/liquid-roots.png"></a></div>
+                <div class="breweryEntry">
+                        <a id="${doc.id}" href="#">
+                        <h3>${doc.data().breweryName}</h3>
+                        </a>
+                      <p>${doc.data().breweryStreet}</p>
+                    <p>Indianapolis, IN 46240</p>
+                    <p>828-572-1106</p>
+                    <p><a id="source" href="https://www.liquidrootsbrewing.com/"
+                            target="blank">liquidrootsbrewing.com</a></p>
+                </div>
+            </div>
+        </div>
+        <hr>`;
 
-    $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
-      $("#content").html(contentData);
+        //adds breweries to the header
+        breweriesHTML += breweryHTML;
 
-      //brewery profile page names to populate in content area
-      $(".halfImageLogo a, .breweryEntry a").click((e) => {
-        $.get(`views/profile/profile.html`, (profileData) => { ///placeholder - ${breweryID} can go here to find html page to serve from the database
-          $("#content").html(profileData);
+            //for a single record as seen on line #40 
+            //and change this to console.log(querySnapshot.data());
+          })
+          $("#content").html(breweriesHTML);
+          $(".breweryEntry a").click(function(e) {
+            loadBreweryProfile(e.currentTarget.id);
+          })
         })
-      })
-    });
+
+      console.log("breweries");
+    } else {
+      $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
+        $("#content").html(contentData);
+  
+        //brewery profile page names to populate in content area
+        $(".halfImageLogo a, .breweryEntry a").click((e) => {
+          $.get(`views/profile/profile.html`, (profileData) => { ///placeholder - ${breweryID} can go here to find html page to serve from the database
+            $("#content").html(profileData);
+          })
+        })
+      });
+    }
+
   });
+}
+
+
+function loadBreweryProfile(breweryID) {
+  console.log("profile", breweryID);
+  _db
+  .collection("breweries")
+  .doc(breweryID)
+  // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
+  .get()
+
+  //query Snapshots are in the Firestore documentation
+  .then(function (doc) {
+      $("#content").html(doc.data().profileHTML);
+      console.log(doc.id + doc.data().breweryName);
+    /////////////////////// DELETE Data Button -- for DELETE ////////////////////////
+    $("#delete").click(function () {
+
+    })
+    })
+  
+
+  
 }
 
 //loads the view for the form to add a brewery //////////////////// /////////////// /////////////// ////////////
@@ -294,100 +341,104 @@ function initFormView() {
   })
 }
 
+
+
+
+
+////////////////////////////////////////FORM FUNCTIONS //////////////////////////////////////////////
 function goPrev() {
   window.history.go(-1); return false;
 }
 
+
 function newBrewery() {
-  let breweryName = $("#breweryName").val();
+//defining the variable names to put in html
+let breweryName = $("#breweryName").val();
+let breweryStreet = $("#breweryStreet").val();
 
-  _db //finds the collection or creates it in Firestore
-    .collection("breweries")
-    .add(breweryCollection)
-    .then(function (data) {
-      console.log(data.id);
-      //add to collections (use add data button to load the json into firebase)
 
-      let breweryCollection =
-      {
-        "breweryName": breweryName,
-        "breweryStreet": breweryStreet,
-        "cityStateZip": "Lenoir, NC 55521",
-        "breweryPhone": "828-572-1106",
-        "breweryUrl": "https://www.liquidrootsbrewing.com/",
-        "breweryLogoFile": "./images/liquid-roots.png",
-        "profilePageHTML": `<div class="headerContent-bg">	
-  <div class="header">	
-      <h3><img src="./images/liquid-roots.png" alt=""></h3>	
-      <h3>Liquid Roots Brewing Project</h3>	
-      <h1>on tap - 11/9/2020</h1>	
-  </div>	
+
+//grabs the input and makes it the value
+  var breweryCollection = {
+    "breweryName": breweryName,
+    "breweryStreet":  breweryStreet,  
+    "profileHTML": `<div class="headerContent-bg">	
+    <div class="header">	
+        <h3><img src="./images/liquid-roots.png" alt=""></h3>	
+        <h3>${breweryName}</h3>	
+        <h1>on tap - 11/9/2020</h1>	
+    </div>	
 </div>	
 
 <div class="columnLayout">	
-  <div class="column">	
-      <div class="beerItem">	
-          <h3>Weiz Guy | ABV 5.4%</h3>	
-          <p>HEFENWIZEN</p>	
-          <p>A bright, crisp light hefe, sure to make your day!</p>	
-          <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-      </div>	
-      <div class="beerItem">	
-          <h3>Weiz Guy | ABV 5.4%</h3>	
-          <p>HEFENWIZEN</p>	
-          <p>A bright, crisp light hefe, sure to make your day!</p>	
-          <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-      </div>	
-  </div>	
+    <div class="column">	
+        <div class="beerItem">	
+            <h3>Weiz Guy | ABV 5.4%</h3>	
+            <p>HEFENWIZEN</p>	
+            <p>A bright, crisp light hefe, sure to make your day!</p>	
+            <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
+        </div>	
+        <div class="beerItem">	
+            <h3>Weiz Guy | ABV 5.4%</h3>	
+            <p>HEFENWIZEN</p>	
+            <p>A bright, crisp light hefe, sure to make your day!</p>	
+            <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
+        </div>	
+    </div>	
 
-  <div class="column">
-      <div class="beerItem">	
-      <img src="./images/liquid-roots-profile-pic.png" alt="">	
-  </div>	
-  <!-- <div class="beerItem">	
-      <button class="myButton">EDIT BEERS</button>	
-  </div> -->	
-  </div>	
+    <div class="column">
+        <div class="beerItem">	
+        <img src="./images/liquid-roots-profile-pic.png" alt="">	
+    </div>	
+    <!-- <div class="beerItem">	
+        <button class="myButton">EDIT BEERS</button>	
+    </div> -->	
+    </div>	
 </div>	
 <hr style="width: 90%;margin: 0 auto; margin-bottom: 50px;">	
 <div class="header">	
-  <h3>About Liquid Roots Brewing Company</h3>	
-  <li>Lenoir, NC Brewery and Tap room.</li>	
-  <li>Dog and Kid Friendly.</li>	
-  <li>Beer, coffee, wine, and great people.</li>	
-  <li>	
-      <h4>Follow Liquid Roots Brewing Project</h3>	
-  </li>	
+    <h3>About Liquid Roots Brewing Company</h3>	
+    <li>${breweryStreet}</li>	
+    <li>Dog and Kid Friendly.</li>	
+    <li>Beer, coffee, wine, and great people.</li>	
+    <li>	
+        <h4>Follow Liquid Roots Brewing Project</h3>	
+    </li>	
 
-  <div class="side-by-side">	
-      <li><a href="https://www.instagram.com/liquidrootsbrewing/" target="blank"><img	
-                  style="width: 70px;margin:0 auto; padding: 10px;" src="./images/instagram-final.png"	
-                  alt=""></a><a href="https://www.facebook.com/liquidrootsbrewing" target="blank"><img	
-                  style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
-                  alt=""></a></li>	
-  </div>	
+    <div class="side-by-side">	
+        <li><a href="https://www.instagram.com/liquidrootsbrewing/" target="blank"><img	
+                    style="width: 70px;margin:0 auto; padding: 10px;" src="./images/instagram-final.png"	
+                    alt=""></a><a href="https://www.facebook.com/liquidrootsbrewing" target="blank"><img	
+                    style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
+                    alt=""></a></li>	
+    </div>	
+    <button id="${doc.id}" class="delete">DELETE</button>
 </div>`
-      }
-      // console.log(breweryCollection.breweryName);
-      // console.log(breweryCollection.breweryStreet);
-      // console.log(breweryCollection.cityStateZip);
-      // console.log(breweryCollection.breweryPhone);
-      // console.log(breweryCollection.breweryUrl);
-      // console.log(breweryCollection.breweryLogoFile)
+  }
+  
+  _db //finds the collection or creates it in Firestore
+    .collection("breweries")
+    .add(breweryCollection)
+    .then(function (doc) {
+      console.log ("added");
     });
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 $(document).ready(function () {
   try {
     initFirebase();
+    initFormView();
     initListeners();
     initViews();
-    initFormView();
-    newBrewery();
   } catch (e) {
     console.error(e);
   }
 });
+
 //for rules once app is ready, after testing:
 
 // rules_version = '2';
