@@ -261,16 +261,16 @@ function initViews() {
             // console.log(breweryName);
             let breweryHTML = `<div class="breweryWrapper">
             <div class="breweryItem">
-                <div class="halfImageLogo"><a href="#"><img src="./images/liquid-roots.png"></a></div>
+                <div class="halfImageLogo"><a href="#"><img src="${doc.data().logo}"></a></div>
                 <div class="breweryEntry">
                         <a id="${doc.id}" href="#">
                         <h3>${doc.data().breweryName}</h3>
                         </a>
                       <p>${doc.data().breweryStreet}</p>
-                    <p>Indianapolis, IN 46240</p>
-                    <p>828-572-1106</p>
-                    <p><a id="source" href="https://www.liquidrootsbrewing.com/"
-                            target="blank">liquidrootsbrewing.com</a></p>
+                    <p>${doc.data().cityStateZip}</p>
+                    <p>${doc.data().breweryPhone}</p>
+                    <p><a id="source" href="${doc.data().breweryUrl}"
+                            target="blank">${doc.data().breweryUrl}</a></p>
                 </div>
             </div>
         </div>
@@ -287,8 +287,6 @@ function initViews() {
             loadBreweryProfile(e.currentTarget.id);
           })
         })
-
-      console.log("breweries");
     } else {
       $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
         $("#content").html(contentData);
@@ -335,7 +333,6 @@ function initFormView() {
     $("#breweryformBtn").click((e) => {
       $.get(`views/breweryform/breweryform.html`, (formData) => { ///placeholder - ${formPage} can go here to find html page to serve from the database
         $("#content").html(formData);
-        console.log("takes to form?!");
       })
     })
   })
@@ -355,18 +352,25 @@ function newBrewery() {
 //defining the variable names to put in html
 let breweryName = $("#breweryName").val();
 let breweryStreet = $("#breweryStreet").val();
-
+let cityStateZip = $("#cityStateZip").val();
+let breweryPhone = $("#breweryPhone").val();
+let breweryUrl = $("#breweryUrl").val();
+let logo = $("#logo").val()
 
 
 //grabs the input and makes it the value
   var breweryCollection = {
     "breweryName": breweryName,
     "breweryStreet":  breweryStreet,  
+    "cityStateZip": cityStateZip,
+    "breweryPhone": breweryPhone,
+    "breweryUrl": breweryUrl,
+    "logo": logo,
     "profileHTML": `<div class="headerContent-bg">	
     <div class="header">	
-        <h3><img src="./images/liquid-roots.png" alt=""></h3>	
+        <h3><img src="${logo}" alt=""></h3>	
         <h3>${breweryName}</h3>	
-        <h1>on tap - 11/9/2020</h1>	
+        <h1>currently on tap</h1>	
     </div>	
 </div>	
 
@@ -390,16 +394,13 @@ let breweryStreet = $("#breweryStreet").val();
         <div class="beerItem">	
         <img src="./images/liquid-roots-profile-pic.png" alt="">	
     </div>	
-    <!-- <div class="beerItem">	
-        <button class="myButton">EDIT BEERS</button>	
-    </div> -->	
     </div>	
 </div>	
 <hr style="width: 90%;margin: 0 auto; margin-bottom: 50px;">	
 <div class="header">	
     <h3>About Liquid Roots Brewing Company</h3>	
-    <li>${breweryStreet}</li>	
-    <li>Dog and Kid Friendly.</li>	
+    <li>${breweryUrl}</li>	
+    <li>${breweryStreet}</li>
     <li>Beer, coffee, wine, and great people.</li>	
     <li>	
         <h4>Follow Liquid Roots Brewing Project</h3>	
@@ -412,7 +413,6 @@ let breweryStreet = $("#breweryStreet").val();
                     style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
                     alt=""></a></li>	
     </div>	
-    <button id="${doc.id}" class="delete">DELETE</button>
 </div>`
   }
   
@@ -450,110 +450,3 @@ $(document).ready(function () {
 //     }
 //   }
 // }
-
-
-
-
-
-
-    // let breweryUrl = breweryUrl.val;
-    // let profileHTML = `<div class="headerContent-bg">	
-    //     <div class="header">	
-    //     <h3><img src="./images/liquid-roots.png" alt=""></h3>	
-    //     <h3>Liquid Roots Brewing Project</h3>	
-    //     <h1>on tap - 11/9/2020</h1>	
-    // </div>	
-    // </div>	
-
-    // <div class="columnLayout">	
-    // <div class="column">	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    // </div>	
-
-    // <div class="column">	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //         <h3>Weiz Guy | ABV 5.4%</h3>	
-    //         <p>HEFENWIZEN</p>	
-    //         <p>A bright, crisp light hefe, sure to make your day!</p>	
-    //         <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-    //     </div>	
-    //     <div class="beerItem">	
-    //     <img src="./images/liquid-roots-profile-pic.png" alt="">	
-    // </div>	
-    // <!-- <div class="beerItem">	
-    //     <button class="myButton">EDIT BEERS</button>	
-    // </div> -->	
-    // </div>	
-    // </div>	
-    // <hr style="width: 90%;margin: 0 auto; margin-bottom: 50px;">	
-    // <div class="header">	
-    // <h3>About Liquid Roots Brewing Company</h3>	
-    // <li>Lenoir, NC Brewery and Tap room.</li>	
-    // <li>Dog and Kid Friendly.</li>	
-    // <li>Beer, coffee, wine, and great people.</li>	
-    // <li>	
-    //     <h4>Follow Liquid Roots Brewing Project</h3>	
-    // </li>	
-
-    // <div class="side-by-side">	
-    //     <li><a href="https://www.instagram.com/liquidrootsbrewing/" target="blank"><img	
-    //                 style="width: 70px;margin:0 auto; padding: 10px;" src="./images/instagram-final.png"	
-    //                 alt=""></a><a href="https://www.facebook.com/liquidrootsbrewing" target="blank"><img	
-    //                 style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
-    //                 alt=""></a></li>	
-    // </div>	
-    // </div>`
-
-    // _db //finds the collection or creates it in Firestore
-    //   .collection("breweries")
-    //   .add(breweryCollection)
-    //   .then(function (doc) {
-    //     console.log();
-    //   });

@@ -2,7 +2,7 @@
     {
         "breweryName": "Liquid Roots",
         "breweryStreet": "1048 Harper Ave. NW",
-        "city-state-zip": "Lenoir, NC 55521",
+        "cityStateZip": "Lenoir, NC 55521",
         "breweryPhone": "828-572-1106",
         "breweryUrl": "https://www.liquidrootsbrewing.com/",
         "logo": "./images/liquid-roots.png",

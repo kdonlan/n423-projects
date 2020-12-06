@@ -20,13 +20,13 @@
             <div class="formItem">
                 <div class="label">
                     <h4><label for="cityStateZip">City, State, Zipcode</h4>
-                    <input name="cityStateZip" id="cityStateZip" type="text" placeholder="city-state-zip"></label>
+                    <input name="cityStateZip" id="cityStateZip" type="text" placeholder="City, St XXXXX"></label>
                 </div>
             </div>
             <div class="formItem">
                 <div class="label">
                     <h4><label for="breweryPhone">Phone Number</h4>
-                    <input name="breweryPhone" id="breweryPhone" type="number" placeholder="XXX-XXX-XXXX"></label>
+                    <input name="breweryPhone" id="breweryPhone" type="text" placeholder="XXX-XXX-XXXX"></label>
                 </div>
             </div>
             <div class="formItem">
@@ -39,17 +39,25 @@
             </div>
             <div class="formItem">
                 <div class="label">
-                    <h4><label for="breweryLogoFile">Logo</h4>
-                    <input id="breweryLogoFile" type="file" name="breweryLogoFile"></input></label>
+                    <label for="logo">
+                        <h4>Your Logo</h4>
+                        <input name="logo" id="logo" type="url" placeholder="Enter a link to your logo here">
+                    </label>
                 </div>
             </div>
-            <h1>NO CACHE</h1>
+            <!-- <div class="formItem">
+                <div class="label">
+                    <h4><label for="logoFile">Logo</h4>
+                    <input name="logoFile" id="logoFile" type="file" placeholder="Upload your logo"></input></label>
+                </div>
+            </div> -->
+            
             <div class="formItem">
                 <div class="label">
                     <button onclick="goPrev()" class="swal2-confirm swal2-styled"
                         style="display: inline-block; background-color: rgb(107, 106, 105);">CANCEL</button>
                     <button onclick="newBrewery()" type="button" submitBreweryBtn" class="swal2-confirm swal2-styled"
-                        style="display: inline-block; background-color: rgb(251, 176, 59)">SUBMIT</button>
+                        style="display: inline-block; background-color: rgb(251, 176, 59)" href="profile.html">SUBMIT</button>
                 </div>
             </div>
         </div>
