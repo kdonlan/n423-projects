@@ -240,7 +240,8 @@ button {
   margin: 0 auto; }
 
 .styleItem .stylePic {
-  width: 220px; }
+  width: 220px;
+  padding-top: 39px; }
 
 @media screen and (max-width: 525px) {
   .styleItem {
@@ -328,7 +329,7 @@ button {
   margin: 0 auto; }
 
 .breweryItem img {
-  width: 305px;
+  width: 278px;
   margin-bottom: 20px; }
 
 .entry {
@@ -790,7 +791,8 @@ nav {
   width: 800px;
   margin: 0 auto;
   padding: 35px;
-  padding-bottom: 35px; }
+  padding-bottom: 35px;
+  padding-top: 35px; }
 
 .source {
   display: block;
@@ -800,6 +802,10 @@ nav {
     text-align: left;
     text-decoration: none;
     color: gray; }
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 /* On screens that are 399x or less */
 @media screen and (max-width: 399px) {

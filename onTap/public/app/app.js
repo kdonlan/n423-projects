@@ -49,7 +49,7 @@ function initListeners() {
         inputPlaceholder: 'Email'
       },
       {
-        title: '<h1 style="font-size:24px">Enter your Password<h1>',
+        title: '<h1 style="font-size:24px">Create your Password<h1>',
         input: 'password',
         inputPlaceholder: 'Password'
       }
@@ -152,7 +152,7 @@ function initListeners() {
                 <pre><code><p style="font-family: serif">${errorMessage}</p></code></pre>
               `,
 
-              confirmButtonText: 'Please try again.',
+              confirmButtonText: 'Try again.',
               confirmButtonColor: '#fbb03b'
             })
           });
@@ -408,9 +408,18 @@ function newBrewery() {
     .collection("breweries")
     .add(breweryCollection)
     .then(function (doc) {
+      Swal.fire({
+        title: '<h1 style="font-size:24px;font-family:Radley serif">Brewery added.<h1>',
+        html: `
+          <pre><code><<p style="font-family: serif">Click on Breweries in the navigation to see more!</p></code></pre>
+        `,
+
+        confirmButtonText: 'Explore',
+        confirmButtonColor: '#fbb03b'
+      })
       console.log("added");
       console.log(doc.id);
-      console.log(instagram);
+
     });
 }
 

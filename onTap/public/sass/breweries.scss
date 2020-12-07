@@ -19,7 +19,7 @@
 }
 
 .breweryItem img {
-    width: 305px;
+    width: 278px;
     margin-bottom: 20px;
 }
 
@@ -98,10 +98,11 @@ hr {
 
 
       @media screen and (max-width: 525px) {
-        .content-bg {
+
+        #content {
             display: flex;
             flex-direction: column;
-            z-index: -1;
+            // z-index: -1;
             height: 100%;
             margin: 0 auto;
             background-color: white;
@@ -123,7 +124,7 @@ hr {
             // padding: 50px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            // justify-content: space-around;
             width: 100%;
             margin: 0 auto;
             // background-color: pink;
@@ -162,7 +163,7 @@ hr {
         #content {
             display: flex;
             flex-direction: column;
-            z-index: -1;
+            // z-index: -1;
             width: 80%;
             height: 100%;
             margin: 0 auto;
@@ -185,8 +186,8 @@ hr {
             display: flex;
             flex-direction: column;
             // justify-content: center;
-            width: 80%;
-            margin: 0 auto;
+            // width: 80%;
+            // margin: 0 auto;
             // background-color: pink;
         }
         

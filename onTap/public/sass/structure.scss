@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6, a {
     margin-top: 12px;
 }
 
+#signIn {
+    z-index: -1;
+}
+
 body {
     background-color:#565655;
     background-image: url("../images/background-image.png");
@@ -51,9 +55,9 @@ body {
 .logo {
     width: 200px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
     position: relative;
-    z-index: 1;
+    z-index: -1;
     a:hover {
         margin-bottom: 25px;
     } 
@@ -179,12 +183,14 @@ nav {
     margin: 0 auto;
     padding: 35px;
     padding-bottom: 35px;
+    padding-top: 35px;
     }
 
     .source {  
     display: block;
     height: 50px;
     color: #565655;
+    padding-bottom: 15px;
     a {
         text-align: left;
         text-decoration: none;
@@ -192,6 +198,10 @@ nav {
     }
 }
   
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -236,26 +246,29 @@ nav {
 
 /* On screens that are 992px or less */
   @media screen and (max-width: 992px) {
+      .breweryEntry {
+        padding-left: 0px;
+      }
     nav {
         width: 80%;
         margin: 0 auto;
         margin-top: 0px;
-        height: 325px;
         background-color:white;
         // background-color: #556655;
         flex-direction: column;
-        justify-content: space-around;
+        // justify-content: space-around;
         // align-items: center;
         
         .logo {
             width: 180px;
-            padding-top: 75px;
+            padding-top: 85px;
             margin: 0 auto;
         }
         a { 
             margin-bottom: 5px;
             line-height: 15px;
             font-size: 1.25rem;
+            z-index: -2;
         }
         a:hover {
             color:#565655;
@@ -277,7 +290,7 @@ nav {
           
         .auth {
           background-color: #565656;
-          height: 85px;
+          height: 1000px;
           width: 100%;
           margin:0 auto;
           padding-bottom: 25px;
@@ -301,6 +314,7 @@ nav {
               text-shadow: 2px 2px 8px rgba($color: black, $alpha: .5);
           }
           a {
+              z-index: 2;
               padding-right: 0px;
               margin: 0 auto;
               text-decoration: none;
@@ -311,5 +325,10 @@ nav {
 
   #breweryform {
       cursor: pointer;
+  }
+
+  .auth {
+      display: flex;
+      flex-direction: row;
   }
 
