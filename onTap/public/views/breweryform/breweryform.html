@@ -45,21 +45,74 @@
                     </label>
                 </div>
             </div>
-            <!-- <div class="formItem">
-                <div class="label">
-                    <h4><label for="logoFile">Logo</h4>
-                    <input name="logoFile" id="logoFile" type="file" placeholder="Upload your logo"></input></label>
-                </div>
-            </div> -->
-            
             <div class="formItem">
                 <div class="label">
-                    <button onclick="goPrev()" class="swal2-confirm swal2-styled"
-                        style="display: inline-block; background-color: rgb(107, 106, 105);">CANCEL</button>
-                    <button onclick="newBrewery()" type="button" submitBreweryBtn" class="swal2-confirm swal2-styled"
-                        style="display: inline-block; background-color: rgb(251, 176, 59)" href="profile.html">SUBMIT</button>
+                    <label for="breweryImage">
+                        <h4>Brewery Image</h4>
+                        <input name="breweryImage" id="breweryImage" type="url"
+                            placeholder="Enter a link to an image of your brewery here">
+                    </label>
+                </div>
+                </div>
+                <div class="formItem">
+                    <div class="label">
+                        <label for="beerName">
+                            <h4>Featured Beer</h4>
+                            <input name="beerName" id="beerName" type="text" placeholder="Enter a featured beer.">
+                        </label>
+                    </div>
+                </div>
+                <div class="formItem">
+                    <div class="label">
+                        <label for="beerStyle">
+                            <h4>Beer Style</h4>
+                            <input name="beerStyle" id="beerStyle" type="text" placeholder="Enter featured beer style.">
+                        </label>
+                    </div>
+                </div>
+                <div class="formItem">
+                    <div class="label">
+                        <label for="beerDesc">
+                            <h4>Beer Description</h4>
+                            <input name="beerDesc" id="beerDesc" type="text" placeholder="Enter featured beer short description.">
+                        </label>
+                    </div>
+                </div>
+                <div class="formItem">
+                    <div class="label">
+                        <label for="abv">
+                            <h4>ABV %</h4>
+                            <input name="abv" id="abv" type="text" placeholder="Enter featured beer abv.">
+                        </label>
+                    </div>
+                    <div class="formItem">
+                        <div class="label">
+                            <label for="facebook">
+                                <h4>Facebook Profile</h4>
+                                <input name="facebook" id="facebook" type="url" placeholder="Enter your facebook url">
+                            </label>
+                        </div>
+                </div>
+                <div class="formItem">
+                    <div class="label">
+                        <label for="instgram">
+                            <h4>Instagram Profile</h4>
+                            <input name="instgram" id="instagram" type="url" placeholder="Enter your instagram url">
+                        </label>
+                    </div>
+            </div>
+
+
+                <div class="formItem">
+                    <div class="label">
+                        <button onclick="goPrev()" class="swal2-confirm swal2-styled"
+                            style="display: inline-block; background-color: rgb(107, 106, 105);">CANCEL</button>
+                        <button onclick="newBrewery()" type="button" submitBreweryBtn"
+                            class="swal2-confirm swal2-styled"
+                            style="display: inline-block; background-color: rgb(251, 176, 59)"
+                            href="profile.html">SUBMIT</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

@@ -1,7 +1,7 @@
 [
     {
-        "name": "Amber American Lager",
-        "desc": "Amber lager features prevalent malt flavors with varying levels of hoppiness. This beer is also characterized by a darker color, caramel aroma, and smooth taste.",
+        "name": "American Lager",
+        "desc": "American lager is light in flavor, color, and alcohol content, and is often produced in large quantities.",
         "style-examples": [
             {
                 "style-example": "Budweiser"

@@ -157,7 +157,8 @@ button {
   margin: 0 auto; }
 
 .glassItem .glassPic {
-  width: 250px; }
+  height: 250px;
+  margin-top: 25px; }
 
 @media screen and (max-width: 525px) {
   .glassItem {
@@ -167,7 +168,8 @@ button {
     width: 100%;
     margin: 0 auto; }
   .glassItem .glassPic {
-    width: 250px; }
+    height: 250px;
+    margin-top: 25px; }
   .source {
     font-size: 13px; } }
 
@@ -233,7 +235,7 @@ button {
   padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-width: 100%;
   margin: 0 auto; }
 
@@ -244,7 +246,7 @@ button {
   .styleItem {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
     margin: 0 auto; }
   .styleItem .stylePic {
@@ -303,8 +305,10 @@ button {
       text-transform: uppercase;
       color: #565655; }
   .styleItem {
+    padding: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
     margin: 0 auto; } }
 
@@ -324,7 +328,7 @@ button {
   margin: 0 auto; }
 
 .breweryItem img {
-  width: 405px;
+  width: 305px;
   margin-bottom: 20px; }
 
 .entry {
@@ -487,14 +491,14 @@ hr {
   background-color: white;
   margin-top: 0px;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: row; }
 
 .header img {
-  width: 500px;
+  max-width: 420px;
   margin-top: 45px;
   margin: 0 auto;
-  align-content: space-around; }
+  align-content: space-around;
+  padding-right: 25px; }
 
 li, a {
   text-align: center;
@@ -511,37 +515,42 @@ li, a {
   height: 100%;
   display: flex;
   flex-direction: row;
-  align-content: space-around;
+  align-content: center;
   justify-items: center; }
 
 .column {
   width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin-left: 10px; }
+  flex-direction: row;
+  align-content: space-around;
+  margin-right: 70px;
+  margin-right: 70px;
+  padding: 20px; }
 
 .column h1 {
-  font-size: 40px;
+  font-size: 80px;
   text-align: center;
   opacity: 60%; }
 
 .column h3 {
-  font-size: 22px; }
+  font-size: 30px; }
 
 .column p {
   font-family: 'Radley', serif;
   font-size: 15px;
+  margin-top: 10px;
   text-align: left;
   color: #565655; }
 
 .beerItem {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column; }
 
 .beerItem img {
-  width: 380px; }
+  width: 450px; }
 
 .journal-add {
   font-family: 'Montserrat', sans-serif;
@@ -586,7 +595,8 @@ li, a {
     color: #565655; }
   .header h1 {
     padding-top: 0;
-    opacity: 60%; }
+    opacity: 60%;
+    text-align: center; }
   .header img {
     width: 480px;
     align-content: space-around; }
@@ -624,13 +634,13 @@ li, a {
     margin: 0 auto;
     width: 310px; }
   .beerItem img {
-    width: 280px;
+    width: 400px;
     padding-top: 20px;
     padding-bottom: 20px; } }
 
 @media screen and (max-width: 400px) {
   .beerItem img {
-    width: 250px;
+    width: 400px;
     padding-top: 20px;
     padding-bottom: 20px; }
   .header h1 {
@@ -638,7 +648,7 @@ li, a {
     opacity: 60%;
     font-size: 25px; }
   .header img {
-    width: 270px; } }
+    width: 300px; } }
 
 * {
   margin: 0px;
@@ -777,7 +787,7 @@ nav {
     color: #565655; }
 
 .homepageImage img {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   padding: 35px;
   padding-bottom: 35px; }

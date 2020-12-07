@@ -191,26 +191,13 @@ function initListeners() {
   ///////////***************************///////////***************************///////////***************************///////////*************************** */
 
   /////////////////////// CREATE (THROUGH THE DATABASE---NOT THE APP)
-    //hard-coded above works fine
+  //hard-coded above works fine
   $("#add").click(function () {
     _db //finds the collection or creates it in Firestore
       .collection("breweries")
       .add(breweryCollection)
       .then(function (data) {
-        let breweryCollection =
-        {
-          "breweryName": "Deviate",
-          "breweryStreet": "Michigan"
-        }
-        console.log(breweryCollection.breweryName);
-        console.log(breweryCollection.breweryStreet)
-        // console.log(data.id);
-        // console.log(breweryCollection.breweryName);
-        // console.log(breweryCollection.breweryStreet);
-        // console.log(breweryCollection.cityStateZip);
-        // console.log(breweryCollection.breweryPhone);
-        // console.log(breweryCollection.breweryUrl);
-        // console.log(breweryCollection.breweryLogoFile)
+        let breweryCollection = {}
       });
 
 
@@ -246,22 +233,20 @@ function initViews() {
           <h2 style="text-align: right;margin-top:0;">Breweries</h2>
       </span>
   </div>`;
-        // use to populate info in pages //////////////////////
-        _db
+      // use to populate info in pages //////////////////////
+      _db
         .collection("breweries")
         // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
         .get()
-   
+
         //query Snapshots are in the Firestore documentation
         .then(function (querySnapshot) {
           //DO I MAKE AN EMPTY ARRAY HERE TO DEFINE A SINGLE BREWERY WITH INDEX?
           //to loop through
           querySnapshot.forEach(function (doc) {
-            console.log(doc.data().breweryName + doc.id); ////the document with the json data
-            // console.log(breweryName);
             let breweryHTML = `<div class="breweryWrapper">
             <div class="breweryItem">
-                <div class="halfImageLogo"><a href="#"><img src="${doc.data().logo}"></a></div>
+            <div class="halfImageLogo"style="width:300px;text-align:center;"><a id="${doc.id}" href="#"><img src="${doc.data().logo}"></a></div>
                 <div class="breweryEntry">
                         <a id="${doc.id}" href="#">
                         <h3>${doc.data().breweryName}</h3>
@@ -272,25 +257,26 @@ function initViews() {
                     <p><a id="source" href="${doc.data().breweryUrl}"
                             target="blank">${doc.data().breweryUrl}</a></p>
                 </div>
+                
             </div>
-        </div>
-        <hr>`;
+            <hr/>
+        </div>`;
 
-        //adds breweries to the header
-        breweriesHTML += breweryHTML;
+            //adds breweries to the header
+            breweriesHTML += breweryHTML;
 
             //for a single record as seen on line #40 
             //and change this to console.log(querySnapshot.data());
           })
           $("#content").html(breweriesHTML);
-          $(".breweryEntry a").click(function(e) {
+          $(".breweryEntry a").click(function (e) {
             loadBreweryProfile(e.currentTarget.id);
           })
         })
     } else {
       $.get(`views/${linkID}/${linkID}.html`, (contentData) => {
         $("#content").html(contentData);
-  
+
         //brewery profile page names to populate in content area
         $(".halfImageLogo a, .breweryEntry a").click((e) => {
           $.get(`views/profile/profile.html`, (profileData) => { ///placeholder - ${breweryID} can go here to find html page to serve from the database
@@ -305,25 +291,25 @@ function initViews() {
 
 
 function loadBreweryProfile(breweryID) {
-  console.log("profile", breweryID);
+  // console.log("profile", breweryID);
   _db
-  .collection("breweries")
-  .doc(breweryID)
-  // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
-  .get()
+    .collection("breweries")
+    .doc(breweryID)
+    // .data("EXAMPLEkkd76884kd") //add this here to to get a specific record in the database, 
+    .get()
 
-  //query Snapshots are in the Firestore documentation
-  .then(function (doc) {
+    //query Snapshots are in the Firestore documentation
+    .then(function (doc) {
       $("#content").html(doc.data().profileHTML);
-      console.log(doc.id + doc.data().breweryName);
-    /////////////////////// DELETE Data Button -- for DELETE ////////////////////////
-    $("#delete").click(function () {
+      console.log(doc.id + " " + doc.data().breweryName);
+      /////////////////////// DELETE Data Button -- for DELETE ////////////////////////
+      $("#delete").click(function () {
 
+      })
     })
-    })
-  
 
-  
+
+
 }
 
 //loads the view for the form to add a brewery //////////////////// /////////////// /////////////// ////////////
@@ -349,78 +335,82 @@ function goPrev() {
 
 
 function newBrewery() {
-//defining the variable names to put in html
-let breweryName = $("#breweryName").val();
-let breweryStreet = $("#breweryStreet").val();
-let cityStateZip = $("#cityStateZip").val();
-let breweryPhone = $("#breweryPhone").val();
-let breweryUrl = $("#breweryUrl").val();
-let logo = $("#logo").val()
+  //defining the variable names to put in html
+  let breweryName = $("#breweryName").val();
+  let breweryStreet = $("#breweryStreet").val();
+  let cityStateZip = $("#cityStateZip").val();
+  let breweryPhone = $("#breweryPhone").val();
+  let breweryUrl = $("#breweryUrl").val();
+  let logo = $("#logo").val();
+  let beerName = $("#beerName").val();
+  let beerDesc = $("#beerDesc").val();
+  let abv = $("#abv").val();
+  let beerStyle = $("#beerStyle").val();
+  let breweryImage = $("#breweryImage").val();
+  let facebook = $("#facebook").val();
+  let instagram = $("#instagram").val();
 
 
-//grabs the input and makes it the value
+
+  //grabs the input and makes it the value *****************************PROFILE PAGE STUFF *****************************
   var breweryCollection = {
     "breweryName": breweryName,
-    "breweryStreet":  breweryStreet,  
+    "breweryStreet": breweryStreet,
     "cityStateZip": cityStateZip,
     "breweryPhone": breweryPhone,
     "breweryUrl": breweryUrl,
     "logo": logo,
+    "beerName": beerName,
+    "beerDesc": beerDesc,
+    "abv": abv,
+    "beerStyle": beerStyle,
+    "breweryImage": breweryImage,
+    "facebook": facebook,
+    "instagram": instagram,
     "profileHTML": `<div class="headerContent-bg">	
     <div class="header">	
+    <h3><${breweryImage}></h3>	
         <h3><img src="${logo}" alt=""></h3>	
-        <h3>${breweryName}</h3>	
-        <h1>currently on tap</h1>	
+        <h1>Featured Brew</h1>	
     </div>	
 </div>	
-
 <div class="columnLayout">	
-    <div class="column">	
-        <div class="beerItem">	
-            <h3>Weiz Guy | ABV 5.4%</h3>	
-            <p>HEFENWIZEN</p>	
-            <p>A bright, crisp light hefe, sure to make your day!</p>	
-            <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-        </div>	
-        <div class="beerItem">	
-            <h3>Weiz Guy | ABV 5.4%</h3>	
-            <p>HEFENWIZEN</p>	
-            <p>A bright, crisp light hefe, sure to make your day!</p>	
-            <a class="journal-add" href="journal.html">+ADD TO JOURNAL</a>	
-        </div>	
-    </div>	
+<div class="column">
+<div class="beerItem">	
+<img src="${breweryImage}" alt="">	
+</div>
 
-    <div class="column">
         <div class="beerItem">	
-        <img src="./images/liquid-roots-profile-pic.png" alt="">	
+            <h3>${beerName}| Abv ${abv}%</h3>
+            <p>${beerStyle}</p>	
+            <p>${beerDesc}</p>
+        </div>	
     </div>	
-    </div>	
-</div>	
+</div>
 <hr style="width: 90%;margin: 0 auto; margin-bottom: 50px;">	
 <div class="header">	
-    <h3>About Liquid Roots Brewing Company</h3>	
-    <li>${breweryUrl}</li>	
-    <li>${breweryStreet}</li>
-    <li>Beer, coffee, wine, and great people.</li>	
-    <li>	
-        <h4>Follow Liquid Roots Brewing Project</h3>	
-    </li>	
+    <h3>Want to learn more about ${breweryName}?</h3>	
 
+    	<li>	
+        <h4>Follow ${breweryName}</h3>	
+    </li>	
     <div class="side-by-side">	
-        <li><a href="https://www.instagram.com/liquidrootsbrewing/" target="blank"><img	
+        <li><a href="${instagram} target="blank"><img	
                     style="width: 70px;margin:0 auto; padding: 10px;" src="./images/instagram-final.png"	
-                    alt=""></a><a href="https://www.facebook.com/liquidrootsbrewing" target="blank"><img	
+                    alt=""></a><a href="${facebook}" target="blank"><img	
                     style="width: 70px;margin:0 auto; padding: 10px;" src="./images/facebook-final.png"	
                     alt=""></a></li>	
     </div>	
 </div>`
   }
-  
+
   _db //finds the collection or creates it in Firestore
     .collection("breweries")
     .add(breweryCollection)
     .then(function (doc) {
-      console.log ("added");
+      console.log("added");
+      console.log(doc.id);
+      console.log(instagram);
     });
 }
 
