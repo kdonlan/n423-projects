@@ -1,7 +1,7 @@
 Kim Donlan N-423 Final Project
 
-On Tap Beer Finder - informational app for craft beer
-First, sign up to access the dynamic web pages for breweries. 
+On Tap Beer Finder - informational app for craft beer.
+-   First, sign up to access the dynamic web pages for breweries. 
 
     - brewery featured beer, style and abv
     - brew descriptions
